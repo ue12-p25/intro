@@ -14,7 +14,7 @@ export default defineConfig({
 				{
 					label: 'Introduction',
 					items: [
-						{ label: 'Présentation', link: '/' },
+						{ label: 'Présentation', link: '/0-00-presentation-ue12-ue22' },
 					],
 				},
 				{

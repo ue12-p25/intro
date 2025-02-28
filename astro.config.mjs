@@ -8,7 +8,7 @@ export default defineConfig({
 		starlight({
 			title: 'UE12 - Introduction',
 			social: {
-				github: 'https://github.com/ue12-p23/intro',
+				github: 'https://github.com/ue12-p25/intro',
 			},
 			sidebar: [
 				{

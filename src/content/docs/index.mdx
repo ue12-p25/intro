@@ -1,36 +1,32 @@
 ---
-title: Welcome to Starlight
+title: Welcome to Astro
 description: Get started building your docs site with Starlight.
-template: splash
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import Admonition from '../../components/Admonition.astro';
 
-## Next steps
+Here are some examples of our Admonition component:
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+<Admonition type="tip" title="Pro tip!" collapsible>
+This is a collapsible tip admonition. Click to expand/collapse!
+
+You can include any markdown content inside the admonition.
+- Like lists
+- And other elements
+</Admonition>
+
+<Admonition type="note" title="Note">
+This is a regular note admonition (not collapsible).
+</Admonition>
+
+<Admonition type="warning" title="Warning">
+This is a warning admonition.
+</Admonition>
+
+<Admonition type="danger" title="Danger!">
+This is a danger admonition.
+</Admonition>
+
+<Admonition type="info" title="Information">
+This is an info admonition.
+</Admonition>

@@ -6,21 +6,22 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'UE12 - Introduction',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/ue12-p23/intro',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Introduction',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Présentation', link: '/' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Outils de développement',
+					items: [
+						{ label: 'Python', link: '/2-03-python' },
+					],
 				},
 			],
 		}),

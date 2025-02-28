@@ -1,32 +1,28 @@
 ---
-title: Welcome to Astro
-description: Get started building your docs site with Starlight.
+title: UE12 - Introduction
+description: on installe les ordis
+template: splash
+hero:
+  tagline: Bienvenue à MinesParis-PSL
+  image:
+    file: ../../../public/media/logo-p25-favicon.svg
 ---
 
-import Admonition from '../../components/Admonition.astro';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-Here are some examples of our Admonition component:
+## Pour quoi faire ?
 
-<Admonition type="tip" title="Pro tip!" collapsible>
-This is a collapsible tip admonition. Click to expand/collapse!
-
-You can include any markdown content inside the admonition.
-- Like lists
-- And other elements
-</Admonition>
-
-<Admonition type="note" title="Note">
-This is a regular note admonition (not collapsible).
-</Admonition>
-
-<Admonition type="warning" title="Warning">
-This is a warning admonition.
-</Admonition>
-
-<Admonition type="danger" title="Danger!">
-This is a danger admonition.
-</Admonition>
-
-<Admonition type="info" title="Information">
-This is an info admonition.
-</Admonition>
+<CardGrid>
+	<Card title="introduction" icon="information">
+		[Un peu de baratin.](/0-00-presentation-ue12-ue22)
+	</Card>
+	<Card title="les installations" icon="seti:config">
+		[C'est ici que ça se passe.](/1-01-installations)
+	</Card>
+	<Card title="comment on se sert des outils" icon="seti:python">
+		[Par là](/2-01-terminal-os)
+	</Card>
+	<Card title="compléments" icon="open-book">
+		[Quelques trucs en plus dans cette partie](/3-01-checklist).
+	</Card>
+</CardGrid>

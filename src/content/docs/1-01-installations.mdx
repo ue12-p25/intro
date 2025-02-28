@@ -1,0 +1,66 @@
+---
+title: Installations
+description: Installation des outils nécessaires pour le cours
+---
+
+import Admonition from '../../components/Admonition.astro';
+
+Ce guide vise à vous permettre de faire toutes les installations nécessaires.
+
+## La liste des outils
+
+<Admonition type="note" title="La liste des outils" collapsible>
+Il nous faut a minima :
+
+* le **terminal** - nous utilisons **`bash`**, qui est
+  * natif sur les OS linux et MacOS,
+  * et qui vient avec le produit `git for windows`
+* l'éditeur de code **Visual Studio Code**, mieux connu comme VS-code
+* **miniconda** pour Python (et les environnements virtuels)
+* **Jupyter** pour les notebooks
+  * on parlera un peu de *markdown* pour la mise en forme du texte,
+  * et de $\LaTeX$ pour les formules mathématiques
+* **Git** pour la gestion de versions  
+  * c'est un outil super-utile pour le développement, c'est indispensable que vous sachiez l'utiliser  
+* enfin on configurera également un compte sur **github.com**
+  * pour le stockage de vos travaux - typiquement les rendus
+  * et le travail en groupe - typiquement les hackatons et projets
+</Admonition>
+
+## Quelques conseils
+
+Mais avant de commencer, voici quelques recommandations générales :
+
+<Admonition type="warning" title="À lire attentivement !">
+Ceux qui zappent cette section ont 95% de chances de tomber dans le piège !
+</Admonition>
+
+### Comment tester une installation
+
+Après avoir installé, disons par exemple VS Code, on va vérifier que ça a bien marché.   
+Pour ça, on vous dit de taper dans le terminal `code .`
+
+Mais en fait l'installation de VS Code modifie **la façon dont s'initialise** le terminal,  
+et du coup ça n'**affecte pas** les terminaux **créés avant** l'installation.
+
+<Admonition type="warning" title="Pensez-y !">
+Il faut donc prendre l'habitude de **lancer un nouveau terminal après une installation**
+</Admonition>
+
+Ceci est notamment pertinent lorsque vous recevez une erreur comme  
+`code: command not found`  
+Si ce symptôme persiste même après avoir essayé dans un nouveau terminal, c'est que l'installation s'est mal passée.
+
+<Admonition type="note" title="Le PATH (pour les curieux)" collapsible>
+Le `PATH` c'est le mécanisme qui permet au terminal de trouver les commandes.
+
+Quand on installe un nouveau logiciel - comme on va le faire tout de suite avec
+*git for windows* - il est souvent nécessaire de **modifier le `PATH`** pour que les nouvelles
+commandes deviennent accessibles depuis le terminal.
+
+Ce n'est pas crucial de le savoir, mais si vous êtes curieux, sachez que :
+
+* `PATH` c'est ce qu'on appelle une variable d'environnement (ça veut dire qu'elle se
+  propage d'un processus à l'autre)
+* C'est une liste de répertoires où sont cherchées les commandes
+</Admonition> 

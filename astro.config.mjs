@@ -21,13 +21,13 @@ export default defineConfig({
         {
           label: "Installation et configuration",
           items: [
-            { label: "Installations", link: "/1-01-installations" },
-            { label: "Cloner le cours", link: "/1-02-clone-and-play" },
+            { label: "Installations", link: "/1-1-installations" },
+            { label: "Cloner le cours", link: "/1-2-clone-and-play" },
           ],
         },
         {
           label: "Outils de développement",
-          items: [{ label: "Python", link: "/2-03-python" }],
+          items: [{ label: "Python", link: "/2-3-python" }],
         },
       ],
     }),

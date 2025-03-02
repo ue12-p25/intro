@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import starlightImageZoom from 'starlight-image-zoom'
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +11,7 @@ export default defineConfig({
       social: {
         github: "https://github.com/ue12-p25/intro",
       },
+      plugins: [starlightImageZoom()],
       sidebar: [
         {
           label: "Introduction",

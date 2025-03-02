@@ -1,6 +1,10 @@
 // @ts-check
 import { defineConfig } from "astro/config"
 import starlight from "@astrojs/starlight"
+// see https://github.com/withastro/starlight/issues/721
+import remarkMath from "remark-math"
+import rehypeMathjax from "rehype-mathjax"
+
 import starlightImageZoom from 'starlight-image-zoom'
 import starlightThemeRapide from 'starlight-theme-rapide'
 
@@ -9,6 +13,11 @@ import starlightThemeRapide from 'starlight-theme-rapide'
 export default defineConfig({
   base: 'intro',
   site: "https://ue12-p25.github.io",
+  // for mathjax
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeMathjax],
+  },
   integrations: [
     starlight({
       title: "UE12/UE22 - Introduction",

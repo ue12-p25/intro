@@ -82,20 +82,14 @@ ce n'est pas crucial de le savoir, mais si vous êtes curieux, sachez que
 
 </Admonition>
 
-+++
-
 ### comment bien installer sur MacOS
 
 sur Mac, quand vous installez une application - comme notamment vs-code:  
 il est trés important **de copier l'application dans le dossier `Applications`** - on aura l'occasion d'en reparler
 
-+++
-
 ## installation de git (et bash sur Windows)
 
 suivez les instructions pour votre OS
-
-+++
 
 <Admonition title="Windows" collapsible>
 
@@ -144,8 +138,6 @@ voici la procédure à suivre dans ce cas:
 </Admonition>
 </Admonition>
 
-+++
-
 <Admonition title="Mac et Linux" collapsible>
 
 sur ces deux OS, `bash` est **préinstallé**  
@@ -161,8 +153,6 @@ pour installer `git`, utilisez ce lien: [Démarrage rapide de git](https://git-s
   ```
   </Admonition>
 </Admonition>
-
-+++
 
 <Admonition title="on vérifie bash (tous OS)" type="caution" collapsible>
 
@@ -195,8 +185,6 @@ vous devez pouvoir
   </Admonition>
 </Admonition>
 
-+++
-
 <Admonition title="on vérifie git (tous OS)" type="caution" collapsible>
 
 * pour vérifer que vous avez bien installé `git`:
@@ -213,8 +201,6 @@ vous devez pouvoir
 
 * si vous n'avez pas **au moins la version 2.23**, faites-vous connaitre; le mieux serait de mettre à jour pour obtenir une version plus récente, car certains éléments du cours sur git ne vont pas fonctionner chez vous...
 </Admonition>
-
-+++
 
 ### exercice: le dossier `cours-info`
 
@@ -269,8 +255,6 @@ c'est dans ce dossier qu'on vous invite à travailler pendant les cours d'info
   on verra plus tard comment créer, dans l'explorateur de fichiers, [un raccourci pour pouvoir faire ça rapidement](#label-raccourci-cours-info)...
   </Admonition>
 </Admonition>
-
-+++
 
 ## installation de vs-code
 
@@ -440,4 +424,523 @@ et vous prenez les options par défaut lorsqu'on vous pose une question
 si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, [voyez cette page](#label-troubleshoot-python-command-not-found)
 </Admonition>
 </Admonition>
+</Admonition>
+
+<Admonition title="MacOS" collapsible>
+
+<Admonition title="préparation: Intel ou M1 ?" collapsible>
+
+c'est important que vous sachiez dire si votre Mac a une puce Intel ou M1 (en fait pour l'installation miniconda, M1 ou M2 c'est pareil..)  
+et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* où vous trouver l'information ici
+
+![about-macos](/media/fig-macos-about.png)
+</Admonition>
+
+<Admonition title="download" collapsible>
+commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
+
+![](/media/fig-miniconda-download.png)
+
+vous téléchargez **la seule entrée de type `.pkg`** qui correspond **à votre architecture**  
+une fois le download terminé, vous double-cliquez sur le `.pkg`  
+il n'y a pas de choix particulier où on pourrait se tromper..
+</Admonition>
+</Admonition>
+
+
+<Admonition title="Linux" collapsible>
+
+<Admonition title="download" collapsible>
+
+commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
+
+![](/media/fig-miniconda-download.png)
+
+vous téléchargez **la première entrée pour Linux** (`Linux 64-bit`), les autres correspondent à des architectures différentes de celles qu'on trouve usuellement sur un ordi personnel
+</Admonition>
+
+
+<Admonition title="pour lancer l'installation" collapsible>
+```bash
+# just in case: go back to homedir
+cd 
+# go to the folder where download has ended up
+cd Downloads
+# making sure: list files that start with 'Miniconda3'
+ls Miniconda3*
+# very probably you will see only one file here, named 
+# Miniconda3-latest-Linux-x86_64.sh
+# (unless of course you download several times..)
+#
+# in any case, the way to actually run such a program is
+
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+les questions/réponses se passent dans le terminal, voici quelques trucs utiles:
+
+- pendant le *License Agreement* on vous faire lire les conditions de la licence
+  - pour avancer dans le document tapez *Espace*
+  - pour abréger, tapez simplement *`q`*
+- à la question  
+  `Do you wish to update your shell profile to automatically initialize conda?`  
+  on recommande de répondre `yes`
+</Admonition>
+</Admonition>
+
+
+<Admonition title="on vérifie conda et python" collapsible type="caution">
+et on fait quoi pour vérifier ? on crée un **nouveau terminal** !
+
+<Admonition title="le prompt (rappel)" collapsible>
+
+* le signe `$ ` **ne fait pas partie** de ce que vous devez taper
+* c'est juste une indication pour dire que la commande s'adresse au terminal  
+  c-à-d à nouveau : GitBash sur Windows, Terminal sur MacOS,  
+  et n'importe quel terminal bash sur linux
+
+ça signifie que vous **n'avez pas à taper le `$`**, ce
+sera déjà affiché lorsque vous taperez vos commandes
+</Admonition>
+
+<Admonition title="la commande conda" collapsible type="caution">
+
+```bash
+:class: important dropdown
+
+vous créez un nouveau terminal, et vous tapez
+```bash
+$ conda --version
+conda 23.5.2
+```
+qui **ne doit pas** vous répondre `command not found`  
+si c'est le cas, c'est que vous n'avez pas bien coché la case  
+*Add Miniconda3 to my PATH environment variable*  
+[dans ce cas voyez ici](#label-troubleshoot-python-command-not-found)
+</Admonition>
+
+<Admonition title="version de python" type="caution" collapsible>
+
+pour savoir la version de python installée
+```bash
+$ python --version
+Python 3.11.4
+```
+vous **devez** avoir une version 3.x, et **surtout pas** 2.7
+</Admonition>
+
+<Admonition title="quel python ?" type="caution" collapsible>
+
+pour savoir quelle version de `python` est utilisée, vous pouvez taper
+```console
+$ type python
+```
+qui doit vous répondre quelque chose comme
+```console
+# sur Windows avec notre setup vous devez avoir
+python is /c/miniconda/python
+# sur Mac par exemple je vois 
+python is /c/Users/JeanMineur/miniconda3/python
+```
+</Admonition>
+</Admonition>
+
+### exercice: vs-code + python
+
+<Admonition title="pas à pas" collapsible>
+
+* créer un nouveau terminal
+* aller dans le dossier `cours-info` (on fait comment déjà ?)
+* lancez vs-code
+  ```bash
+  code .
+  ```
+
+* copiez-collez le code ci-dessous dans un fichier qui s'appelle `fact.py`
+  ```python
+  # une fonction qui calcule factorielle
+  def fact(n):
+      return 1 if n <= 1 else n * fact(n-1)
+
+
+  # on affiche quelques résultats
+  for n in [4, 25]:
+      print(f"fact({n}) = {fact(n)}")
+  ```
+  ```{admonition} quelques trucs
+  :class: tip dropdown
+
+  utilisez les raccourcis clavier (remplacer Control par Command sur Mac)
+
+  * Control-N: créer un nouveau fichier
+  * Control-S: sauver le nouveau fichier, et lui donner un nom si nécessaire
+  * Control-A Control-C Control-V: comme d'habitude pour le copier-coller
+  ```
+
+* exécutez le programme
+  ```bash
+  $ python fact.py
+  fact(4) = 24
+  fact(25) = 15511210043330985984000000
+  ```
+</Admonition>
+
+## installation des extras Python
+
+c'est-à-dire:
+- numpy + pandas + matplotlib
+- ainsi que IPython + Jupyter
+
+<Admonition title="installation numpy et jupyter">
+
+voici un bloc de commandes que vous pouvez copier-coller **dans le terminal**  
+pour faire en un seul coup toutes les installations dont on aura besoin
+
+par contre cela peut prendre un moment...
+
+  {/*(label-config-jupytext)=*/}
+  ```bash
+  # c'est avec pip install qu'on installe quasiment tout pour Python
+  pip install numpy pandas matplotlib
+  pip install ipython jupyter
+  pip install jupytext jupyterlab-myst
+  jupytext-config set-default-viewer
+  ```
+</Admonition>
+
+<Admonition title="à quoi servent Jupyter et Jupytext ?" collapsible>
+
+le cours est écrit sous forme de notebooks Jupyter, dans un format textuel (ici du markdown) grâce à Jupytext
+
+de manière générale vous aurez le choix entre
+
+* lire le cours en HTML (comme ce premier cours),
+* ou de l'exécuter sous forme de notebook en lançant Jupyter sur votre ordi; on en reparlera
+</Admonition>
+
+<Admonition title="à quoi sert jupytext-config ?" collapsible>
+
+en l'absence de cette dernière commande, depuis Jupyter vous pouvez toujours ouvrir les notebooks jupytext ,
+mais il faut passer par *Clic droit* → *Open with* → *Notebook*  
+une fois que vous aurez exécuté la commande ci-dessus, vous pourrez ouvrir les notebooks
+simplement en double-cliquant dessus
+</Admonition>
+
+<Admonition title="on vérifie numpy et jupyter" type="caution" collapsible>
+
+<Admonition title="version de ipython et numpy" collapsible type="caution">
+
+lancez `ipython` et tentez de reproduire cette session  
+vous ne devez pas avoir d'erreur du type `ModuleNotFound`
+
+```bash
+$ ipython
+Python 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:10:28) [Clang 15.0.7 ]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.14.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import numpy
+
+In [2]: print(numpy.__version__)
+1.26.0
+
+In [3]: exit()
+$
+```
+</Admonition>
+
+<Admonition title="version de jupyter" collapsible type="caution">
+
+de retour dans le terminal, affichez les versions des composants de Jupyter avec cette commande  
+vous ne devez pas avoir de `command not found`
+```bash
+jupyter --version
+```
+</Admonition>
+
+<Admonition title="les modules installés avec pip (optionnel)" collapsible type="caution">
+
+```bash
+# pour obtenir la liste des librairies installées
+# (possiblement beaucoup)
+pip list
+# pour voir la version installée de UNE librairie, par exemple
+pip show numpy
+```
+</Admonition>
+
+</Admonition>
+
+### configuration de l'autoreload
+
+<Admonition title="autoreload">
+
+copiez-collez ceci dans votre terminal
+
+```bash
+mkdir -p ~/.ipython/profile_default
+cat >> ~/.ipython/profile_default/ipython_config.py << EOF
+c.InteractiveShellApp.exec_lines = []
+c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
+c.InteractiveShellApp.exec_lines.append('%autoreload 2')
+EOF
+```
+</Admonition>
+
+<Admonition title="à quoi ça sert ?" collapsible>
+
+**le problème**: vous êtes dans `ipython` ou dans un notebook, et vous faites
+
+```python
+from my_module import my_function
+my_function(...)
+```
+
+et puis ensuite un peu plus tard, vous modifiez `my_module.py` sous vs-code, et vous
+voulez essayer la nouvelle version; votre première idée est de refaire l'import pour
+recharger le module dans l'interpréteur
+
+MAIS là attention, **un second `import` ne recharge pas le fichier** ! c'est le
+comportement attendu, et souhaitable, car charger un module est coûteux; c'est
+pourquoi l'interpréteur garde en mémoire les modules qu'il a déjà chargés, et du
+coup vous pouvez ré-importer autant que vous voulez, vous allez toujours utiliser
+le premier code, et non ce que vous venez de modifier !
+
+**la solution**: avec cette astuce, vous n'aurez plus besoin de ré-importer,
+vous pourrez juste ré-exécuter `my_function()` et vous utiliserez la dernière
+version du module (pour autant que le nouveau module ne contienne pas d'erreur qui
+empêche son chargement, bien entendu)
+
+<Admonition title="comment ça marche ?" collapsible>
+
+pour les curieux qui veulent comprendre, le script est en bash:
+
+* il commence par s'assurer que le dossier `.ipython/profile_default` existe sous le home directory
+* puis dans ce dossier, il ajoute dans le fichier `ipython_config.py` les 3 lignes de configuration qui précèdent le `EOF` (c'est du Python bien sûr); le fichier est créé s'il n'existait pas
+</Admonition>
+</Admonition>
+
+### exercice: mon premier notebook (optionnel)
+
+<Admonition title="pas à pas" collapsible>
+
+* créez un nouveau terminal
+* allez dans `cours-info`
+* tapez la commande `jupyter lab`
+  cela doit ouvrir un nouvel onglet dans votre navigateur
+  dans lequel tourne l'application Jupyter
+  et le terminal devient inutilisable
+
+* menu *Jupytext* -> *New Text Notebook* -> *Markdown MyST*
+* renommez le nouveau fichier, qui a été créé sous le nom `Untitled.md`, en `my-first-notebook.md`
+* dans la première cellule vous mettez le code de la fonction `fact()` (voir + haut)
+* calculez différentes valeurs de `fact()` dans les cellules suivantes
+* créez une cellule markdown et voyez ce que ça donne
+  * les styles gras, italique, code, etc..
+  * les listes à bullet
+  * les titres
+  * etc...
+* (option)  dans une autre cellule markdown vous insérez une ou des équations $\LaTeX$, j'invente:
+  {/*
+  $$
+  \forall c \in \mathbb{C}^3-{1}, \exists c' \in \mathbb{C}^3, \phi(c') = \frac{c^2+1}{c-1}
+  $$
+  */}
+
+* sortez de JupyterLab en faisant *File* -> *Shutdown*
+* vous retournez dans le terminal qui maintenant fonctionne à nouveau
+</Admonition>
+
+## configuration git
+
+avant de pouvoir utiliser git, il nous faire un minimum de configuration
+
+c'est **très important** de bien **suivre toutes ces consignes**, 
+ou alors vous risquez de sérieusement galérer plus tard…
+
+<Admonition title="votre identité">
+
+pour commencer vous devez configurer git pour qu'il connaisse votre identité, cela sera utilisé à chaque fois que vous faites un *commit*
+
+```bash
+# remplacez ici vos nom et prénom et mail
+git config --global user.name "Jean Mineur"
+git config --global user.email jean.mineur@etu.minesparis.psl.eu
+```
+</Admonition>
+
+{/*(label-vscode-for-commit)=*/}
+<Admonition title="les autres réglages">
+
+à copier-coller tel quel dans le terminal
+````bash
+# peut être copié tel quel
+git config --global core.editor "code --wait"
+git config --global init.defaultbranch main
+git config --global pull.rebase false
+git config --global alias.l "log --oneline --graph"
+git config --global alias.la "log --oneline --graph --all"
+git config --global alias.s "status"
+````
+
+<Admonition title="à quoi ça sert ?" collapsible>
+
+* avec `core.editor` on choisit vs-code comme éditeur (voir ci-dessous)
+* avec `init.defaultbranch` on indique que la branche initiale s'appelle `main`
+* avec `pull.rebase` on indique qu'on veut *merge* et non pas *rebase* lorsqu'on *pull*
+* avec les trois `alias` on définit des raccourcis; c'est comme ça par exemple qu'on pourra taper simplement  
+  `git la`  
+  au lieu de devoir taper  
+  `git log --oneline --graph --all`
+</Admonition>
+
+<Admonition title="pour utiliser vs-code avec git" collapsible>
+
+à chaque commit est associé **un message**, et git a besoin de savoir **quel éditeur de code** vous voulez utiliser pour entrer ce message
+
+dans notre cas nous allons utiliser **vs-code**, et c'est le propos du réglage qui s'appelle `core.editor`
+
+<Admonition title="terminer la rédaction du message" type="danger">
+
+lorsque vous faites par exemple `git commit` et que l'éditeur se lance pour vous laisser entrer le message, le programme dans le terminal **attend que vous ayez fini** d'entrer le message  
+et pour lui dire "ça y est, j'ai fini, on peut finaliser le commit", ce que vous devez faire, c'est:
+- il ne suffit pas de simplement sauver le fichier (c'est nécessaire bien sûr, mais pas suffisant)  
+- ce qui compte c'est que vous ***fermiez l'onglet qui édite le message***;
+vous pouvez utiliser par exemple `Control-W` (ou Command-W sur mac); ou encore utiliser la petite croix en x à droite de l'onglet
+- ce n'est **pas la peine** de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
+</Admonition>
+</Admonition>
+
+<Admonition title="command not found ?" collapsible>
+
+pour que ça fonctionne, il faut bien sûr que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, [reportez-vous à la section sur ce problème](#label-troubleshoot-code-command-not-found)
+</Admonition>
+</Admonition>
+
+<Admonition title="on vérifie: mon premier commit (optionnel)" type="caution" collapsible>
+
+voici un petit scénario qui vous fait créer un dossier, un repo git, un fichier, et un commit; toutes les commandes sont à taper dans le terminal (bash bien sûr)
+
+```bash
+# je repars de mon homedir
+cd
+# je vais dans le dossier cours-info
+cd cours-info
+# je crée un nouveau dossier 
+mkdir my-first-git-repo
+# je vais dedans
+cd my-first-git-repo
+# j'initialise ce dossier comme un repo git
+git init
+# je lance l'éditeur de code
+code .
+
+# à ce stade, dans vs-code, créez le fichier `readme.md`
+# avec une ou deux lignes de texte, sauvez-le
+# puis retournez dans le terminal:
+
+# on veut que readme.md soit dans le commit qu'on va créer
+git add readme.md
+git commit
+
+# à ce stade, vous devez voir une fenêtre s'ouvrir dans vs-code
+# allez-y, tapez un message sur la première ligne
+# (par exemple `mon premier commit`), 
+# puis faites `Control-S` suivi de `Control-W`
+# (ou Command-S suivi de Command-W sur mac)
+
+# et là si tout se passe bien: 
+# la fenêtre dans vs-code se ferme, 
+# et si vous retournez dans le terminal
+# vous voyez que le `git commit` est terminé
+
+# on peut alors continuer, et faire
+git log
+
+# qui doit vous montrer UN commit; vérifiez
+# que votre nom et mail est correct
+# et que la branche s'appelle bien `main`
+```
+
+</Admonition>
+
+## github et la clé SSH
+
+depuis Août 2021, il est devenu très compliqué d'utiliser la méthode dite 'HTTPS' pour s'authentifier chez github;  
+aussi nous allons ensemble voir comment créer une clé pour la méthode SSH
+
+### compte github
+
+pour commencer, créez-vous un compte sur github si ce n'est pas déjà fait
+
+### c'est quoi SSH ?
+
+au départ, c'est un système de terminal distant pour pouvoir administrer les serveurs à distance; l'authentification est basée sur le principe d'une paire de clés publique/privée
+
+sans entrer dans les détails, ces deux morceaux sont en gros **deux éléments symétriques** l'un de l'autre dans un très gros groupe fini, et on ne peut pas facilement calculer l'un à partir de l'autre  
+
+par définition:
+
+* la clé publique peut être divulguée sans aucun souci au monde entier
+* par contre **la clé privée** doit être gardée secrète, donc **jamais exposée/copiée** en dehors de votre ordi
+
+et donc, ce qu'on va faire tout simplement, c'est:
+
+* générer une paire de clés
+* et déposer une copie de la clé publique sur github, en l'associant à votre compte github
+
+### on y va
+
+<Admonition title="création de la paire de clés" collapsible>
+
+pour générer la clé publique vous faites simplement dans le terminal
+```bash
+ssh-keygen -t rsa
+```
+
+ce programme va vous poser des questions, à ce stade je vous recommande de toujours **répondre par simplement la touche *Entrée***, pour accepter les défauts et ne pas attacher de mot de passe votre clé privée (ce qui n'est pas une pratique hyper-sûre, mais à ce stade de votre cursus ça parait raisonnable; si vous êtes geek et/ou très soucieux de sécurité, mettez un mot de passe mais soyez prêt à taper votre mot de passe *ad nauseam*, ou à passer du temps à des configurations scabreuses pour ne pas avoir à le faire...)
+<Admonition title="ça ressemble à ceci" collapsible>
+vous n'aurez pas *exactement* les mêmes messages, mais pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
+![](/media/ssh-keygen.png)
+</Admonition>
+</Admonition>
+
+<Admonition title="affichage de la clé publique" collapsible>
+
+`ssh-keygen` va avoir pour effet de créer deux fichiers situés dans le dossier `~/.ssh`  
+(le tilda signifie: directement sous votre homedir)
+
+du coup vous affichez le contenu de la clé publique en faisant maintenant
+
+```bash
+# pensez à copier-coller, surtout
+# si vous ne trouvez pas le ~ sur votre clavier
+
+cat ~/.ssh/id_rsa.pub
+```
+
+et vous copiez tout le contenu (en incluant bien tout, même le `ssh-rsa` et tout)
+<Admonition title="ça ressemble à ceci" collapsible>
+de nouveau, pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
+![](/media/ssh-copy-key.png)
+</Admonition>
+</Admonition>
+
+<Admonition title="attachez la clé à votre compte github" collapsible>
+
+maintenant vous allez sur github:
+
+1. dans le coin en haut à droite il y a votre icône  
+2. qui ouvre un sous-menu dans lequel vous choisissez *Settings*  
+3. dans la partie gauche de la page qui s'ouvre, cliquez 'SSH and GPG Keys'
+
+![](/media/github-profile-1.png)
+
+et là vous pouvez ajouter votre clé publique SSH:
+
+1. mettez ce que vous voulez comme titre
+2. mais vous collez la clé publique dans la zone qui va bien
+
+![](/media/github-profile-2.png)
+
 </Admonition>

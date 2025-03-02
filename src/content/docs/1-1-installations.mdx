@@ -100,42 +100,42 @@ pierre deux coups, et installer à la fois `bash` et `git`
 * téléchargez et lancez l'installation...
 * vous pouvez prendre **toutes les options par défaut**
 
-<Admonition title="on peut prendre toutes les options par défaut" collapsible type="tip">
+  <Admonition title="on peut prendre toutes les options par défaut" collapsible type="tip">
 
-et entre autres, à la question ***Adjusting your PATH environment*** :  
+  et entre autres, à la question ***Adjusting your PATH environment*** :  
 choisissez au moins l'option recommandée (#2) - on peut prendre l'option (#3) si on veut importer plus d'outils dans le terminal, mais ce n'est pas strictement nécessaire pour le cours
 
-![](/media/fig-set-path-git-for-windows.png)
-</Admonition>
+  ![](/media/fig-set-path-git-for-windows.png)
+  </Admonition>
 
-<Admonition title="machine DSI / pas de droit administrateur ?" type="warning" collapsible>
+  <Admonition title="machine DSI / pas de droit administrateur ?" type="warning" collapsible>
 
-le programme d'installation de *git for windows* est conçu pour installer le programme dans `C:\Program Files`,
-qui peut nécessiter des **droits administrateur**; et malheureusement il ne propose pas de choisir un autre endroit...
+  le programme d'installation de *git for windows* est conçu pour installer le programme dans `C:\Program Files`,
+  qui peut nécessiter des **droits administrateur**; et malheureusement il ne propose pas de choisir un autre endroit...
 
-aussi, si vous n'arrivez pas à installer *git for windows*, il va vous falloir lancer le programme d'installation "à la main" c'est-à-dire depuis un terminal;
-voici la procédure à suivre dans ce cas:
+  aussi, si vous n'arrivez pas à installer *git for windows*, il va vous falloir lancer le programme d'installation "à la main" c'est-à-dire depuis un terminal;
+  voici la procédure à suivre dans ce cas:
 
-* lancer un terminal *PowerShell* (on ne peut pas encore utiliser le terminal *bash* naturellement, puisqu'on ne l'a pas encore installé)
-* trouver le nom de votre *homedir*; pour cela tapez
-  ```bash
-  cd
-  pwd
-  ```
-  qui devrait vous répondre quelque chose qui contient votre nom, comme genre
-  ```
-  C:\Users\Jean Mineur
-  ```
-* se déplacer dans le dossier où vous avez téléchargé le programme d'installation (généralement `Downloads`)
-  ```bash
-  cd Downloads
-  ```
-* lancer le programme d'installation en ligne de commande en précisant un dossier d'installation **sous votre homedir**  
-  à affiner selon le nom du fichier que vous avez téléchargé, mais ça ressemble à
-  ```bash
-  .\Git-2.34.1-64-bit.exe /DIR="C:\Users\Jean Mineur\GitForWindows"
-  ```
-</Admonition>
+  * lancer un terminal *PowerShell* (on ne peut pas encore utiliser le terminal *bash* naturellement, puisqu'on ne l'a pas encore installé)
+  * trouver le nom de votre *homedir*; pour cela tapez
+    ```bash
+    cd
+    pwd
+    ```
+    qui devrait vous répondre quelque chose qui contient votre nom, comme genre
+    ```
+    C:\Users\Jean Mineur
+    ```
+  * se déplacer dans le dossier où vous avez téléchargé le programme d'installation (généralement `Downloads`)
+    ```bash
+    cd Downloads
+    ```
+  * lancer le programme d'installation en ligne de commande en précisant un dossier d'installation **sous votre homedir**  
+    à affiner selon le nom du fichier que vous avez téléchargé, mais ça ressemble à
+    ```bash
+    .\Git-2.34.1-64-bit.exe /DIR="C:\Users\Jean Mineur\GitForWindows"
+    ```
+  </Admonition>
 </Admonition>
 
 <Admonition title="Mac et Linux" collapsible>
@@ -223,8 +223,8 @@ c'est dans ce dossier qu'on vous invite à travailler pendant les cours d'info
   ```
   c'est votre *home directory*, en abrégé *homedir*
 
-  <Admonition title="ce n'est pas le cas ?" collapsible type="danger">
-    si vous vous trouvez dans un dossier bizarre (qui n'a rien à voir avec votre nom), 
+  <Admonition title="ce n'est pas le cas ?" type="danger" collapsible>
+    si vous vous trouvez dans un dossier bizarre (qui n'a rien à voir avec votre nom),
     prenez l'habitude de commencer par forcer le terminal à aller dans votre homedir en faisant simplement
     ```bash
     cd
@@ -273,22 +273,22 @@ On y va. Le site est là [https://code.visualstudio.com/](https://code.visualstu
 Vous voulez installer donc il va falloir que vous alliez dans une section *download* ... vous la voyez ?  
 à vous de jouer maintenant
 
-    <Admonition title="Windows: toutes les option par défaut" collapsible>
+  <Admonition title="Windows: toutes les option par défaut" collapsible>
 
-    pour les Windows, à nouveau vous prenez **toutes les options par défaut**
-    </Admonition>
+  pour les Windows, à nouveau vous prenez **toutes les options par défaut**
+  </Admonition>
 
-    <Admonition title="pour les Mac: déplacez dans le dossier Applications !" collapsible>
+  <Admonition title="pour les Mac: déplacez dans le dossier Applications !" collapsible>
 
-    **Attention**
+  **Attention**
 
-    on l'a signalé déjà rapidement, mais la bonne façon d'installer une appli sur MacOS en général est de la glisser-déplacer dans le dossier `Applications`  
+  on l'a signalé déjà rapidement, mais la bonne façon d'installer une appli sur MacOS en général est de la glisser-déplacer dans le dossier `Applications`  
 
-    aussi une fois que vous aurez téléchargé, et double cliqué sur le zip, vous allez voir un fichier de type `.app`, **qui se trouve dans votre dossier `Downloads`**  
-    **il est impératif** de glisser-déplacer ce fichier dans le dossier `Applications`  
-    si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes assez retors par la suite
+  aussi une fois que vous aurez téléchargé, et double cliqué sur le zip, vous allez voir un fichier de type `.app`, **qui se trouve dans votre dossier `Downloads`**  
+  **il est impératif** de glisser-déplacer ce fichier dans le dossier `Applications`  
+  si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes assez retors par la suite
 
-    </Admonition>
+  </Admonition>
 </Admonition>
 
 
@@ -354,7 +354,6 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 <Admonition title="Windows" collapsible>
 
   <Admonition title="préparation" collapsible>
-
   une première précaution, spécifique à Windows:  
   il s'agit de contourner un bug dans l'installateur conda, qui se déclenche lorsqu'il y un caractère exotique (accent, cédille, ...) dans le nom du dossier d'installation; ce qui peut se produire si vous en avez dans votre nom !
 
@@ -381,168 +380,165 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   une fois la commande tapée vous pouvez sortir de PowerShell (utiliser la croix en haut à
   droite par exemple)
-</Admonition>
+  </Admonition>
 
 
+  <Admonition title="download" collapsible>
+  commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
-<Admonition title="download" collapsible>
+  ![miniconda download page](/media/fig-miniconda-download.png)
 
-commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
-
-![miniconda download page](/media/fig-miniconda-download.png)
-
-puisqu'on est sur Windows, on n'a pas le choix, téléchargez le `*.exe`  
-(avant de le lancer, voyez l'étape suivante pour les réponses aux questions...)
-</Admonition>
+  puisqu'on est sur Windows, on n'a pas le choix, téléchargez le `*.exe`  
+  (avant de le lancer, voyez l'étape suivante pour les réponses aux questions...)
+  </Admonition>
 
 
+  <Admonition title="les réponses aux questions" collapsible>
 
-<Admonition title="les réponses aux questions" collapsible>
+  vous lancez le `.exe`  
+  et vous prenez les options par défaut lorsqu'on vous pose une question  
+  **sauf pour les écrans qui suivent**:
 
-vous lancez le `.exe`  
-et vous prenez les options par défaut lorsqu'on vous pose une question  
-**sauf pour les écrans qui suivent**:
+  * ***Install for:*** (si la question vous est posée)   
+    répondez *Just me (recommended)*
 
-* ***Install for:*** (si la question vous est posée)   
-  répondez *Just me (recommended)*
+    ![install miniconda just for me](/media/fig-miniconda-just-me.png)
 
-  ![install miniconda just for me](/media/fig-miniconda-just-me.png)
+  * **le choix du dossier où installer**  
+    sur cet écran vous remplacez le chemin qu'on vous propose par défaut, et vous
+    choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'est-à-dire
+    `c:\miniconda`
 
-* **le choix du dossier où installer**  
-  sur cet écran vous remplacez le chemin qu'on vous propose par défaut, et vous
-  choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'est-à-dire
-  `c:\miniconda`
+    ![install miniconda in c:\miniconda](/media/fig-miniconda-install-dir.png)
 
-  ![install miniconda in c:\miniconda](/media/fig-miniconda-install-dir.png)
+  * **advanced options: *add to my PATH environment variable***  
+    il est important de **bien cocher la case ci-dessous** (malgré l'avertissement en rouge)
 
-* **advanced options: *add to my PATH environment variable***  
-  il est important de **bien cocher la case ci-dessous** (malgré l'avertissement en rouge)
+    ![add miniconda to PATH](/media/fig-miniconda-add-path.png)
 
-  ![add miniconda to PATH](/media/fig-miniconda-add-path.png)
-
-<Admonition title="pas coché la case ?" collapsible type="danger">
-si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, [voyez cette page](#label-troubleshoot-python-command-not-found)
-</Admonition>
-</Admonition>
+    <Admonition title="pas coché la case ?" collapsible type="danger">
+    si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, [voyez cette page](#label-troubleshoot-python-command-not-found)
+    </Admonition>
+  </Admonition>
 </Admonition>
 
 <Admonition title="MacOS" collapsible>
 
-<Admonition title="préparation: Intel ou M1 ?" collapsible>
+  <Admonition title="préparation: Intel ou M1 ?" collapsible>
 
-c'est important que vous sachiez dire si votre Mac a une puce Intel ou M1 (en fait pour l'installation miniconda, M1 ou M2 c'est pareil..)  
-et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* où vous trouver l'information ici
+  c'est important que vous sachiez dire si votre Mac a une puce Intel ou M1 (en fait pour l'installation miniconda, M1 ou M2 c'est pareil..)  
+  et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* où vous trouver l'information ici
 
-![about-macos](/media/fig-macos-about.png)
-</Admonition>
+  ![about-macos](/media/fig-macos-about.png)
+  </Admonition>
 
-<Admonition title="download" collapsible>
-commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
+  <Admonition title="download" collapsible>
+  commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
-![](/media/fig-miniconda-download.png)
+  ![](/media/fig-miniconda-download.png)
 
-vous téléchargez **la seule entrée de type `.pkg`** qui correspond **à votre architecture**  
-une fois le download terminé, vous double-cliquez sur le `.pkg`  
-il n'y a pas de choix particulier où on pourrait se tromper..
-</Admonition>
+  vous téléchargez **la seule entrée de type `.pkg`** qui correspond **à votre architecture**  
+  une fois le download terminé, vous double-cliquez sur le `.pkg`  
+  il n'y a pas de choix particulier où on pourrait se tromper..
+  </Admonition>
 </Admonition>
 
 
 <Admonition title="Linux" collapsible>
 
-<Admonition title="download" collapsible>
+  <Admonition title="download" collapsible>
 
-commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
+  commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
-![](/media/fig-miniconda-download.png)
+  ![](/media/fig-miniconda-download.png)
 
-vous téléchargez **la première entrée pour Linux** (`Linux 64-bit`), les autres correspondent à des architectures différentes de celles qu'on trouve usuellement sur un ordi personnel
-</Admonition>
+  vous téléchargez **la première entrée pour Linux** (`Linux 64-bit`), les autres correspondent à des architectures différentes de celles qu'on trouve usuellement sur un ordi personnel
+  </Admonition>
 
 
-<Admonition title="pour lancer l'installation" collapsible>
-```bash
-# just in case: go back to homedir
-cd 
-# go to the folder where download has ended up
-cd Downloads
-# making sure: list files that start with 'Miniconda3'
-ls Miniconda3*
-# very probably you will see only one file here, named 
-# Miniconda3-latest-Linux-x86_64.sh
-# (unless of course you download several times..)
-#
-# in any case, the way to actually run such a program is
+  <Admonition title="pour lancer l'installation" collapsible>
+  ```bash
+  # just in case: go back to homedir
+  cd 
+  # go to the folder where download has ended up
+  cd Downloads
+  # making sure: list files that start with 'Miniconda3'
+  ls Miniconda3*
+  # very probably you will see only one file here, named 
+  # Miniconda3-latest-Linux-x86_64.sh
+  # (unless of course you download several times..)
+  #
+  # in any case, the way to actually run such a program is
 
-bash Miniconda3-latest-Linux-x86_64.sh
-```
+  bash Miniconda3-latest-Linux-x86_64.sh
+  ```
 
-les questions/réponses se passent dans le terminal, voici quelques trucs utiles:
+  les questions/réponses se passent dans le terminal, voici quelques trucs utiles:
 
-- pendant le *License Agreement* on vous faire lire les conditions de la licence
-  - pour avancer dans le document tapez *Espace*
-  - pour abréger, tapez simplement *`q`*
-- à la question  
-  `Do you wish to update your shell profile to automatically initialize conda?`  
-  on recommande de répondre `yes`
-</Admonition>
+  - pendant le *License Agreement* on vous faire lire les conditions de la licence
+    - pour avancer dans le document tapez *Espace*
+    - pour abréger, tapez simplement *`q`*
+  - à la question  
+    `Do you wish to update your shell profile to automatically initialize conda?`  
+    on recommande de répondre `yes`
+  </Admonition>
 </Admonition>
 
 
 <Admonition title="on vérifie conda et python" collapsible type="caution">
 et on fait quoi pour vérifier ? on crée un **nouveau terminal** !
 
-<Admonition title="le prompt (rappel)" collapsible>
+  <Admonition title="le prompt (rappel)" collapsible>
 
-* le signe `$ ` **ne fait pas partie** de ce que vous devez taper
-* c'est juste une indication pour dire que la commande s'adresse au terminal  
-  c-à-d à nouveau : GitBash sur Windows, Terminal sur MacOS,  
-  et n'importe quel terminal bash sur linux
+  * le signe `$ ` **ne fait pas partie** de ce que vous devez taper
+  * c'est juste une indication pour dire que la commande s'adresse au terminal  
+    c-à-d à nouveau : GitBash sur Windows, Terminal sur MacOS,  
+    et n'importe quel terminal bash sur linux
 
-ça signifie que vous **n'avez pas à taper le `$`**, ce
-sera déjà affiché lorsque vous taperez vos commandes
-</Admonition>
+  ça signifie que vous **n'avez pas à taper le `$`**, ce
+  sera déjà affiché lorsque vous taperez vos commandes
+  </Admonition>
 
-<Admonition title="la commande conda" collapsible type="caution">
+  <Admonition title="la commande conda" collapsible type="caution">
 
-```bash
-:class: important dropdown
+  ```bash
+  :class: important dropdown
 
-vous créez un nouveau terminal, et vous tapez
-```bash
-$ conda --version
-conda 23.5.2
-```
-qui **ne doit pas** vous répondre `command not found`  
-si c'est le cas, c'est que vous n'avez pas bien coché la case  
-*Add Miniconda3 to my PATH environment variable*  
-[dans ce cas voyez ici](#label-troubleshoot-python-command-not-found)
-</Admonition>
+  vous créez un nouveau terminal, et vous tapez
+  ```bash
+  $ conda --version
+  conda 23.5.2
+  ```
+  qui **ne doit pas** vous répondre `command not found`  
+  si c'est le cas, c'est que vous n'avez pas bien coché la case  
+  *Add Miniconda3 to my PATH environment variable*  
+  [dans ce cas voyez ici](#label-troubleshoot-python-command-not-found)
+  </Admonition>
 
-<Admonition title="version de python" type="caution" collapsible>
+  <Admonition title="version de python" type="caution" collapsible>
 
-pour savoir la version de python installée
-```bash
-$ python --version
-Python 3.11.4
-```
-vous **devez** avoir une version 3.x, et **surtout pas** 2.7
-</Admonition>
+  pour savoir la version de python installée
+  ```bash
+  $ python --version
+  Python 3.11.4
+  ```
+  vous **devez** avoir une version 3.x, et **surtout pas** 2.7
+  </Admonition>
 
-<Admonition title="quel python ?" type="caution" collapsible>
+  <Admonition title="quel python ?" type="caution" collapsible>
 
-pour savoir quelle version de `python` est utilisée, vous pouvez taper
-```console
-$ type python
-```
-qui doit vous répondre quelque chose comme
-```console
-# sur Windows avec notre setup vous devez avoir
-python is /c/miniconda/python
-# sur Mac par exemple je vois 
-python is /c/Users/JeanMineur/miniconda3/python
-```
-</Admonition>
+  pour savoir quelle version de `python` est utilisée, vous pouvez taper
+  ```console
+  $ type python
+  ```
+  qui doit vous répondre quelque chose comme
+  ```console
+  # sur Windows avec notre setup vous devez avoir
+  python is /c/miniconda/python
+  # sur Mac par exemple je vois 
+  python is /c/Users/JeanMineur/miniconda3/python
+  ```
+  </Admonition>
 </Admonition>
 
 ### exercice: vs-code + python
@@ -555,7 +551,6 @@ python is /c/Users/JeanMineur/miniconda3/python
   ```bash
   code .
   ```
-
 * copiez-collez le code ci-dessous dans un fichier qui s'appelle `fact.py`
   ```python
   # une fonction qui calcule factorielle
@@ -567,15 +562,14 @@ python is /c/Users/JeanMineur/miniconda3/python
   for n in [4, 25]:
       print(f"fact({n}) = {fact(n)}")
   ```
-  ```{admonition} quelques trucs
-  :class: tip dropdown
+  <Admonition title="quelques trucs" collapsible>
 
   utilisez les raccourcis clavier (remplacer Control par Command sur Mac)
 
   * Control-N: créer un nouveau fichier
   * Control-S: sauver le nouveau fichier, et lui donner un nom si nécessaire
   * Control-A Control-C Control-V: comme d'habitude pour le copier-coller
-  ```
+  </Admonition>
 
 * exécutez le programme
   ```bash
@@ -628,46 +622,46 @@ simplement en double-cliquant dessus
 
 <Admonition title="on vérifie numpy et jupyter" type="caution" collapsible>
 
-<Admonition title="version de ipython et numpy" collapsible type="caution">
+  <Admonition title="version de ipython et numpy" collapsible type="caution">
 
-lancez `ipython` et tentez de reproduire cette session  
-vous ne devez pas avoir d'erreur du type `ModuleNotFound`
+  lancez `ipython` et tentez de reproduire cette session  
+  vous ne devez pas avoir d'erreur du type `ModuleNotFound`
 
-```bash
-$ ipython
-Python 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:10:28) [Clang 15.0.7 ]
-Type 'copyright', 'credits' or 'license' for more information
-IPython 8.14.0 -- An enhanced Interactive Python. Type '?' for help.
+  ```bash
+  $ ipython
+  Python 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:10:28) [Clang 15.0.7 ]
+  Type 'copyright', 'credits' or 'license' for more information
+  IPython 8.14.0 -- An enhanced Interactive Python. Type '?' for help.
 
-In [1]: import numpy
+  In [1]: import numpy
 
-In [2]: print(numpy.__version__)
-1.26.0
+  In [2]: print(numpy.__version__)
+  1.26.0
 
-In [3]: exit()
-$
-```
-</Admonition>
+  In [3]: exit()
+  $
+  ```
+  </Admonition>
 
-<Admonition title="version de jupyter" collapsible type="caution">
+  <Admonition title="version de jupyter" collapsible type="caution">
 
-de retour dans le terminal, affichez les versions des composants de Jupyter avec cette commande  
-vous ne devez pas avoir de `command not found`
-```bash
-jupyter --version
-```
-</Admonition>
+  de retour dans le terminal, affichez les versions des composants de Jupyter avec cette commande  
+  vous ne devez pas avoir de `command not found`
+  ```bash
+  jupyter --version
+  ```
+  </Admonition>
 
-<Admonition title="les modules installés avec pip (optionnel)" collapsible type="caution">
+  <Admonition title="les modules installés avec pip (optionnel)" collapsible type="caution">
 
-```bash
-# pour obtenir la liste des librairies installées
-# (possiblement beaucoup)
-pip list
-# pour voir la version installée de UNE librairie, par exemple
-pip show numpy
-```
-</Admonition>
+  ```bash
+  # pour obtenir la liste des librairies installées
+  # (possiblement beaucoup)
+  pip list
+  # pour voir la version installée de UNE librairie, par exemple
+  pip show numpy
+  ```
+  </Admonition>
 
 </Admonition>
 
@@ -711,13 +705,13 @@ vous pourrez juste ré-exécuter `my_function()` et vous utiliserez la dernière
 version du module (pour autant que le nouveau module ne contienne pas d'erreur qui
 empêche son chargement, bien entendu)
 
-<Admonition title="comment ça marche ?" collapsible>
+  <Admonition title="comment ça marche ?" collapsible>
 
-pour les curieux qui veulent comprendre, le script est en bash:
+  pour les curieux qui veulent comprendre, le script est en bash:
 
-* il commence par s'assurer que le dossier `.ipython/profile_default` existe sous le home directory
-* puis dans ce dossier, il ajoute dans le fichier `ipython_config.py` les 3 lignes de configuration qui précèdent le `EOF` (c'est du Python bien sûr); le fichier est créé s'il n'existait pas
-</Admonition>
+  * il commence par s'assurer que le dossier `.ipython/profile_default` existe sous le home directory
+  * puis dans ce dossier, il ajoute dans le fichier `ipython_config.py` les 3 lignes de configuration qui précèdent le `EOF` (c'est du Python bien sûr); le fichier est créé s'il n'existait pas
+  </Admonition>
 </Admonition>
 
 ### exercice: mon premier notebook (optionnel)
@@ -800,21 +794,21 @@ git config --global alias.s "status"
 
 dans notre cas nous allons utiliser **vs-code**, et c'est le propos du réglage qui s'appelle `core.editor`
 
-<Admonition title="terminer la rédaction du message" type="danger">
+  <Admonition title="terminer la rédaction du message" type="danger">
 
-lorsque vous faites par exemple `git commit` et que l'éditeur se lance pour vous laisser entrer le message, le programme dans le terminal **attend que vous ayez fini** d'entrer le message  
-et pour lui dire "ça y est, j'ai fini, on peut finaliser le commit", ce que vous devez faire, c'est:
-- il ne suffit pas de simplement sauver le fichier (c'est nécessaire bien sûr, mais pas suffisant)  
-- ce qui compte c'est que vous ***fermiez l'onglet qui édite le message***;
-vous pouvez utiliser par exemple `Control-W` (ou Command-W sur mac); ou encore utiliser la petite croix en x à droite de l'onglet
-- ce n'est **pas la peine** de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
-</Admonition>
+  lorsque vous faites par exemple `git commit` et que l'éditeur se lance pour vous laisser entrer le message, le programme dans le terminal **attend que vous ayez fini** d'entrer le message  
+  et pour lui dire "ça y est, j'ai fini, on peut finaliser le commit", ce que vous devez faire, c'est:
+  - il ne suffit pas de simplement sauver le fichier (c'est nécessaire bien sûr, mais pas suffisant)  
+  - ce qui compte c'est que vous ***fermiez l'onglet qui édite le message***;
+  vous pouvez utiliser par exemple `Control-W` (ou Command-W sur mac); ou encore utiliser la petite croix en x à droite de l'onglet
+  - ce n'est **pas la peine** de terminer toute votre session vs-code (vous pouvez avoir plein d'autres fichiers ouverts à ce moment-là dans vs-code)
+  </Admonition>
 </Admonition>
 
-<Admonition title="command not found ?" collapsible>
+  <Admonition title="command not found ?" collapsible>
 
-pour que ça fonctionne, il faut bien sûr que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, [reportez-vous à la section sur ce problème](#label-troubleshoot-code-command-not-found)
-</Admonition>
+  pour que ça fonctionne, il faut bien sûr que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, [reportez-vous à la section sur ce problème](#label-troubleshoot-code-command-not-found)
+  </Admonition>
 </Admonition>
 
 <Admonition title="on vérifie: mon premier commit (optionnel)" type="caution" collapsible>
@@ -845,12 +839,12 @@ git commit
 
 # à ce stade, vous devez voir une fenêtre s'ouvrir dans vs-code
 # allez-y, tapez un message sur la première ligne
-# (par exemple `mon premier commit`), 
+# (par exemple `mon premier commit`),
 # puis faites `Control-S` suivi de `Control-W`
 # (ou Command-S suivi de Command-W sur mac)
 
-# et là si tout se passe bien: 
-# la fenêtre dans vs-code se ferme, 
+# et là si tout se passe bien:
+# la fenêtre dans vs-code se ferme,
 # et si vous retournez dans le terminal
 # vous voyez que le `git commit` est terminé
 
@@ -877,7 +871,7 @@ pour commencer, créez-vous un compte sur github si ce n'est pas déjà fait
 
 au départ, c'est un système de terminal distant pour pouvoir administrer les serveurs à distance; l'authentification est basée sur le principe d'une paire de clés publique/privée
 
-sans entrer dans les détails, ces deux morceaux sont en gros **deux éléments symétriques** l'un de l'autre dans un très gros groupe fini, et on ne peut pas facilement calculer l'un à partir de l'autre  
+sans entrer dans les détails, ces deux morceaux sont en gros **deux éléments symétriques** l'un de l'autre dans un très gros groupe fini, et on ne peut pas facilement calculer l'un à partir de l'autre
 
 par définition:
 
@@ -899,10 +893,10 @@ ssh-keygen -t rsa
 ```
 
 ce programme va vous poser des questions, à ce stade je vous recommande de toujours **répondre par simplement la touche *Entrée***, pour accepter les défauts et ne pas attacher de mot de passe votre clé privée (ce qui n'est pas une pratique hyper-sûre, mais à ce stade de votre cursus ça parait raisonnable; si vous êtes geek et/ou très soucieux de sécurité, mettez un mot de passe mais soyez prêt à taper votre mot de passe *ad nauseam*, ou à passer du temps à des configurations scabreuses pour ne pas avoir à le faire...)
-<Admonition title="ça ressemble à ceci" collapsible>
-vous n'aurez pas *exactement* les mêmes messages, mais pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
-![](/media/ssh-keygen.png)
-</Admonition>
+  <Admonition title="ça ressemble à ceci" collapsible>
+  vous n'aurez pas *exactement* les mêmes messages, mais pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
+  ![](/media/ssh-keygen.png)
+  </Admonition>
 </Admonition>
 
 <Admonition title="affichage de la clé publique" collapsible>
@@ -920,10 +914,10 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 et vous copiez tout le contenu (en incluant bien tout, même le `ssh-rsa` et tout)
-<Admonition title="ça ressemble à ceci" collapsible>
-de nouveau, pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
-![](/media/ssh-copy-key.png)
-</Admonition>
+  <Admonition title="ça ressemble à ceci" collapsible>
+  de nouveau, pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
+  ![](/media/ssh-copy-key.png)
+  </Admonition>
 </Admonition>
 
 <Admonition title="attachez la clé à votre compte github" collapsible>

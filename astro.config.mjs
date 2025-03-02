@@ -31,6 +31,10 @@ export default defineConfig({
           label: "Outils de développement",
           items: [{ label: "Python", link: "/2-3-python" }],
         },
+        {
+          label: "Compléments",
+          items: [{ label: "Checklist", link: "/3-1-checklist" }],
+        },
       ],
     }),
   ],

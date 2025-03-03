@@ -32,6 +32,7 @@ export default defineConfig({
           label: "Les outils",
           items: [
             { label: "Le terminal", link: "/2-1-terminal-os" },
+            { label: "vs-code & markdown", link: "/2-2-vscode-markdown" },
             { label: "Python", link: "/2-3-python" },
           ],
         },

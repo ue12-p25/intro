@@ -34,6 +34,7 @@ export default defineConfig({
             { label: "Le terminal", link: "/2-1-terminal-os" },
             { label: "vs-code & markdown", link: "/2-2-vscode-markdown" },
             { label: "Python", link: "/2-3-python" },
+            { label: "Jupyter", link: "/2-4-jupyter" },
           ],
         },
         {

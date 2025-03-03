@@ -35,11 +35,16 @@ export default defineConfig({
             { label: "vs-code & markdown", link: "/2-2-vscode-markdown" },
             { label: "Python", link: "/2-3-python" },
             { label: "Jupyter", link: "/2-4-jupyter" },
+            { label: "git(hub)", link: "/2-5-git-optional" },
           ],
         },
         {
           label: "Compléments",
-          items: [{ label: "Checklist", link: "/3-1-checklist" }],
+          items: [
+            { label: "Checklist", link: "/3-1-checklist" },
+            { label: "Troubleshooting", link: "/3-2-troubleshooting" },
+            { label: "Environnements virtuels", link: "/3-3-virtual-envs" },
+          ],
         },
       ],
     }),

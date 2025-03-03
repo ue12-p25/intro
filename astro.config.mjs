@@ -25,12 +25,15 @@ export default defineConfig({
           label: "Installation et configuration",
           items: [
             { label: "Installations", link: "/1-1-installations" },
-            { label: "Cloner le cours", link: "/1-2-clone-and-play" },
+            { label: "Cloner et lire le cours", link: "/1-2-clone-and-play" },
           ],
         },
         {
-          label: "Outils de développement",
-          items: [{ label: "Python", link: "/2-3-python" }],
+          label: "Les outils",
+          items: [
+            { label: "Le terminal", link: "/2-1-terminal-os" },
+            { label: "Python", link: "/2-3-python" },
+          ],
         },
         {
           label: "Compléments",

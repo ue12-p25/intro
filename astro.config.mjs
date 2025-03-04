@@ -22,33 +22,33 @@ export default defineConfig({
         {
           label: "Introduction",
           items: [
-            { label: "<tl;dr>", link: "/0-1-presentation-ue12-ue22" },
-            { label: "Version longue", link: "/0-2-presentation-longue" },
+            { label: "<tl;dr>", slug: "0-1-presentation-ue12-ue22" },
+            { label: "Version longue", slug: "0-2-presentation-longue" },
           ],
         },
         {
           label: "Installation et configuration",
           items: [
-            { label: "Installations", link: "/1-1-installations" },
-            { label: "Cloner et lire le cours", link: "/1-2-clone-and-play" },
+            { label: "Installations", slug: "1-1-installations" },
+            { label: "Cloner et lire le cours", slug: "1-2-clone-and-play" },
           ],
         },
         {
           label: "Les outils",
           items: [
-            { label: "Le terminal", link: "/2-1-terminal-os" },
-            { label: "vs-code & markdown", link: "/2-2-vscode-markdown" },
-            { label: "Python", link: "/2-3-python" },
-            { label: "Jupyter", link: "/2-4-jupyter" },
-            { label: "git(hub)", link: "/2-5-git-optional" },
+            { label: "Le terminal", slug: "2-1-terminal-os" },
+            { label: "vs-code & markdown", slug: "2-2-vscode-markdown" },
+            { label: "Python", slug: "2-3-python" },
+            { label: "Jupyter", slug: "2-4-jupyter" },
+            { label: "git(hub)", slug: "2-5-git-optional" },
           ],
         },
         {
           label: "Compléments",
           items: [
-            { label: "Checklist", link: "/3-1-checklist" },
-            { label: "Troubleshooting", link: "/3-2-troubleshooting" },
-            { label: "Environnements virtuels", link: "/3-3-virtual-envs" },
+            { label: "Checklist", slug: "3-1-checklist" },
+            { label: "Troubleshooting", slug: "3-2-troubleshooting" },
+            { label: "Environnements virtuels", slug: "3-3-virtual-envs" },
           ],
         },
       ],

@@ -1,7 +1,9 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import starlight from "@astrojs/starlight";
+import { defineConfig } from "astro/config"
+import starlight from "@astrojs/starlight"
 import starlightImageZoom from 'starlight-image-zoom'
+import starlightThemeRapide from 'starlight-theme-rapide'
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +14,10 @@ export default defineConfig({
         github: "https://github.com/ue12-p25/intro",
       },
       // for zoomable images
-      plugins: [starlightImageZoom()],
+      plugins: [
+        starlightThemeRapide(),
+        starlightImageZoom(),
+      ],
       sidebar: [
         {
           label: "Introduction",

@@ -8,6 +8,7 @@ import starlightThemeRapide from 'starlight-theme-rapide'
 // https://astro.build/config
 export default defineConfig({
   base: 'intro',
+  site: "https://ue12-p25.github.io",
   integrations: [
     starlight({
       title: "UE12/UE22 - Introduction",

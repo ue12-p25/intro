@@ -9,7 +9,7 @@ import starlightThemeRapide from 'starlight-theme-rapide'
 export default defineConfig({
   integrations: [
     starlight({
-      title: "UE12 - Introduction",
+      title: "UE12/UE22 - Introduction",
       social: {
         github: "https://github.com/ue12-p25/intro",
       },

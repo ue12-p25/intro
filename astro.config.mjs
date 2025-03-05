@@ -13,9 +13,9 @@ export default defineConfig({
       social: {
         github: "https://github.com/ue12-p25/intro",
       },
-      // for zoomable images
       plugins: [
         starlightThemeRapide(),
+        // for zoomable images
         starlightImageZoom(),
       ],
       sidebar: [

@@ -18,6 +18,9 @@ export default defineConfig({
         // for zoomable images
         starlightImageZoom(),
       ],
+      customCss: [
+        "./src/styles/custom.css",
+      ],
       sidebar: [
         {
           label: "Introduction",

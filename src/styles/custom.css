@@ -1,0 +1,9 @@
+:root {
+    --sl-content-width: 50rem;
+    --sl-text-5xl: 3.5rem;
+}
+
+.hero {
+	padding-bottom: 0px;
+    padding-top: 0px;
+}

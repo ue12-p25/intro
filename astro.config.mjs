@@ -12,12 +12,12 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "UE12/UE22 - Introduction",
-      // favicon: "/media/logo-p25-favicon.svg",
-      // logo: {
-      //   light: "/media/logo-p25-favicon.svg",
-      //   dark: "/media/logo-p25-favicon-dark.svg",
-      //   alt: "Logo P25",
-      // },
+      favicon: "media/favicon-p25.svg",
+       logo: {
+        light: "/src/media/logo-p25-light.svg",
+        dark: "/src/media/logo-p25-dark.svg",
+        alt: "MinesParis PSL P25",
+      },
       social: {
         github: "https://github.com/ue12-p25/intro",
       },

@@ -3,6 +3,7 @@ title: L'enseignement de l'informatique en première année
 description: Présentation des modules d'informatique
 ---
 
+import { Steps } from '@astrojs/starlight/components';
 import Admonition from '../../components/Admonition.astro';
 import SidebarToggle from '../../components/SidebarToggle.astro';
 
@@ -47,26 +48,31 @@ un autre rappel important ***votre présence est obligatoire à toutes les séan
 les deux modules:
 
 ----------
+<Steps>
 
 1. un module **python-numérique** comprenant
    * 5 séances sur `numpy` (librairie numérique), `pandas` (traitement de données) et `matplotlib` (visualisation)  
    * 2 séances sur la gestion de version de fichiers avec `git` et `github`  
    * 1 séance de hackathon (coder en équipe)
 
-----------
-
 2. un module d'**apprentissage de la programmation** (**1 langage** au choix parmi 3)
-   * `Python` approfondissements du langage
-   * `C++` découverte d'un langage de haut niveau compilé (et proche de la mémoire)
-   * `Julia` découverte d'un langage de haute performance, spécialisé en calcul scientifique  
+     * `Python` approfondissements du langage
+     * `C++` découverte d'un langage de haut niveau compilé (et proche de la mémoire)
+     * `Julia` découverte d'un langage de haute performance, spécialisé en calcul scientifique  
     *nouveau depuis 2024*
-  * 9 séances (1 langage)
-  * une journée de hackathon (coder en équipe)
+   * 9 séances (1 langage)
+   * une journée de hackathon (coder en équipe)
+
+</Steps>
 
 ### Au second semestre `UE22`
 
-- un module sur le Web et les réseaux
-- un module dédié aux projets informatique
+<Steps>
+
+1. un module sur le Web et les réseaux
+2. un module dédié aux projets informatique
+
+</Steps>
 
 ## Nos objectifs
 
@@ -109,7 +115,7 @@ et non pas compétitifs; vous êtes très à l'aise ? aidez vos camarades, vous 
 <Admonition title="mise à jour" type="caution">
 ces quelques compétences en informatiques sont **incontournables quel que soit votre futur métier**  
 
-→ il vous faudra aussi les tenir à jour
+→ il vous faudra aussi les tenir à jour !
 </Admonition>
 
 ----

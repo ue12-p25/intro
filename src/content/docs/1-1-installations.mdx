@@ -3,6 +3,7 @@ title: Installations
 description: Installation des outils nécessaires pour le cours
 ---
 
+import { Steps } from '@astrojs/starlight/components';
 import Admonition from '../../components/Admonition.astro';
 import SidebarToggle from '../../components/SidebarToggle.astro';
 
@@ -366,21 +367,24 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   en deux étapes, ça se présente comme ceci :
 
+  <Steps>
   1. pour lancer la console `PowerShell`
 
-  ![locating powershell](/media/fig-miniconda-powershell-locate.png)
+     ![locating powershell](/media/fig-miniconda-powershell-locate.png)
 
   2. on va créer maintenant le dossier dans lequel on installera ensuite miniconda,
   et pour cela il y a une seule ligne à taper
 
-  ```console
-  md c:/miniconda
-  ```
+     ```console
+     md c:/miniconda
+     ```
 
-  ![creating miniconda folder](/media/fig-miniconda-powershell-md.png)
+     ![creating miniconda folder](/media/fig-miniconda-powershell-md.png)
 
-  une fois la commande tapée vous pouvez sortir de PowerShell (utiliser la croix en haut à
-  droite par exemple)
+     une fois la commande tapée vous pouvez sortir de PowerShell (utiliser la croix en haut à
+     droite par exemple)
+
+  </Steps>
   </Admonition>
 
 

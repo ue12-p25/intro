@@ -12,20 +12,25 @@ hero:
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 
+{/* not sure how to use this
+import.meta.env.BASE_URL
+whose value should help us not hard-wire the /intro instances below
+*/}
+
 ## Pour bien démarrer les cours d'Informatique
 
 <CardGrid stagger>
 	<Card title="introduction" icon="information">
-		[Un peu de baratin.](/0-1-presentation-ue12-ue22)
+		[Un peu de baratin.](/intro/0-1-presentation-ue12-ue22)
 	</Card>
 	<Card title="les installations" icon="seti:config">
-		[C'est ici que ça se passe.](/1-1-installations)
+		[C'est ici que ça se passe.](/intro/1-1-installations)
 	</Card>
 	<Card title="comment on se sert des outils" icon="seti:python">
-		[C'est bien beau tout ça, mais comment on s'en sert ?](/2-1-terminal-os)
+		[C'est bien beau tout ça, mais comment on s'en sert ?](/intro/2-1-terminal-os)
 	</Card>
 	<Card title="compléments" icon="open-book">
-		[Quelques trucs en plus dans cette partie](/3-1-checklist).
+		[Quelques trucs en plus dans cette partie](/intro/3-1-checklist).
 	</Card>
 </CardGrid>
 

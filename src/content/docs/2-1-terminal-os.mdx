@@ -5,6 +5,7 @@ description: on apprend à se servir du terminal
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+import ImageLoader from '../../components/ImageLoader.astro';
 import Admonition from '../../components/Admonition.astro';
 import SidebarToggle from '../../components/SidebarToggle.astro';
 
@@ -101,7 +102,7 @@ je vous invite à expérimenter tout ceci dans votre propre terminal (et sans ta
 
 <Admonition title="screenshot">
 
-![](/media/fig-bash-relative-paths.png)
+<ImageLoader filename="fig-bash-relative-paths.png" />
 </Admonition>
 
 <Admonition title="à noter sur cet exemple">
@@ -231,7 +232,7 @@ je vous recommande de passer 5 minutes pour ajouter ce dossier dans les **raccou
 de cette façon vous y aurez un accès direct en un clic, comme ceci  
 (ici sur Windows, mais c'est une *feature* disponible sur tous les OS)
 
-![](/media/fig-quick-access-cours-info.png)
+<ImageLoader filename="fig-quick-access-cours-info.png" />
 
 ### ne pas abuser sur la profondeur des arbres  
 
@@ -279,14 +280,14 @@ voici comment on peut changer ce comportement, pour voir **les noms de fichier e
 
 <CardGrid>
   <Card title="par défaut, pas d'extension" icon="">
-  ![](/media/fig-explorer-showext-1.png)
+  <ImageLoader filename="fig-explorer-showext-1.png" />
   </Card>
   <Card title="mais on peut le changer" icon="">
-  ![](/media/fig-explorer-showext-2.png)
+  <ImageLoader filename="fig-explorer-showext-2.png" />
   </Card>
 </CardGrid>
 
-si bien qu'après vous voyez bien ce qu'il faut: ![](/media/fig-explorer-showext-3.png)
+si bien qu'après vous voyez bien ce qu'il faut: <ImageLoader filename="fig-explorer-showext-3.png" />
 
 ## creusons un peu `bash`
 

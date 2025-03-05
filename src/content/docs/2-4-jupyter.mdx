@@ -4,6 +4,7 @@ description: Jupyter et notebooks
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import ImageLoader from '../../components/ImageLoader.astro';
 import Admonition from '../../components/Admonition.astro';
 import SidebarToggle from '../../components/SidebarToggle.astro';
 
@@ -50,10 +51,10 @@ mais ça aura aussi pour effet, bien plus intéressant, d'ouvrir une fenêtre ou
 
 <CardGrid>
   <Card title="le serveur se lance dans le terminal">
-    ![](/media/jlab-001-blob.png)
+    <ImageLoader filename="jlab-001-blob.png" />
   </Card>
   <Card title="mais ça ouvre aussi une page dans votre browser web">
-    ![](/media/jlab-002-welcome.png)
+    <ImageLoader filename="jlab-002-welcome.png" />
   </Card>
 </CardGrid>
 
@@ -90,27 +91,27 @@ car notamment sur Windows, lorsqu'on essaie de terminer "sauvagement" le process
 depuis le navigateur, vous pouvez vous déplacer dans le cours  
 pour commencer allez dans le dossier `demo/notebooks` où vous verrez ceci
 
-![](/media/jlab-003-in-demo.png)
+<ImageLoader filename="jlab-003-in-demo.png" />
 
 ### créer un notebook
 
 créez un nouveau notebook, et appelez-le `foo` (*File* -> *Rename Notebook...*), vous devez voir maintenant ceci
 
-![](/media/jlab-004-new-notebook-foo.png)
+<ImageLoader filename="jlab-004-new-notebook-foo.png" />
 
 ### créer des cellules mixtes
 
 à présent arrangez-vous pour créer une nouvelle cellule, de sorte à avoir une cellule de texte suivie d'une cellule de code, comme ceci
 
-![](/media/jlab-005-mixed-cells.png)
+<ImageLoader filename="jlab-005-mixed-cells.png" />
 
 ### gérer l'affichage
 
 vous pouvez libérer de la place et supprimer le browser de fichiers sur la gauche  
 essayez de cliquer sur les boutons de la barre de gauche pour comprendre la logique  
-remarquez la troisième icône ![](/media/jlab-006-toc-icon.png), qui permet d'afficher la table des matières
+remarquez la troisième icône <ImageLoader filename="jlab-006-toc-icon.png" />, qui permet d'afficher la table des matières
 
-![](/media/jlab-006-more-space.png)
+<ImageLoader filename="jlab-006-more-space.png" />
 
 ### mode édition ou commande
 
@@ -123,11 +124,11 @@ chaque cellule est dans un des deux modes :
 <CardGrid>
   <Card title="en mode 'commande'">
     voici à quoi ressemblent **nos deux cellules en mode 'commande'**
-    ![](/media/jlab-007-command-mode.png)
+    <ImageLoader filename="jlab-007-command-mode.png" />
   </Card>
   <Card title="et en mode 'édition'">
     la différence est un peu subtile
-    ![](/media/jlab-007-edit-mode.png)
+    <ImageLoader filename="jlab-007-edit-mode.png" />
   </Card>
 </CardGrid>
 
@@ -168,14 +169,14 @@ mimée sur celle de vs-code, il y a ici aussi une palette, que l'on invoque avec
 
 c'est extrêmement utile pour trouver des commandes un peu évoluées, qui ne sont pas forcément toutes accessibles au travers d'un bouton dans l'interface
 
-![](/media/jlab-008-palette.png)
+<ImageLoader filename="jlab-008-palette.png" />
 
 ### sélection multiple
 
 * en général on a exactement **une** cellule courante
 * mais avec `Shift-⬆` ou `Shift-⬇` on peut sélectionner plusieurs cellules contigües
 
-![](/media/jlab-009-multiple-selection.png)
+<ImageLoader filename="jlab-009-multiple-selection.png" />
 
 c'est utile pour par exemple les déplacer toutes ensemble
 
@@ -183,7 +184,7 @@ c'est utile pour par exemple les déplacer toutes ensemble
 
 parlant de déplacer les cellules, on peut le faire à la souris comme ceci
 
-![](/media/jlab-010-move-cells.gif)
+<ImageLoader filename="jlab-010-move-cells.gif" />
 
 ## lire le cours localement
 

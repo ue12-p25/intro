@@ -1,0 +1,20 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+interface Props {
+    filename: string
+    alt?: string
+}
+
+const { filename, alt } = Astro.props
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/media/*.{jpeg,jpg,png,gif,svg}')
+// console.log(images)
+const path = images[`/src/media/${filename}`]
+if (!path) {
+    throw new Error(`Image not found: ${filename}`)
+}
+const altText = alt || filename
+---
+
+<Image src={path()} alt={altText} />

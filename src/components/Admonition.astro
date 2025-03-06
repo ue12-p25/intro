@@ -62,10 +62,21 @@ const openProperties = {
 }
 
 <style>
+  /*
+   * the rapide theme has rounded corners for asides (0.5rem)
+   * and a 1px border
+   */
+  aside.starlight-aside {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
   /* Base styles matching Starlight's defaults */
   .admonition {
-    border-radius: 0.5rem;
-    border: 2px solid;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     margin: 1rem 0;
   }
 

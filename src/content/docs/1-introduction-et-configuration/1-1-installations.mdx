@@ -121,7 +121,7 @@ pierre deux coups, et installer à la fois `bash` et `git`
   et entre autres, à la question ***Adjusting your PATH environment*** :  
 choisissez au moins l'option recommandée (#2) - on peut prendre l'option (#3) si on veut importer plus d'outils dans le terminal, mais ce n'est pas strictement nécessaire pour le cours
 
-  <Image src={figSetPathGitForWindows} alt="Configuration du PATH dans Git for Windows" />
+  <Image src={figSetPathGitForWindows} alt="Configuration du PATH dans Git for Windows" loading="lazy" />
   </Admonition>
 
   <Admonition title="machine DSI / pas de droit administrateur ?" type="caution" collapsible>
@@ -384,7 +384,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   <Steps>
   1. pour lancer la console `PowerShell`
 
-     <Image src={figMinicondaPowershellLocate} alt="Localisation de PowerShell" />
+     <Image src={figMinicondaPowershellLocate} alt="Localisation de PowerShell" loading="lazy" />
 
   2. on va créer maintenant le dossier dans lequel on installera ensuite miniconda,
   et pour cela il y a une seule ligne à taper
@@ -393,7 +393,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
      md c:/miniconda
      ```
 
-     <Image src={figMinicondaPowershellMd} alt="Création du dossier miniconda" />
+     <Image src={figMinicondaPowershellMd} alt="Création du dossier miniconda" loading="lazy" />
 
      une fois la commande tapée vous pouvez sortir de PowerShell (utiliser la croix en haut à
      droite par exemple)
@@ -405,7 +405,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   <Admonition title="download" collapsible>
   commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
-  <Image src={figMinicondaDownload} alt="Page de téléchargement de Miniconda" />
+  <Image src={figMinicondaDownload} alt="Page de téléchargement de Miniconda" loading="lazy" />
 
   puisqu'on est sur Windows, on n'a pas le choix, téléchargez le `*.exe`  
   (avant de le lancer, voyez l'étape suivante pour les réponses aux questions...)
@@ -421,19 +421,19 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   * ***Install for:*** (si la question vous est posée)   
     répondez *Just me (recommended)*
 
-    <Image src={figMinicondaJustMe} alt="Installation pour l'utilisateur courant" />
+    <Image src={figMinicondaJustMe} alt="Installation pour l'utilisateur courant" loading="lazy" />
 
   * **le choix du dossier où installer**  
     sur cet écran vous remplacez le chemin qu'on vous propose par défaut, et vous
     choisissez à la place le dossier qu'on a créé dans l'étape précédente, c'est-à-dire
     `c:\miniconda`
 
-    <Image src={figMinicondaSetInstallDir} alt="Choix du dossier d'installation" />
+    <Image src={figMinicondaSetInstallDir} alt="Choix du dossier d'installation" loading="lazy" />
 
   * **advanced options: *add to my PATH environment variable***  
     il est important de **bien cocher la case ci-dessous** (malgré l'avertissement en rouge)
 
-    <Image src={figMinicondaAddPath} alt="Ajout au PATH" />
+    <Image src={figMinicondaAddPath} alt="Ajout au PATH" loading="lazy" />
 
     <Admonition title="pas coché la case ?" collapsible type="danger">
     si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, [voyez cette page](#label-troubleshoot-python-command-not-found)
@@ -448,13 +448,13 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   c'est important que vous sachiez dire si votre Mac a une puce Intel ou M1 (en fait pour l'installation miniconda, M1 ou M2 c'est pareil..)  
   et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* où vous trouver l'information ici
 
-  <Image src={figMacosAbout} alt="À propos de ce Mac" />
+  <Image src={figMacosAbout} alt="À propos de ce Mac" loading="lazy" />
   </Admonition>
 
   <Admonition title="download" collapsible>
   commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
-  <Image src={figMinicondaDownload} alt="Page de téléchargement de Miniconda" />
+  <Image src={figMinicondaDownload} alt="Page de téléchargement de Miniconda" loading="lazy" />
 
   vous téléchargez **la seule entrée de type `.pkg`** qui correspond **à votre architecture**  
   une fois le download terminé, vous double-cliquez sur le `.pkg`  
@@ -469,7 +469,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
-  <Image src={figMinicondaDownload} alt="Page de téléchargement de Miniconda" />
+  <Image src={figMinicondaDownload} alt="Page de téléchargement de Miniconda" loading="lazy" />
 
   vous téléchargez **la première entrée pour Linux** (`Linux 64-bit`), les autres correspondent à des architectures différentes de celles qu'on trouve usuellement sur un ordi personnel
   </Admonition>
@@ -925,7 +925,7 @@ ssh-keygen -t rsa
 ce programme va vous poser des questions, à ce stade je vous recommande de toujours **répondre par simplement la touche *Entrée***, pour accepter les défauts et ne pas attacher de mot de passe votre clé privée (ce qui n'est pas une pratique hyper-sûre, mais à ce stade de votre cursus ça parait raisonnable; si vous êtes geek et/ou très soucieux de sécurité, mettez un mot de passe mais soyez prêt à taper votre mot de passe *ad nauseam*, ou à passer du temps à des configurations scabreuses pour ne pas avoir à le faire...)
   <Admonition title="ça ressemble à ceci" collapsible>
   vous n'aurez pas *exactement* les mêmes messages, mais pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
-  <Image src={sshKeygen} alt="Génération de clé SSH" />
+  <Image src={sshKeygen} alt="Génération de clé SSH" loading="lazy" />
   </Admonition>
 </Admonition>
 
@@ -946,7 +946,7 @@ cat ~/.ssh/id_rsa.pub
 et vous copiez tout le contenu (en incluant bien tout, même le `ssh-rsa` et tout)
   <Admonition title="ça ressemble à ceci" collapsible>
   de nouveau, pour que vous ne soyez pas surpris voici *en gros* à quoi vous attendre comme session
-  <Image src={sshCopyKey} alt="Copie de la clé SSH" />
+  <Image src={sshCopyKey} alt="Copie de la clé SSH" loading="lazy" />
   </Admonition>
 </Admonition>
 
@@ -958,13 +958,13 @@ maintenant vous allez sur github:
 2. qui ouvre un sous-menu dans lequel vous choisissez *Settings*  
 3. dans la partie gauche de la page qui s'ouvre, cliquez 'SSH and GPG Keys'
 
-<Image src={githubProfile1} alt="Accès aux paramètres du profil GitHub" />
+<Image src={githubProfile1} alt="Accès aux paramètres du profil GitHub" loading="lazy" />
 
 et là vous pouvez ajouter votre clé publique SSH:
 
 1. mettez ce que vous voulez comme titre
 2. mais vous collez la clé publique dans la zone qui va bien
 
-<Image src={githubProfile2} alt="Ajout d'une clé SSH à GitHub" />
+<Image src={githubProfile2} alt="Ajout d'une clé SSH à GitHub" loading="lazy" />
 
 </Admonition>

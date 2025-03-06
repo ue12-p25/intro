@@ -3,8 +3,10 @@ title: vs-code & markdown
 description: pour éditer du code et du texte
 ---
 
-import ImageLoader from '../../../components/ImageLoader.astro';
-import Admonition from '../../../components/Admonition.astro';
+import { Image } from 'astro:assets';
+import Admonition from '@components/Admonition.astro';
+
+import figVscodeMarkdown from '@assets/fig-vscode-markdown.png';
 
 ## éditeur de code : micro-démo
 
@@ -79,7 +81,7 @@ montrer des manipulations élémentaires de fenêtres
 
 ### la palette
 
-* de retour dans vs-code, montrer **la palette** :
+* de retour dans vs-code, montrer **la palette** :
   * `⇧ ⌘ P` Shift-Command-P (mac)
   * `⇧ ⌃ P` Shift-Control-P (windows)
 * chercher une commande, par exemple `Format Document`
@@ -131,7 +133,7 @@ est devenu le couteau suisse pour écrire des documents
   * maths
 * toujours dans un **fichier texte** (c'est à dire par exemple, pas comme dans Word)
 
-format **très populaire** en ce moment, supporté e.g. :
+format **très populaire** en ce moment, supporté e.g. :
 
 * dans les notebooks, justement,
 * dans discourse
@@ -146,7 +148,7 @@ directement depuis le navigateur
 > sous vs-code
 
 * créer un fichier `foo.md`
-* remarquer la petite icône <ImageLoader filename="fig-vscode-markdown.png" />
+* remarquer la petite icône <Image src={figVscodeMarkdown} alt="Icône Markdown dans VS Code" />
   * afficher côte à côte le markdown brut et rendu
 * rapide survol
   * sections
@@ -203,7 +205,7 @@ $$
 $$
 ```
 
-se présentera comme ceci :
+se présentera comme ceci :
 
 $$
 \forall x \in \mathbb{R}, \forall \epsilon \in \mathbb{R}^+, \exists\alpha\in\mathbb{R}^+ \\
@@ -270,7 +272,7 @@ $$
 ceux qui veulent creuser peuvent
 
 * s'exercer avec un outil en ligne [https://www.codecogs.com/latex/eqneditor.php](https://www.codecogs.com/latex/eqneditor.php)
-* commencer par cet article 
+* commencer par cet article 
 [https://www.physicsoverflow.org/15329/mathjax-basic-tutorial-and-quick-reference](https://www.physicsoverflow.org/15329/mathjax-basic-tutorial-and-quick-reference)
 
 * approfondir avec celui-ci [https://en.wikibooks.org/wiki/LaTeX/Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics)

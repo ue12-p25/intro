@@ -4,10 +4,11 @@ description: comment se servir des outils, et compétences attendues
 ---
 
 import { YouTube } from 'astro-embed';
+import { Image } from 'astro:assets';
+import Admonition from '@components/Admonition.astro';
+import SidebarToggle from '@components/SidebarToggle.astro';
 
-import ImageLoader from '../../../components/ImageLoader.astro';
-import Admonition from '../../../components/Admonition.astro';
-import SidebarToggle from '../../../components/SidebarToggle.astro';
+import illustrationEarth from '@assets/illustration-earth.svg';
 
 <SidebarToggle />
 
@@ -50,7 +51,7 @@ voici maintenant une liste un peu plus complète des compétences qui sont atten
 
 ### éditeur de code *vs-code*
 
-* après avoir installé l'éditeur vscode, savoir :
+* après avoir installé l'éditeur vscode, savoir :
 * le lancer rapidement dans le dossier principal
   * à partir de l'explorateur de fichiers
   * à partir du terminal
@@ -67,14 +68,14 @@ voici maintenant une liste un peu plus complète des compétences qui sont atten
 * afficher le numéro de version de Python
 * lancer un micro-programme (genre hello-world ou factoriel) depuis le terminal
 * lancer `ipython` pour faire du Python en mode interactif
-* savoir utiliser la complétion (par exemple `import frac` donne `import fractions`)
+* savoir utiliser la complétion (par exemple `import frac` donne `import fractions`)
 * sortir de `ipython`
 * avoir installé `numpy`, `pandas` et `matplotlib`
 * trouver le numéro de version de ces 3 librairies
 
 ### git
 
-* avoir installé `git`; savoir :
+* avoir installé `git`; savoir :
 * cloner un dépôt trouvé sur github
 * [créer un compte sur github](https://github.com/)
 * mettre à jour un dépôt cloné, après que son auteur a publié des modifications
@@ -102,13 +103,13 @@ idéalement à la fin de cette leçon vous devriez être capable
 
 ### Python sous vs-code
 
-sous vs-code, savoir :
+sous vs-code, savoir :
 
 * trouver les erreurs signalées par l'éditeur (les zigouigouis)
 * trouver la raison de l'erreur (passer la souris dessus)
 * ouvrir / fermer la fenêtre de listing du détail des erreurs
 
-notez que cela suppose d'avoir :
+notez que cela suppose d'avoir :
 
 * configuré l'interpréteur Python pour vs-code
 * installé pylint
@@ -139,7 +140,7 @@ suggestions de sujets possibles:
 
 ### exo 2 (plus dirigé)
 
-même consigne, pour le calcul de la visibilité à une altitude donnée :
+même consigne, pour le calcul de la visibilité à une altitude donnée :
 
 vous êtes sur le globe terrestre au point $B$, à une altitude $h$, vous devez
 calculer la distance à laquelle se situe l'horizon (on admet que c'est la mer tout autour
@@ -150,9 +151,9 @@ c'est-à-dire que vous devez calculer, à partir de $h$, la distance AB
 et réciproquement, étant donné AB, vous devez calculer à quelle hauteur il faut se hisser
 pour apercevoir un objet à cette distance
 
-<ImageLoader filename="illustration-earth.svg" />
+<Image src={illustrationEarth} alt="Illustration du problème de visibilité sur Terre" />
 
-applications :
+applications :
 
 * je suis en mer à 50 nautiques ($\alpha$ = 50') de la Corse, à quelle altitude sont les
   montagnes qui m'apparaissent au niveau de l'horizon ?

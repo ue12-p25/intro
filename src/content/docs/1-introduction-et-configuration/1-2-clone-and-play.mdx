@@ -3,9 +3,12 @@ title: Cloner et lire le cours
 description: Comment récupérer et utiliser le contenu du cours
 ---
 
-import ImageLoader from '../../../components/ImageLoader.astro';
-import Admonition from '../../../components/Admonition.astro';
-import SidebarToggle from '../../../components/SidebarToggle.astro';
+import { Image } from 'astro:assets';
+import Admonition from '@components/Admonition.astro';
+import SidebarToggle from '@components/SidebarToggle.astro';
+
+import githubOrga from '@assets/github-orga.png';
+import githubChooseSsh from '@assets/github-choose-ssh.png';
 
 <SidebarToggle />
 
@@ -30,12 +33,12 @@ https://github.com/ue12-p25/
 
 Allez éventuellement à l'onglet *Repositories*, cliquez sur le cours `intro`
 
-<ImageLoader filename="github-orga.png" />
+<Image src={githubOrga} alt="Organisation GitHub du cours" />
 </Admonition>
 
 Dans cette page, on va aller copier l'URL du cours; pour cela suivez les instructions ci-dessous.
 
-<ImageLoader filename="github-choose-ssh.png" />
+<Image src={githubChooseSsh} alt="Choix de l'URL SSH pour cloner" />
 
 une fois que vous aurez cliqué sur l'icône "copier-coller" (étape 3),  
 vous aurez copié **dans votre presse-papier la chaine `git@github.com:ue12-p25/intro.git`**  
@@ -90,7 +93,7 @@ si vous n'arrivez pas à cloner le repo, il y a pas mal de documentation sur git
 
 <Admonition title="on vérifie le clone" type="caution" collapsible>
 
-pour vérifier que tout s'est bien passé :
+pour vérifier que tout s'est bien passé :
 
 ```bash
 # aller dans le nouveau dossier clone

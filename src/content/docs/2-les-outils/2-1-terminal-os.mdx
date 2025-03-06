@@ -4,10 +4,15 @@ description: on apprend à se servir du terminal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import Admonition from '@components/Admonition.astro';
+import SidebarToggle from '@components/SidebarToggle.astro';
 
-import ImageLoader from '../../../components/ImageLoader.astro';
-import Admonition from '../../../components/Admonition.astro';
-import SidebarToggle from '../../../components/SidebarToggle.astro';
+import figBashRelativePaths from '@assets/fig-bash-relative-paths.png';
+import figQuickAccessCoursInfo from '@assets/fig-quick-access-cours-info.png';
+import figExplorerShowext1 from '@assets/fig-explorer-showext-1.png';
+import figExplorerShowext2 from '@assets/fig-explorer-showext-2.png';
+import figExplorerShowext3 from '@assets/fig-explorer-showext-3.png';
 
 <SidebarToggle />
 
@@ -102,7 +107,7 @@ je vous invite à expérimenter tout ceci dans votre propre terminal (et sans ta
 
 <Admonition title="screenshot">
 
-<ImageLoader filename="fig-bash-relative-paths.png" />
+<Image src={figBashRelativePaths} alt="Exemple de navigation dans les dossiers avec le terminal" />
 </Admonition>
 
 <Admonition title="à noter sur cet exemple">
@@ -195,7 +200,7 @@ un peu en vrac, quelques conseils généraux pour bien utiliser votre ordi
 
 ce qu'on appelle **complétion**, c'est la capacité d'un outil à vous aider à taper votre code, en complétant **la phrase que vous avez commencée**
 
-exemple :
+exemple :
 
 * vous lancez un terminal, et si nécessaire vous allez dans votre home-directory
 * à cet endroit il y a en principe un dossier qui s'appelle `cours-info`  
@@ -232,12 +237,12 @@ je vous recommande de passer 5 minutes pour ajouter ce dossier dans les **raccou
 de cette façon vous y aurez un accès direct en un clic, comme ceci  
 (ici sur Windows, mais c'est une *feature* disponible sur tous les OS)
 
-<ImageLoader filename="fig-quick-access-cours-info.png" />
+<Image src={figQuickAccessCoursInfo} alt="Raccourci vers le dossier cours-info dans l'explorateur Windows" />
 
 ### ne pas abuser sur la profondeur des arbres  
 
 vous pouvez bien sûr décider de mettre le `cours-info` où vous voulez dans votre ordi, mais 
-dans tous les cas, évitez de couper les cheveux en 4 en créant plein de sous-répertoires, genre :
+dans tous les cas, évitez de couper les cheveux en 4 en créant plein de sous-répertoires, genre :
 
 ~~`/c/Users/Jean\ Mineur/Desktop/mines/première-année/info/ue12/cours-info`~~
 
@@ -280,14 +285,14 @@ voici comment on peut changer ce comportement, pour voir **les noms de fichier e
 
 <CardGrid>
   <Card title="par défaut, pas d'extension" icon="">
-  <ImageLoader filename="fig-explorer-showext-1.png" />
+  <Image src={figExplorerShowext1} alt="Explorateur Windows sans affichage des extensions" />
   </Card>
   <Card title="mais on peut le changer" icon="">
-  <ImageLoader filename="fig-explorer-showext-2.png" />
+  <Image src={figExplorerShowext2} alt="Configuration de l'affichage des extensions dans l'explorateur Windows" />
   </Card>
 </CardGrid>
 
-si bien qu'après vous voyez bien ce qu'il faut: <ImageLoader filename="fig-explorer-showext-3.png" />
+si bien qu'après vous voyez bien ce qu'il faut: <Image src={figExplorerShowext3} alt="Explorateur Windows avec affichage des extensions" />
 
 ## creusons un peu `bash`
 

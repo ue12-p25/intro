@@ -4,9 +4,22 @@ description: Jupyter et notebooks
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
-import ImageLoader from '../../../components/ImageLoader.astro';
-import Admonition from '../../../components/Admonition.astro';
-import SidebarToggle from '../../../components/SidebarToggle.astro';
+import { Image } from 'astro:assets';
+import Admonition from '@components/Admonition.astro';
+import SidebarToggle from '@components/SidebarToggle.astro';
+
+import jlab001Blob from '@assets/jlab-001-blob.png';
+import jlab002Welcome from '@assets/jlab-002-welcome.png';
+import jlab003InDemo from '@assets/jlab-003-in-demo.png';
+import jlab004NewNotebookFoo from '@assets/jlab-004-new-notebook-foo.png';
+import jlab005MixedCells from '@assets/jlab-005-mixed-cells.png';
+import jlab006TocIcon from '@assets/jlab-006-toc-icon.png';
+import jlab006MoreSpace from '@assets/jlab-006-more-space.png';
+import jlab007CommandMode from '@assets/jlab-007-command-mode.png';
+import jlab007EditMode from '@assets/jlab-007-edit-mode.png';
+import jlab008Palette from '@assets/jlab-008-palette.png';
+import jlab009MultipleSelection from '@assets/jlab-009-multiple-selection.png';
+import jlab010MoveCells from '@assets/jlab-010-move-cells.gif';
 
 <SidebarToggle />
 
@@ -51,10 +64,10 @@ mais ça aura aussi pour effet, bien plus intéressant, d'ouvrir une fenêtre ou
 
 <CardGrid>
   <Card title="le serveur se lance dans le terminal">
-    <ImageLoader filename="jlab-001-blob.png" />
+    <Image src={jlab001Blob} alt="Terminal montrant le lancement du serveur Jupyter" />
   </Card>
   <Card title="mais ça ouvre aussi une page dans votre browser web">
-    <ImageLoader filename="jlab-002-welcome.png" />
+    <Image src={jlab002Welcome} alt="Page d'accueil de JupyterLab dans le navigateur" />
   </Card>
 </CardGrid>
 
@@ -91,44 +104,44 @@ car notamment sur Windows, lorsqu'on essaie de terminer "sauvagement" le process
 depuis le navigateur, vous pouvez vous déplacer dans le cours  
 pour commencer allez dans le dossier `demo/notebooks` où vous verrez ceci
 
-<ImageLoader filename="jlab-003-in-demo.png" />
+<Image src={jlab003InDemo} alt="Explorateur de fichiers dans JupyterLab" />
 
 ### créer un notebook
 
 créez un nouveau notebook, et appelez-le `foo` (*File* -> *Rename Notebook...*), vous devez voir maintenant ceci
 
-<ImageLoader filename="jlab-004-new-notebook-foo.png" />
+<Image src={jlab004NewNotebookFoo} alt="Nouveau notebook nommé 'foo'" />
 
 ### créer des cellules mixtes
 
 à présent arrangez-vous pour créer une nouvelle cellule, de sorte à avoir une cellule de texte suivie d'une cellule de code, comme ceci
 
-<ImageLoader filename="jlab-005-mixed-cells.png" />
+<Image src={jlab005MixedCells} alt="Notebook avec cellules mixtes (texte et code)" />
 
 ### gérer l'affichage
 
 vous pouvez libérer de la place et supprimer le browser de fichiers sur la gauche  
 essayez de cliquer sur les boutons de la barre de gauche pour comprendre la logique  
-remarquez la troisième icône <ImageLoader filename="jlab-006-toc-icon.png" />, qui permet d'afficher la table des matières
+remarquez la troisième icône <Image src={jlab006TocIcon} alt="Icône de table des matières" />, qui permet d'afficher la table des matières
 
-<ImageLoader filename="jlab-006-more-space.png" />
+<Image src={jlab006MoreSpace} alt="Interface JupyterLab avec plus d'espace" />
 
 ### mode édition ou commande
 
-chaque cellule est dans un des deux modes :
+chaque cellule est dans un des deux modes :
 
-* édition : pour changer le contenu d'une cellule (le texte que vous tapez va directement dans la cellule)
-* commande : cette fois quand vous tapez un caractère il est interprété comme une commande
-* pour sortir du mode édition : tapez `Escape` ou encore `Control-M`
+* édition : pour changer le contenu d'une cellule (le texte que vous tapez va directement dans la cellule)
+* commande : cette fois quand vous tapez un caractère il est interprété comme une commande
+* pour sortir du mode édition : tapez `Escape` ou encore `Control-M`
 
 <CardGrid>
   <Card title="en mode 'commande'">
     voici à quoi ressemblent **nos deux cellules en mode 'commande'**
-    <ImageLoader filename="jlab-007-command-mode.png" />
+    <Image src={jlab007CommandMode} alt="Cellules en mode commande" />
   </Card>
   <Card title="et en mode 'édition'">
     la différence est un peu subtile
-    <ImageLoader filename="jlab-007-edit-mode.png" />
+    <Image src={jlab007EditMode} alt="Cellules en mode édition" />
   </Card>
 </CardGrid>
 
@@ -136,7 +149,7 @@ chaque cellule est dans un des deux modes :
 
 autant prendre rapidement l'habitude d'utiliser les raccourcis clavier - ça va tellement plus vite !
 
-parmi les plus fréquemment utilisés, il y a :
+parmi les plus fréquemment utilisés, il y a :
 
 * `Shift-Entrée`: pour évaluer la cellule courante et passer à la suivante
 * `⌥-Entrée`: pour évaluer la cellule et en insérer une dessous
@@ -169,14 +182,14 @@ mimée sur celle de vs-code, il y a ici aussi une palette, que l'on invoque avec
 
 c'est extrêmement utile pour trouver des commandes un peu évoluées, qui ne sont pas forcément toutes accessibles au travers d'un bouton dans l'interface
 
-<ImageLoader filename="jlab-008-palette.png" />
+<Image src={jlab008Palette} alt="Palette de commandes dans JupyterLab" />
 
 ### sélection multiple
 
 * en général on a exactement **une** cellule courante
 * mais avec `Shift-⬆` ou `Shift-⬇` on peut sélectionner plusieurs cellules contigües
 
-<ImageLoader filename="jlab-009-multiple-selection.png" />
+<Image src={jlab009MultipleSelection} alt="Sélection multiple de cellules" />
 
 c'est utile pour par exemple les déplacer toutes ensemble
 
@@ -184,7 +197,7 @@ c'est utile pour par exemple les déplacer toutes ensemble
 
 parlant de déplacer les cellules, on peut le faire à la souris comme ceci
 
-<ImageLoader filename="jlab-010-move-cells.gif" />
+<Image src={jlab010MoveCells} alt="Animation montrant comment déplacer des cellules" />
 
 ## lire le cours localement
 

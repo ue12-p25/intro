@@ -10,7 +10,7 @@ const ICON_NAME_BY_TYPE: Record<AdmonitionType, StarlightIcon> = {
   note: 'information',
   tip: 'rocket',
   caution: 'warning',
-  danger: 'warning',
+  danger: 'error',
 } as const
 
 interface Props {
@@ -47,7 +47,7 @@ const openProperties = {
   ) : (
     <aside aria-label="Note" class=`starlight-aside starlight-aside--${type}`>
       <p class="starlight-aside__title" aria-hidden="true">
-          <Icon name="warning" size="24px" />
+          <Icon name={ICON_NAME_BY_TYPE[type]} size="24px" />
         {resolvedTitle}
       </p>
       <div class="starlight-aside__content">

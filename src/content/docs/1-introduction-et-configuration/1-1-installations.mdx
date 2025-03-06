@@ -20,6 +20,10 @@ import sshKeygen from './assets/ssh-keygen.png';
 import sshCopyKey from './assets/ssh-copy-key.png';
 import githubProfile1 from './assets/github-profile-1.png';
 import githubProfile2 from './assets/github-profile-2.png';
+import jlabConfigDefer1 from './assets/jlab-config-defer-1.png';
+import jlabConfigDefer2 from './assets/jlab-config-defer-2.png';
+
+
 
 <SidebarToggle />
 
@@ -738,11 +742,11 @@ lorsque vous essayez de remonter dans le document, procédez à la manipe suivan
 <Steps>
 
 1. <Admonition title="Ouvrez l'éditeur de *Settings*" collapsible>
-   <ImageLoader filename="jlab-config-defer-1.png" />
+   <Image src={jlabConfigDefer1} alt="JupyterLab Settings" loading="lazy" />
    </Admonition>
 2. <Admonition title="Choisissez le mode `defer`" collapsible>
    cherchez le mot `windowing` pour trouver la bonne rubrique dans les *Settings*
-    <ImageLoader filename="jlab-config-defer-2.png" />
+   <Image src={jlabConfigDefer2} alt="JupyterLab Settings" loading="lazy" />
     </Admonition>
 </Steps>
 

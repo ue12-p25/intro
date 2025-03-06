@@ -42,33 +42,33 @@ export default defineConfig({
         {
           label: "Introduction",
           items: [
-            { label: "<tl;dr>", slug: "0-1-presentation-ue12-ue22" },
-            { label: "Version longue", slug: "0-2-presentation-longue" },
+            { label: "<tl;dr>", slug: "0-introduction/0-1-presentation-ue12-ue22" },
+            { label: "Version longue", slug: "0-introduction/0-2-presentation-longue" },
           ],
         },
         {
           label: "Installation et configuration",
           items: [
-            { label: "Installations", slug: "1-1-installations" },
-            { label: "Cloner et lire le cours", slug: "1-2-clone-and-play" },
+            { label: "Installations", slug: "1-introduction-et-configuration/1-1-installations" },
+            { label: "Cloner et lire le cours", slug: "1-introduction-et-configuration/1-2-clone-and-play" },
           ],
         },
         {
           label: "Les outils",
           items: [
-            { label: "Le terminal", slug: "2-1-terminal-os" },
-            { label: "vs-code & markdown", slug: "2-2-vscode-markdown" },
-            { label: "Python", slug: "2-3-python" },
-            { label: "Jupyter", slug: "2-4-jupyter" },
-            { label: "git(hub)", slug: "2-5-git-optional" },
+            { label: "Le terminal", slug: "2-les-outils/2-1-terminal-os" },
+            { label: "vs-code & markdown", slug: "2-les-outils/2-2-vscode-markdown" },
+            { label: "Python", slug: "2-les-outils/2-3-python" },
+            { label: "Jupyter", slug: "2-les-outils/2-4-jupyter" },
+            { label: "git(hub)", slug: "2-les-outils/2-5-git-optional" },
           ],
         },
         {
           label: "Compléments",
           items: [
-            { label: "Checklist", slug: "3-1-checklist" },
-            { label: "Troubleshooting", slug: "3-2-troubleshooting" },
-            { label: "Environnements virtuels", slug: "3-3-virtual-envs" },
+            { label: "Checklist", slug: "3-complements/3-1-checklist" },
+            { label: "Troubleshooting", slug: "3-complements/3-2-troubleshooting" },
+            { label: "Environnements virtuels", slug: "3-complements/3-3-virtual-envs" },
           ],
         },
       ],

@@ -1,7 +1,6 @@
 ---
 import { Icon } from '@astrojs/starlight/components';
 import type { StarlightIcon } from '@astrojs/starlight/types';
-import { undefined } from 'astro:schema';
 
 // les types d'admonitions disponibles
 type AdmonitionType = "note" | "tip" | "caution" | "danger";
@@ -23,7 +22,7 @@ interface Props {
   icon?: string;
 }
 
-const { type = "note", collapsible = false, title, open = false, icon = undefined } = Astro.props;
+const { type = "note", collapsible = false, title, open = false, icon = null } = Astro.props;
 const resolvedTitle = title ?? type.charAt(0).toUpperCase() + type.slice(1);
 const iconName = icon || ICON_NAME_BY_TYPE[type];
 

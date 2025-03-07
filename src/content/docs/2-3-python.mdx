@@ -3,60 +3,77 @@ title: Python
 description: Introduction à Python et ses outils
 ---
 
+import { Steps, Card, CardGrid } from '@astrojs/starlight/components';
+
 import Admonition from '../../components/Admonition.astro';
 import SidebarToggle from '../../components/SidebarToggle.astro';
+import ImageLoader from '../../components/ImageLoader.astro';
 
 <SidebarToggle />
 
+## rappels
 
-## Rappels
-
-En guise de rappel, pour utiliser Python vous pouvez :
+en guise de rappel, pour utiliser python vous pouvez:
 
 <Admonition type="tip" title="Différentes façons d'utiliser Python">
-- Soit lancer un programme depuis le terminal avec :
+
+- soit lancer un programme depuis le terminal avec :
   ```bash
   $ python moncode.py
   ```
-- Soit écrire / utiliser un notebook interactivement avec :
+- soit écrire / utiliser un notebook interactivement avec :
   ```bash
   $ jupyter lab
   ```
-- Soit pour un usage interactif et volatil (sans sauver votre travail) depuis le terminal :
+- soit pour un usage interactif et volatil (sans sauver votre travail) depuis le terminal :
   ```bash
   $ ipython
   ```
+
 </Admonition>
 
-## La complétion
+## la complétion
 
-On a déjà parlé de la complétion avec le terminal, c'est disponible également avec Python.
+on a déjà parlé de la complétion avec le terminal, c'est disponible également avec Python; par exemple
 
-<Admonition type="note" title="Exemple de complétion">
-1. On lance `ipython`
-2. On tape le début d'une commande, par exemple `import frac`
-3. Appuyez sur la touche Tab pour voir les suggestions de complétion
+<Steps>
 
-Dans cet exemple, IPython se rend compte que le seul mot qui fait du sens dans ce contexte et qui commence par `frac` est `fractions`, du coup il remplit la commande automatiquement.
-</Admonition>
+1. on lance `ipython`
+2. on tape le début d'une commande, par exemple `import frac`
+3. on appuie sur la touche Tab pour voir les suggestions de complétion
 
-<Admonition type="tip" title="Conseil">
-La complétion est un outil **indispensable** pour ne pas perdre un temps précieux.
+</Steps>
+
+dans cet exemple, IPython se rend compte que le seul mot qui fait du sens dans ce contexte et qui commence par `frac` est `fractions`, du coup il remplit la commande automatiquement.
+
+
+<Admonition type="tip" title="conseil">
+
+la complétion est un outil **indispensable** pour ne pas perdre un temps précieux.
 Apprenez à la maîtriser !
+
 </Admonition>
 
-## *RTFEM* (Read The Full Error Message)
+## *RTFEM*
 
 <Admonition type="note" title="Les erreurs font partie du processus">
-Il est normal de faire des erreurs quand on code, tout le monde en fait !
 
-On verra un peu plus loin comment les détecter le plus tôt possible (grâce à des extensions dans un éditeur de code), mais dans les cas où ça se produit quand même, la première chose à faire est bien entendu de **lire le message d'erreur**.
+il est normal de faire des erreurs quand on code, tout le monde en fait !
 
-Le langage Python s'efforce de vous donner des indications plutôt claires dans ces cas-là.
+on verra un peu plus loin comment les détecter le plus tôt possible (grâce à des
+extensions dans un éditeur de code)  
+mais les cas où ça se produit quand même, la première chose à faire est bien
+entendu de **lire le message d'erreur**
+
+le langage Python s'efforce de vous donner des indications plutôt claires dans
+ces cas-là
+
 </Admonition>
 
-<Admonition type="warning" title="Exemple d'erreur">
-Voici par exemple un fichier très proche de `fact.py` qu'on vient de faire tourner, mais avec une petite erreur de syntaxe intentionnelle :
+<Admonition type="warning" title="Exemple d'erreur"> 
+
+voici par exemple un fichier très proche de `fact.py` qu'on vient de faire
+tourner, mais avec une petite erreur de syntaxe intentionnelle :
 
 ```python
 def factorielle(n)
@@ -68,96 +85,122 @@ def factorielle(n)
 print(factorielle(10))
 ```
 
-Si on essaie de l'exécuter, Python nous signalera une erreur de syntaxe (il manque le `:` après la définition de la fonction).
+Si on essaie de l'exécuter, Python nous signalera une erreur de syntaxe  
+je vous demande en exercice de trouver l'erreur en question
+
 </Admonition>
 
-<Admonition type="tip" title="Conseil de débogage">
-En pratique, il arrive qu'on se trouve face à des erreurs plus difficiles à diagnostiquer, mais dans tous les cas **commencez par lire attentivement le message d'erreur** (*RTFEM*).
+<Admonition title="En conclusion: commencez toujours par lire le message d'erreur !">
 
-Ça va de soi mais ça va mieux en le disant, et nous aurons sûrement l'occasion de le rappeler pendant les cours de langage !
+en pratique, il arrive qu'on se trouve face à des erreurs plus difficiles à diagnostiquer,
+mais dans tous les cas **commencez par *RTFEM***  
+ça va de soi mais ça va mieux en le disant, je suis certain qu'on aura l'occasion de le
+rappeler pendant les cours de langage :)
+
 </Admonition>
 
-## Python et VS Code
+## Python et vs-code
 
-### Les indicateurs d'erreur
+maintenant qu'on a installé Python, on peut retourner dans vs-code pour voir à quoi
+ressemble l'extension Python (vérifiez que vous l'avez bien installée)
 
-<Admonition type="note" title="Détection automatique des erreurs">
-L'extension Python de VS Code vous permet de voir les erreurs dans votre code **en permanence** (à chaque sauvegarde). Ces erreurs sont détectées par `pylint`.
+###  les zigouigouis
+
+pour commencer, l'extension Python vous permet de voir les erreurs dans votre code  
+l'extension Python de vs-code va afficher **en permanence**  (à chaque sauvegarde) les soucis détectés par `pylint`
+
+
+<Admonition title="c'est quoi pylint ?">
+
+`pylint` est un outil pour trouver les erreurs dans le code Python  
+il détecte beaucoup d'erreurs (erreurs de syntaxe, variables mal orthographiées, etc..)  
+si `pylint` n'est pas installé, vs-code va automatiquement vous proposer de le faire (choisissez alors de préférence l'option *install with pip*)
+
 </Admonition>
 
-<Admonition type="tip" title="Qu'est-ce que pylint ?">
-`pylint` est un outil pour trouver les erreurs dans le code Python :
-- Il détecte beaucoup d'erreurs (erreurs de syntaxe, variables mal orthographiées, etc.)
-- Si `pylint` n'est pas installé, VS Code va automatiquement vous proposer de le faire (choisissez alors de préférence l'option *install with pip*)
+### voir les erreurs
+
+grâce à cette *feature* vous pouvez voir les erreurs **avant de lancer** votre
+programme; apprenez à les voir et à les corriger **avant même** d'essayer de
+faire tourner votre code, cela vous fera gagner beaucoup de temps !
+
+voici par exemple comment se manifeste, dans *vs-code*, le fichier
+`fact-broken.py` de tout à l'heure:  
+en regardant bien, vous voyez apparaître un *zigouigoui* comme ceci <ImageLoader
+filename="fig-vscode-zigouigoui.png" /> (en général c'est plus visible qu'ici,
+mais avec l'habitude vous détecterez cela tout de suite !)
+
+<CardGrid>
+  <Card title="que faire avec les zigouigouis">
+    <ImageLoader filename="fig-vscode-errors-1.png" alt="ouvrir l'onglet *PROBLEMS*" />
+  </Card>
+  <Card title="ouvrir l'onglet *PROBLEMS*">
+    <ImageLoader filename="fig-vscode-errors-2.png" alt="ouvrir l'onglet *PROBLEMS*" />
+  </Card>
+</CardGrid>
+
+<Admonition title="valeur indicative seulement" type="caution">
+
+**attention** il faut toutefois toujours garder à l'esprit que cette phase de détection préliminaire des
+erreurs de programmation n'a **qu'une valeur indicative**
+
+`pylint` fait tous ses efforts, **mais** :
+
+* ce n'est pas parce qu'un programme n'a pas de zigouigoui qu'il va tourner à coup sûr
+* et réciproquement, il y a des programmes qui tournent alors qu'ils ont exhibé des erreurs
+
+donc il faut garder votre cerveau en marche, et **ne pas se fier aveuglément** à cette information
+
 </Admonition>
 
-### Voir les erreurs
+### terminal intégré
 
-<Admonition type="tip" title="Détection précoce des erreurs">
-Grâce à cette fonctionnalité, vous pouvez voir les erreurs **avant de lancer** votre programme. 
-Apprenez à les voir et à les corriger **avant même** d'essayer de faire tourner votre code, cela vous fera gagner beaucoup de temps !
+depuis vs-code, on peut exécuter du Python sans avoir à recourir au terminal (ou disons plutôt, il y a un terminal intégré dans vs-code, ce qui évite de basculer entre les applications); vous utilisez cette *feature* lorsque vous cliquez sur la flêche ici
 
-Par exemple, dans le fichier `fact-broken.py` de tout à l'heure, VS Code affiche un indicateur d'erreur (un "zigouigoui") à côté de la ligne problématique.
+<ImageLoader filename="fig-vscode-run-python.png" alt="lancer un fichier Python" />
+
+<Admonition title="mise en garde" type="caution">
+
+toutefois, on vous **met en garde**, car c'est d'une utilisation parfois (souvent) confusante ! 
+aussi **si vous rencontrez des soucis** avec ce mode d'utilisation, préférez revenir à un mode bien contrôlé, qui consiste à basculer dans le "vrai" terminal, de façon à bien comprendre ce qu'on fait...
+
 </Admonition>
 
-<Admonition type="note" title="Comment utiliser les indicateurs d'erreur">
-1. Repérez les indicateurs d'erreur dans la marge de l'éditeur
-2. Survolez l'indicateur avec la souris pour voir une description de l'erreur
-3. Ouvrez l'onglet *PROBLEMS* pour voir la liste complète des erreurs détectées
-</Admonition>
+cette précaution étant prise, voici quelques mots sur cette feature:
 
-<Admonition type="warning" title="Attention">
-Les indications de `pylint` sont à prendre comme des suggestions. Même si elles sont souvent pertinentes, il peut arriver que certaines "erreurs" signalées ne soient pas réellement problématiques dans votre contexte spécifique.
+<Admonition title="réglages importants">
 
-Il faut toujours garder à l'esprit que cette phase de détection préliminaire des erreurs n'a **qu'une valeur indicative** :
+à ce stade, il y a deux réglages importants pour utiliser le terminal intégré:
 
-* Ce n'est pas parce qu'un programme n'a pas d'indicateur d'erreur qu'il va tourner à coup sûr
-* Et réciproquement, il y a des programmes qui tournent alors qu'ils ont exhibé des erreurs
+* (Windows surtout): choisissez le terminal `bash`, et pour cela [utilisez la palette](#label-vscode-palette) et tapez  
+  *`Terminal: Select Default Profile`*
 
-Donc il faut garder votre cerveau en marche, et **ne pas se fier aveuglément** à cette information !
-</Admonition>
+* assurez-vous aussi de bien utiliser le Python installé avec miniconda, et pour cela:
 
-### Terminal intégré
+<ImageLoader filename="fig-vscode-select-python.png" />
 
-<Admonition type="note" title="Exécuter Python dans VS Code">
-VS Code permet d'exécuter du Python sans avoir à recourir au terminal externe (il y a un terminal intégré dans VS Code, ce qui évite de basculer entre les applications). 
+<Admonition title="environnements virtuels">
 
-Vous pouvez lancer votre code Python en cliquant sur la flèche de lecture (▶️) dans le coin supérieur droit de l'éditeur.
-</Admonition>
+lorsqu'on fait du développement professionnel, on a habituellement une installation Python
+par projet; une partie optionnelle avancée est consacrée à ce sujet un peu plus loin
 
-<Admonition type="warning" title="Mise en garde">
-Toutefois, on vous **met en garde**, car l'utilisation du terminal intégré peut parfois être source de confusion ! 
-
-Si vous rencontrez des soucis avec ce mode d'utilisation, préférez revenir à un mode bien contrôlé, qui consiste à basculer dans le "vrai" terminal, de façon à bien comprendre ce qu'on fait...
-</Admonition>
-
-<Admonition type="tip" title="Réglages importants" collapsible>
-À ce stade, il y a deux réglages importants pour utiliser le terminal intégré :
-
-1. (Windows surtout) : choisissez le terminal `bash`
-   - Utilisez la palette de commandes (Ctrl/Cmd + Shift + P)
-   - Tapez `Terminal: Select Default Profile`
-   - Sélectionnez `bash`
-
-2. Assurez-vous de bien utiliser le Python installé avec miniconda :
-   - Cliquez sur la version de Python affichée dans la barre d'état (en bas)
-   - Sélectionnez l'interpréteur Python de votre environnement conda
-
-<Admonition type="note" title="Environnements virtuels">
-Lorsqu'on fait du développement professionnel, on a habituellement une installation Python par projet. Une partie optionnelle avancée sera consacrée à ce sujet un peu plus loin.
 </Admonition>
 </Admonition>
 
-<Admonition type="note" title="Pour essayer">
-Pour tester le terminal intégré :
+pour essayer, une fois ceci mis en place:
 
-1. Mettez-vous dans le dossier `demo` du cours
-2. Lancez `code .`
-3. Ouvrez le fichier `fact.py`
-4. Si vous n'avez pas encore installé l'extension 'Python' de VS Code, acceptez de l'installer
-5. Cliquez sur la flèche (ou utilisez la palette : `Python: Run Python File in Terminal`)
-6. VS Code ouvre un terminal et exécute le fichier `fact.py`
-7. Vous pouvez utiliser ```Control ` ``` (ou la palette : `View: Toggle Terminal`) pour afficher/fermer le terminal intégré
+<Steps>
 
-**Rappel** : en cas de soucis avec cette fonctionnalité, repassez au terminal "normal" ! 😉
-</Admonition> 
+1. mettez-vous dans le dossier `demo` du cours
+1. lancez `code .`
+1. ouvrez le fichier `fact.py`
+1. si vous n'avez pas encore installé l'extension 'Python' de *vs-code*, il va vous proposer de le faire
+   n'hésitez pas à accepter (cela peut prendre un peu de temps...)
+1. cliquez sur la flêche (équivalent palette: `Python: Run Python File in Terminal`)  
+   -> vs-code ouvre un terminal et exécute le fichier `fact.py`
+1. vous pouvez utiliser ```Control ` ``` (équivalent palette: `View: Toggle Terminal`)
+   pour afficher/fermer le terminal intégré
+
+</Steps>
+
+mais à nouveau: **en cas de soucis avec cette *feature*, repassez au terminal "normal"** :)

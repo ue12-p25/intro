@@ -3,6 +3,7 @@ title: Installations
 description: Installation des outils nécessaires pour le cours
 ---
 
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import ImageLoader from '@components/ImageLoader.astro';
 import Admonition from '@components/Admonition.astro';
@@ -92,9 +93,11 @@ il est trés important **de copier l'application dans le dossier `Applications`*
 
 ## installation de git (et bash sur Windows)
 
-suivez les instructions pour votre OS
 
-<Admonition title="Windows" collapsible>
+<Admonition title="on installe" collapsible>
+suivez les instructions pour votre OS
+<Tabs>
+<TabItem label="Windows">
 
 en installant ***git for windows*** on va faire d'une
 pierre deux coups, et installer à la fois `bash` et `git`
@@ -139,9 +142,8 @@ choisissez au moins l'option recommandée (#2) - on peut prendre l'option (#3) s
     .\Git-2.34.1-64-bit.exe /DIR="C:\Users\Jean Mineur\GitForWindows"
     ```
   </Admonition>
-</Admonition>
-
-<Admonition title="Mac et Linux" collapsible>
+</TabItem>
+<TabItem label="Mac & Linux">
 
 sur ces deux OS, `bash` est **préinstallé**  
 pour installer `git`, utilisez ce lien: [Démarrage rapide de git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
@@ -155,6 +157,8 @@ pour installer `git`, utilisez ce lien: [Démarrage rapide de git](https://git-s
   xcode-select --install
   ```
   </Admonition>
+</TabItem>
+</Tabs>
 </Admonition>
 
 <Admonition title="on vérifie bash (tous OS)" type="caution" collapsible>
@@ -354,7 +358,9 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
 * ça va sans dire, mais ne prenez **surtout pas Python 2.7** !
 
-<Admonition title="Windows" collapsible>
+<Admonition title="on installe">
+<Tabs>
+<TabItem label="Windows">
 
   <Admonition title="préparation" collapsible>
   une première précaution, spécifique à Windows:  
@@ -426,9 +432,9 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
     si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, [voyez cette page](#label-troubleshoot-python-command-not-found)
     </Admonition>
   </Admonition>
-</Admonition>
+</TabItem>
 
-<Admonition title="MacOS" collapsible>
+<TabItem label="MacOS">
 
   <Admonition title="préparation: Intel ou M1 ?" collapsible>
 
@@ -438,7 +444,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   <ImageLoader filename="fig-macos-about.png" />
   </Admonition>
 
-  <Admonition title="download" collapsible>
+  <Admonition title="download et install" collapsible>
   commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
   <ImageLoader filename="fig-miniconda-download.png" />
@@ -447,10 +453,9 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   une fois le download terminé, vous double-cliquez sur le `.pkg`  
   il n'y a pas de choix particulier où on pourrait se tromper..
   </Admonition>
-</Admonition>
+</TabItem>
 
-
-<Admonition title="Linux" collapsible>
+<TabItem label="Linux">
 
   <Admonition title="download" collapsible>
 
@@ -488,8 +493,9 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
     `Do you wish to update your shell profile to automatically initialize conda?`  
     on recommande de répondre `yes`
   </Admonition>
+</TabItem>
+</Tabs>
 </Admonition>
-
 
 <Admonition title="on vérifie conda et python" collapsible type="caution">
 et on fait quoi pour vérifier ? on crée un **nouveau terminal** !

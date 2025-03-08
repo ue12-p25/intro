@@ -3,7 +3,7 @@ title: Python
 description: Introduction à Python et ses outils
 ---
 
-import { Steps, Card, CardGrid } from '@astrojs/starlight/components';
+import { Steps, Card, CardGrid, Code } from '@astrojs/starlight/components';
 
 import Admonition from '@components/Admonition.astro';
 import SidebarToggle from '@components/SidebarToggle.astro';
@@ -75,15 +75,9 @@ ces cas-là
 voici par exemple un fichier très proche de `fact.py` qu'on vient de faire
 tourner, mais avec une petite erreur de syntaxe intentionnelle :
 
-```python
-def factorielle(n)
-    if n <= 1:
-        return 1
-    else:
-        return n * factorielle(n-1)
+import factBroken from '/demo/python/fact-broken.py?raw';
 
-print(factorielle(10))
-```
+<Code code={factBroken} title="fact-broken.py" lang="python" />
 
 Si on essaie de l'exécuter, Python nous signalera une erreur de syntaxe  
 je vous demande en exercice de trouver l'erreur en question

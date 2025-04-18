@@ -8,6 +8,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 import ImageLoader from '@components/ImageLoader.astro';
 import Admonition from '@components/Admonition.astro';
 import SidebarToggle from '@components/SidebarToggle.astro';
+import LabeledAnchor from '@components/LabeledAnchor.astro';
 
 <SidebarToggle />
 
@@ -140,7 +141,8 @@ et cela bien sûr parce qu'on est dans le dossier `/c/ bla bla /python`
   parce qu'il se comprend **par rapport** au dossier courant
 </Admonition>
 
-{/* (label-bash-dot)= */}
+<LabeledAnchor label="label-bash-dot" />
+
 ### `.` et `..`
 
 on nous donne deux outils pour naviguer dans l'arbre des fichiers; par convention:
@@ -226,7 +228,7 @@ sur Windows par exemple si vous regardez son contenu
 c'est pourquoi on vous a demandé de créer un dossier `cours-info` dans lequel on va ranger vos différents dossiers:  
 chaque cours dans un repo, puis au besoin un dossier par exercice ou TP ou hackaton, etc...
 
-{/* (label-raccourci-cours-info)= */}
+<LabeledAnchor label="label-raccourci-cours-info" />
 
 je vous recommande de passer 5 minutes pour ajouter ce dossier dans les **raccourcis de votre explorateur de fichiers**  
 de cette façon vous y aurez un accès direct en un clic, comme ceci  

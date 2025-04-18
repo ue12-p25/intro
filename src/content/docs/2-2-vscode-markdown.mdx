@@ -5,6 +5,7 @@ description: pour éditer du code et du texte
 
 import ImageLoader from '@components/ImageLoader.astro';
 import Admonition from '@components/Admonition.astro';
+import LabeledAnchor from '@components/LabeledAnchor.astro';
 
 ## éditeur de code : micro-démo
 
@@ -15,7 +16,7 @@ import Admonition from '@components/Admonition.astro';
   code .
   ```
 
-{/* (label-vscode-parameter)= */}
+<LabeledAnchor label="label-vscode-parameter" />
 
 <Admonition title="un exemple de passage de paramètre" type="tip">
 
@@ -75,7 +76,7 @@ montrer des manipulations élémentaires de fenêtres
   * `Python` (de Microsoft)
   * `Jupyter` (de Microsoft aussi)
 
-{/* (label-vscode-palette)= */}
+<LabeledAnchor label="label-vscode-palette" />
 
 ### la palette
 

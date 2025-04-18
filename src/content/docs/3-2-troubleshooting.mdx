@@ -5,6 +5,7 @@ description: les erreurs les plus fréquentes lors des installations
 
 import Admonition from '@components/Admonition.astro';
 import SidebarToggle from '@components/SidebarToggle.astro';
+import LabeledAnchor from '@components/LabeledAnchor.astro';
 
 <SidebarToggle />
 
@@ -16,7 +17,7 @@ dans tous les cas, essayez d'abord de trouver par vous même avant de demander d
 
 ## `code: command not found`
 
-{/* (label-troubleshoot-code-command-not-found)= */}
+<LabeledAnchor label="label-troubleshoot-code-command-not-found" />
 
 <Admonition title="symptôme" type="danger">
 
@@ -36,7 +37,7 @@ comme toujours, relancez un nouveau terminal et réessayez
 
 ## `python: command not found`
 
-{/* (label-troubleshoot-python-command-not-found)= */}
+<LabeledAnchor label="label-troubleshoot-python-command-not-found" />
 
 <Admonition title="symptôme" type="danger">
 

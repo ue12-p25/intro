@@ -8,6 +8,7 @@ import { Steps, Card, CardGrid, Code } from '@astrojs/starlight/components';
 import Admonition from '@components/Admonition.astro';
 import SidebarToggle from '@components/SidebarToggle.astro';
 import ImageLoader from '@components/ImageLoader.astro';
+import LabeledLink from '@components/LabeledLink.astro';
 
 <SidebarToggle />
 
@@ -166,7 +167,7 @@ cette précaution étant prise, voici quelques mots sur cette feature:
 
 à ce stade, il y a deux réglages importants pour utiliser le terminal intégré:
 
-* (Windows surtout): choisissez le terminal `bash`, et pour cela [utilisez la palette](#label-vscode-palette) et tapez  
+* (Windows surtout): choisissez le terminal `bash`, et pour cela <LabeledLink label="label-vscode-palette" file="">utilisez la palette</LabeledLink> et tapez  
   *`Terminal: Select Default Profile`*
 
 * assurez-vous aussi de bien utiliser le Python installé avec miniconda, et pour cela:

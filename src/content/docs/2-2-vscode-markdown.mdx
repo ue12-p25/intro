@@ -6,6 +6,7 @@ description: pour éditer du code et du texte
 import ImageLoader from '@components/ImageLoader.astro';
 import Admonition from '@components/Admonition.astro';
 import LabeledAnchor from '@components/LabeledAnchor.astro';
+import LabeledLink from '@components/LabeledLink.astro';
 
 ## éditeur de code : micro-démo
 
@@ -25,7 +26,7 @@ import LabeledAnchor from '@components/LabeledAnchor.astro';
 * quand on fait une recherche, on recherche dans (tous les fichiers de) tout le dossier
 * et aussi, d'une fois sur l'autre, on retrouve les fichiers qu'on avait consultés la fois précédente,
 
-c'est pourquoi on lance *vs-code* en tapant `code .` - et ici le `.` signifie "le dossier courant", [comme on l'a vu ici, rappelez-vous](#label-bash-dot)
+c'est pourquoi on lance *vs-code* en tapant `code .` - et ici le `.` signifie "le dossier courant", <LabeledLink label="label-bash-dot" file="">comme on l'a vu ici, rappelez-vous</LabeledLink>
 </Admonition>
 
 <Admonition title="keyboard modifiers (Control et Command)" type="note" extras="admonition-small">
@@ -116,7 +117,7 @@ pour cela, vous pouvez soit
 </Admonition>
 
 <Admonition title="vs-code et git" type="tip">
-enfin pour bien utiliser vs-code avec git, [voyez cette section dans le notebook d'installation](#label-vscode-for-commit)
+enfin pour bien utiliser vs-code avec git, <LabeledLink label="label-vscode-for-commit" file="">voyez cette section dans le notebook d'installation</LabeledLink>
 </Admonition>
 
 ## markdown

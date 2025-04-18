@@ -8,6 +8,7 @@ import { Steps } from '@astrojs/starlight/components';
 import ImageLoader from '@components/ImageLoader.astro';
 import Admonition from '@components/Admonition.astro';
 import SidebarToggle from '@components/SidebarToggle.astro';
+import LabeledLink from '@components/LabeledLink.astro';
 import LabeledAnchor from '@components/LabeledAnchor.astro';
 
 <SidebarToggle />
@@ -260,7 +261,8 @@ c'est dans ce dossier qu'on vous invite à travailler pendant les cours d'info
   à ce stade vous devez constater que le dossier est bien créé, et qu'il est bien vide
   <Admonition title="on peut créer un raccourci">
   c'est important car c'est une opération qu'on **va faire très souvent**;  
-  on verra plus tard comment créer, dans l'explorateur de fichiers, [un raccourci pour pouvoir faire ça rapidement](#label-raccourci-cours-info)...
+  on verra plus tard comment créer, dans l'explorateur de fichiers, <LabeledLink 
+  label="label-raccourci-cours-info" file="2-1-terminal-os">un raccourci pour pouvoir faire ça rapidement</LabeledLink>...
   </Admonition>
 </Admonition>
 
@@ -322,7 +324,8 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   code: command not found
   ```
   d'abord vérifiez que vous avez bien essayé **dans un nouveau terminal** (oui je sais...)  
-  et sinon [allez voir cette page](#label-troubleshoot-code-command-not-found)
+  et sinon <LabeledLink label="label-troubleshoot-code-command-not-found" file="3-2-troubleshooting">
+  allez voir cette page </LabeledLink>
   </Admonition>
 
 * lorsque ça fonctionne, prenez l'habitude de lancer vs-code comme ceci
@@ -433,7 +436,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
     <ImageLoader filename="fig-miniconda-add-path.png" />
 
     <Admonition title="pas coché la case ?" collapsible type="danger">
-    si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, [voyez cette page](#label-troubleshoot-python-command-not-found)
+    si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, <LabeledLink label="label-troubleshoot-python-command-not-found" file="">voyez cette page</LabeledLink>
     </Admonition>
   </Admonition>
 </TabItem>
@@ -531,7 +534,7 @@ et on fait quoi pour vérifier ? on crée un **nouveau terminal** !
   qui **ne doit pas** vous répondre `command not found`  
   si c'est le cas, c'est que vous n'avez pas bien coché la case  
   *Add Miniconda3 to my PATH environment variable*  
-  [dans ce cas voyez ici](#label-troubleshoot-python-command-not-found)
+  <LabeledLink label="label-troubleshoot-python-command-not-found" file="">dans ce cas voyez ici</LabeledLink>
   </Admonition>
 
   <Admonition title="version de python" type="caution" collapsible>
@@ -842,7 +845,7 @@ dans notre cas nous allons utiliser **vs-code**, et c'est le propos du réglage 
 
   <Admonition title="command not found ?" collapsible>
 
-  pour que ça fonctionne, il faut bien sûr que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, [reportez-vous à la section sur ce problème](#label-troubleshoot-code-command-not-found)
+  pour que ça fonctionne, il faut bien sûr que la commande `code` soit bien installée dans votre PATH; si vous avez `command not found` quand vous tapez `code .` dans votre terminal, <LabeledLink label="label-troubleshoot-code-command-not-found" file="">reportez-vous à la section sur ce problème</LabeledLink>
   </Admonition>
 </Admonition>
 

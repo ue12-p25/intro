@@ -282,7 +282,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   <Admonition title="Windows: toutes les option par défaut" collapsible>
 
-  pour les Windows, à nouveau vous prenez **toutes les options par défaut**
+  pour les Windows, à nouveau vous prenez **toutes les options par défaut** (enfin, il faut accepter la licence, évidemment)
   </Admonition>
 
   <Admonition title="pour les Mac: déplacez dans le dossier Applications !" collapsible>
@@ -299,7 +299,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 </Admonition>
 
 
-<Admonition title="on vérifie l'installation de vs-code" collapsible>
+<Admonition title="on vérifie l'installation de vs-code" type="caution" collapsible>
 
 * si le programme d'installation a lancé un exemplaire de vs-code, fermez-le
 
@@ -396,12 +396,15 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
 
   <Admonition title="download" collapsible>
-  commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
+    Vous copiez les commandes suivantes dans un terminal bash
 
-  <ImageLoader filename="fig-miniconda-download.png" />
+    ```bash
+    curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o miniconda-installer.exe
+    ./miniconda-installer.exe
+    ```
 
-  puisqu'on est sur Windows, on n'a pas le choix, téléchargez le `*.exe`  
-  (avant de le lancer, voyez l'étape suivante pour les réponses aux questions...)
+    et voyez l'étape suivante pour les réponses aux questions
+
   </Admonition>
 
 
@@ -438,20 +441,38 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   <Admonition title="préparation: Intel ou M1 ?" collapsible>
 
-  c'est important que vous sachiez dire si votre Mac a une puce Intel ou M1 (en fait pour l'installation miniconda, M1 ou M2 c'est pareil..)  
+  c'est important que vous sachiez dire si votre Mac a une puce Intel ou M1 (en fait pour l'installation miniconda, M1 ou M2 etc.. c'est pareil..)  
   et pour ça c'est simple, il suffit d'ouvrir le menu Pomme -> *About This Mac* où vous trouver l'information ici
 
   <ImageLoader filename="fig-macos-about.png" />
   </Admonition>
 
   <Admonition title="download et install" collapsible>
-  commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
 
-  <ImageLoader filename="fig-miniconda-download.png" />
+  toujours dans le terminal bien entendu, en fonction de votre puce:
 
-  vous téléchargez **la seule entrée de type `.pkg`** qui correspond **à votre architecture**  
-  une fois le download terminé, vous double-cliquez sur le `.pkg`  
-  il n'y a pas de choix particulier où on pourrait se tromper..
+  <Tabs>
+
+  <TabItem label="Intel" icon="apple">
+
+  ```bash
+  curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg -o miniconda-installer-intel.pkg
+  open miniconda-installer-intel.pkg
+  ```
+  </TabItem>
+
+  <TabItem label="M1/M2" icon="apple">
+  ```bash
+  curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.pkg -o miniconda-installer-arm.pkg
+  open miniconda-installer-arm.pkg
+  ```
+  </TabItem>
+
+  </Tabs>
+
+  cela va lancer le programme d'installation;
+  prenez les options par défaut, il n'y a pas de choix particulier où on pourrait se tromper..
+
   </Admonition>
 </TabItem>
 
@@ -459,30 +480,15 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   <Admonition title="download" collapsible>
 
-  commencez par [aller sur la page de downloads de miniconda](https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links) qui ressemble à ceci
+  ```bash
+  curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o miniconda-installer.sh
+  bash miniconda-installer.sh
+  ```
 
-  <ImageLoader filename="fig-miniconda-download.png" />
-
-  vous téléchargez **la première entrée pour Linux** (`Linux 64-bit`), les autres correspondent à des architectures différentes de celles qu'on trouve usuellement sur un ordi personnel
   </Admonition>
 
 
-  <Admonition title="pour lancer l'installation" collapsible>
-  ```bash
-  # just in case: go back to homedir
-  cd 
-  # go to the folder where download has ended up
-  cd Downloads
-  # making sure: list files that start with 'Miniconda3'
-  ls Miniconda3*
-  # very probably you will see only one file here, named 
-  # Miniconda3-latest-Linux-x86_64.sh
-  # (unless of course you download several times..)
-  #
-  # in any case, the way to actually run such a program is
-
-  bash Miniconda3-latest-Linux-x86_64.sh
-  ```
+  <Admonition title="les réponses aux questions" collapsible>
 
   les questions/réponses se passent dans le terminal, voici quelques trucs utiles:
 
@@ -493,8 +499,11 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
     `Do you wish to update your shell profile to automatically initialize conda?`  
     on recommande de répondre `yes`
   </Admonition>
+
 </TabItem>
+
 </Tabs>
+
 </Admonition>
 
 <Admonition title="on vérifie conda et python" collapsible type="caution">

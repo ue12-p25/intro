@@ -34,6 +34,14 @@ Il nous faut a minima :
 * enfin on configurera également un compte sur **github.com**
   * pour le stockage de vos travaux - typiquement les rendus
   * et le travail en groupe - typiquement les hackatons et projets
+
+  <Admonition type="note" title="et pour le S2" collapsible> 
+
+  pour le S2, on vous demandera aussi d'installer Node.js; ce n'est pas
+  nécessaire de l'installer tout de suite mais [les instructions sont ici](#label-install-nodejs)
+
+   </Admonition>
+
 </Admonition>
 
 ## quelques conseils
@@ -974,5 +982,44 @@ et là vous pouvez ajouter votre clé publique SSH:
 2. mais vous collez la clé publique dans la zone qui va bien
 
 <ImageLoader filename="github-profile-2.png" />
+
+</Admonition>
+
+<LabeledAnchor label="label-install-nodejs" />
+
+## 🔧 Node.js (S2 uniquement)
+
+<Admonition title="Environnement actif" type="danger">
+
+attention, comme toujours avec conda, l'installation n'a d'effet que **dans l'environnement virtuel actif**  
+pensez à faire d'abord le `conda activate` qui va bien, si nécessaire...
+
+</Admonition>
+
+<Admonition title="installation de Node.js" collapsible>
+
+```bash
+# ceci fonctionne mais me donne une version trop ancienne
+# conda install nodejs
+conda install conda-forge::nodejs=22
+```
+
+<Admonition title="pourquoi Node.js ?" type="tip" collapsible>
+
+Node.js est un environnement d'exécution JavaScript, qui permet de faire tourner du code JavaScript en dehors du navigateur. On va l'utiliser massivement dans le cours de S2, notamment pour faire tourner des serveurs web
+
+cette installation vous donne accès aux commandes `node` et `npm`
+
+</Admonition>
+
+</Admonition>
+
+<Admonition title="vérification de l'installation" type="caution" collapsible>
+
+```bash
+node --version
+# et aussi
+npm --version
+```
 
 </Admonition>

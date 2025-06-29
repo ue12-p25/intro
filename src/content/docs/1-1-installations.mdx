@@ -230,52 +230,56 @@ vous devez pouvoir
 depuis le terminal on peut tout faire ! et pour commencer on va apprendre à **créer un dossier**  
 c'est dans ce dossier qu'on vous invite à travailler pendant les cours d'info
 
-* créez un nouveau terminal
-* **regardez dans quel dossier vous êtes**
-  ```bash
-  pwd
-  ```
-  qui devrait vous répondre quelque chose qui contient votre nom, comme genre
-  ```bash
-  # sur Windows
-  /c/Users/Jean Mineur
-  # sur Mac / Linux
-  /Users/jeanmineur
-  ```
-  c'est votre *home directory*, en abrégé *homedir*
+<Steps>
+1. créez un nouveau terminal
+1. **regardez dans quel dossier vous êtes**
+   ```bash
+   pwd
+   ```
+   qui devrait vous répondre quelque chose qui contient votre nom, comme genre
+   ```bash
+   # sur Windows
+   /c/Users/Jean Mineur
+   # sur Mac / Linux
+   /Users/jeanmineur
+   ```
+   c'est votre *home directory*, en abrégé *homedir*
 
-  <Admonition title="ce n'est pas le cas ?" type="danger" collapsible>
+   <Admonition title="ce n'est pas le cas ?" type="danger" collapsible>
     si vous vous trouvez dans un dossier bizarre (qui n'a rien à voir avec votre nom),
-    prenez l'habitude de commencer par forcer le terminal à aller dans votre homedir en faisant simplement
+    <LabeledLink label="label-troubleshoot-terminal-starts-in-weird-folder" file="3-2-troubleshooting">
+    voyez cette page pour arranger le problème
+    </LabeledLink>
+    si le problème persiste, prenez l'habitude de commencer par forcer le
+    terminal à aller dans votre homedir en faisant simplement
     ```bash
     cd
     ```
+
     <Admonition title="à quoi ça sert ?" collapsible>
 
     sur mac et linux, c'est optionnel car le terminal démarre justement dans le homedir; c'est le comportement normal  
     par contre selon les configurations sur Windows, il peut être nécessaire de prendre l'habitude de faire un premier `cd` au début du terminal, car dans certains setups le terminal démarre dans un autre dossier...
     </Admonition>
-  </Admonition>
-
-* **créez un dossier `cours-info`**
-  ```bash
-  mkdir cours-info
-  ```
-  bien entendu il ne faut le faire qu'une seule fois :)
-
-* **allez dans ce nouveau dossier**
-  ```bash
-  cd cours-info
-  ```
-  éventuellement refaites `pwd` pour constater que vous avez changé de dossier
-
-* maintenant ouvrez votre **explorateur de fichiers**, et déplacez-vous dans ce même dossier
-  à ce stade vous devez constater que le dossier est bien créé, et qu'il est bien vide
-  <Admonition title="on peut créer un raccourci">
-  c'est important car c'est une opération qu'on **va faire très souvent**;  
-  on verra plus tard comment créer, dans l'explorateur de fichiers, <LabeledLink 
-  label="label-raccourci-cours-info" file="2-1-terminal-os">un raccourci pour pouvoir faire ça rapidement</LabeledLink>...
-  </Admonition>
+   </Admonition>
+1. **créez un dossier `cours-info`**
+   ```bash
+   mkdir cours-info
+   ```
+   bien entendu il ne faut le faire qu'une seule fois :)
+1. **allez dans ce nouveau dossier**
+   ```bash
+   cd cours-info
+   ```
+   éventuellement refaites `pwd` pour constater que vous avez changé de dossier
+1. maintenant ouvrez votre **explorateur de fichiers**, et déplacez-vous dans ce même dossier
+   à ce stade vous devez constater que le dossier est bien créé, et qu'il est bien vide
+   <Admonition title="on peut créer un raccourci">
+   c'est important car c'est une opération qu'on **va faire très souvent**;  
+   on verra plus tard comment créer, dans l'explorateur de fichiers, <LabeledLink 
+   label="label-raccourci-cours-info" file="2-1-terminal-os">un raccourci pour pouvoir faire ça rapidement</LabeledLink>...
+   </Admonition>
+</Steps>
 </Admonition>
 
 ## 🔧 vs-code

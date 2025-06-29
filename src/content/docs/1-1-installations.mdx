@@ -317,14 +317,18 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   <Admonition title="Windows: toutes les option par défaut" collapsible>
 
-  pour les Windows, à nouveau vous prenez **toutes les options par défaut** (enfin, il faut accepter la licence, évidemment)
+  pour les Windows, à nouveau vous prenez **toutes les options par défaut** (enfin, il faut accepter la licence, évidemment)  
+  ne vous laissez pas distraire par un message qui vous parlerait d'installer pour d'autres utilisateurs !
+  par défaut on fait une installation pour l'utilisateur courant, et c'est suffisant pour nous,
+  une installation pour tous les utilisateurs n'est pas nécessaire et n'apporte que des complications...
   </Admonition>
 
   <Admonition title="pour les Mac: déplacez dans le dossier Applications !" collapsible>
 
   **Attention**
 
-  on l'a signalé déjà rapidement, mais la bonne façon d'installer une appli sur MacOS en général est de la glisser-déplacer dans le dossier `Applications`  
+  on l'a signalé déjà rapidement, mais la bonne façon d'installer une appli sur MacOS en général 
+  est de la **glisser-déplacer dans le dossier `Applications`**
 
   aussi une fois que vous aurez téléchargé, et double cliqué sur le zip, vous allez voir un fichier de type `.app`, **qui se trouve dans votre dossier `Downloads`**  
   **il est impératif** de glisser-déplacer ce fichier dans le dossier `Applications`  
@@ -946,8 +950,9 @@ git log
 
 ## github et la clé SSH
 
-depuis Août 2021, il est devenu très compliqué d'utiliser la méthode dite 'HTTPS' pour s'authentifier chez github;  
-aussi nous allons ensemble voir comment créer une clé pour la méthode SSH
+il est devenu très compliqué d'utiliser la méthode dite 'HTTPS' pour s'authentifier chez github;  
+aussi nous allons ensemble voir comment créer une clé pour **la méthode SSH**
+(et on utilisera exclusivement cette méthode pour communiquer avec github par la suite)
 
 ### 🔧 compte github
 
@@ -1044,9 +1049,9 @@ des informations fiables sur le contexte dans lequel on se trouve, comme:
 - dans quel dossier on est
 - quel environnement virtuel Python est actif - et la version de Python
 - quelle branche git est active
--  et si le dépôt a des changements non commités, etc.
+-  et si le dépôt a des changements non commités, non poussés, etc.
 
-<Admonition title="installation de starship" collapsible>
+<Admonition title="installation de starship (windows only for now)" collapsible>
 
 ```bash
 curl https://ue12-p25.github.io/intro/code/setup-starship.sh | bash

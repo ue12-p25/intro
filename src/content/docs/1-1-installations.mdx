@@ -175,50 +175,66 @@ pour installer `git`, utilisez ce lien: [Démarrage rapide de git](https://git-s
 </Tabs>
 </Admonition>
 
-<Admonition title="on vérifie bash (tous OS)" type="caution" collapsible>
+<Admonition title="bon à savoir" collapsible type="tip">
+<Tabs>
+<TabItem label="Windows" icon="seti:windows">
+Pour lancer un terminal `bash` sur Windows, vous cherchez *Git Bash* dans le menu Démarrer.
+  <Admonition title="Pin to Taskbar" collapsible type="tip">
 
-vous devez pouvoir
+    n'hésitez pas à faire en sorte (*Pin to Taskbar*) que ce programme reste dans la barre des tâches
+    même lorsqu'il est inactif; ça vous facilitera la vie...
 
-* lancer un terminal `bash`
-  <Admonition title="Windows" collapsible>
+    **mais** vérifiez bien toutefois que le terminal **démarre bien dans votre homedir**  
+    si vous tapez `pwd` dans un terminal qui vient de démarrer, vous devez voir  
+    `/c/Users/Votre Nom`  
+    <LabeledLink label="label-troubleshoot-terminal-starts-in-weird-folder" file="3-2-troubleshooting">
+    si ce n'est pas le cas voyez cette page pour arranger le problème
+    </LabeledLink>
 
-  cherchez *bash* dans le menu Démarrer  
-  lancez l'application qui s'appelle *Git Bash*  
-  n'hésitez pas à faire en sorte (*Pin to Taskbar*) que ce programme reste dans la barre des tâches même lorsqu'il est inactif; ça vous facilitera la vie...
   </Admonition>
 
-* pour vérifier que c'est bien du `bash` - et pas du *PowerShell* par exemple, tapez
-  ```bash
-  echo $BASH_VERSION
-  ```
-  qui doit répondre
-  ```bash
-  5.2.15(1)-release        # c'est juste un exemple hein
-  ```
-  <Admonition title="zsh sur Mac" collapsible>
-
-  si vous avez un Mac, il se peut que votre terminal soit un `zsh` et pas un `bash`  
+</TabItem>
+<TabItem label="Mac" icon="apple">
+  **`zsh`** -- si vous avez un Mac, il se peut que votre terminal soit un `zsh` et pas un `bash`  
   ce n'est pas un souci, les deux outils sont très largement compatibles !  
   pour savoir quel est exactement votre shell, vous pouvez faire  
   ```console
   echo $SHELL
   ```
-  </Admonition>
+</TabItem>
+</Tabs>
+</Admonition>
+
+
+<Admonition title="on vérifie bash (surtout Windows)" type="caution" collapsible>
+
+pour vérifier que votre terminal est bien `bash` - et pas du *PowerShell* par exemple, tapez ceci  
+(vous pouvez zapper si vous avez `zsh` du coup)
+  ```bash
+  $ echo $BASH_VERSION
+  ```
+  qui doit répondre
+  ```bash
+  5.2.37(1)-release        # c'est juste un exemple hein
+  ```
+  **remarque** dans cette forme, le `$` signifie que j'ai tapé `echo
+  $BASH_VERSION`  
+  en face du `$` qui est  l'invite de commande (le prompt) du
+  terminal  
+  et que ça m'a répondu `5.2.37(1)-release`  
+  
+  pensez bien à **ne pas taper le premier `$` vous même**  
+  car bien sûr ça va marcher beaucoup moins bien si vous le faites ;)
 </Admonition>
 
 <Admonition title="on vérifie git (tous OS)" type="caution" collapsible>
 
-* pour vérifer que vous avez bien installé `git`:
+* pour vérifer que vous avez bien installé `git`  
+(à partir de maintenant on ne met plus le `$` dans les commandes, c'est implicite):
   ```bash
-  $ git --version
+  git --version
   git version 2.41.0       # pareil, la réponse peut être différente chez vous
   ```
-  **remarque**
-  dans cette forme, le `$` signifie que j'ai tapé `git --version`  
-  et que ça m'a répondu `git version 2.41.0`  
-  c'est pour abréger un peu  
-  pensez bien à **ne pas taper le `$` vous même**  
-  car bien sûr ça va marcher beaucoup moins bien si vous le faites ;)
 
 * si vous n'avez pas **au moins la version 2.23**, faites-vous connaitre; le mieux serait de mettre à jour pour obtenir une version plus récente, car certains éléments du cours sur git ne vont pas fonctionner chez vous...
 </Admonition>
@@ -452,7 +468,8 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
     <ImageLoader filename="fig-miniconda-add-path.png" />
 
     <Admonition title="pas coché la case ?" collapsible type="danger">
-    si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, <LabeledLink label="label-troubleshoot-python-command-not-found" file="">voyez cette page</LabeledLink>
+    si par mégarde vous êtes allé jusqu'au bout sans cocher cette case, 
+    <LabeledLink label="label-troubleshoot-python-command-not-found" file="">voyez cette page</LabeledLink>
     </Admonition>
   </Admonition>
 </TabItem>

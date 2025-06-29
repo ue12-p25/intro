@@ -79,6 +79,8 @@ si ce n'est pas cela, le plus probable est que vous n'avez pas bien coché la ca
 
 ## `ModuleNotFoundError: No module named 'bidule'`
 
+<LabeledAnchor label="label-troubleshoot-module-not-found" />
+
 <Admonition title="symptôme" type="danger">
 
 vous avez installé un module Python avec `pip` (n'importe lequel, disons `numpy`) depuis le terminal  
@@ -96,6 +98,28 @@ il faut bien sûr que ce soit le même python des deux cotés (à nouveau, là o
 souvenez-vous aussi que sous VS-code vous avez un menu pour, justement, choisir l'environnement Python à utiliser
 </Admonition>
 </Admonition>
+
+## le terminal démarre dans un dossier bizarre
+
+<LabeledAnchor label="label-troubleshoot-terminal-starts-in-weird-folder" />
+
+<Admonition title="symptôme" type="danger">
+sur Windows, quand vous lancez un terminal bash, il ne démarre dans votre homedir  
+</Admonition>
+
+<Admonition title="solution" type="tip">
+une cause fréquente de ce problème est lié au raccourci qu'on utilise pour lancer le terminal  
+la méthode fiable consiste à:
+
+1. éventuellement détruire le raccourci actuel
+2. ouvrir le menu démarrer
+3. taper `bash` pour trouver le raccourci `Bash on Ubuntu on Windows
+4. faire un clic droit sur le raccourci et choisir `Pin to taskbar`
+</Admonition>
+
+ne pas créer le raccourci à partir d'un programme en cours !  
+vous pouvez aussi inspecter les *Properties* du raccourci, parmi lesquelles il y
+ a un réglage pour choisir dans quel dossier démarrer
 
 ## `jupyter lab` n'ouvre pas de nouvelle fenêtre dans le browser
 

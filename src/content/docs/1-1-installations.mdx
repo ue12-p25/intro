@@ -706,12 +706,21 @@ simplement en double-cliquant dessus
 copiez-collez ceci dans votre terminal
 
 ```bash
+function ipython-autoreload() {
+    # make it idempotent
+    if grep -q '%autoreload' ~/.ipython/profile_default/ipython_config.py 2> /dev/null; then
+        return
+    fi
+    mkdir -p ~/.ipython/profile_default
+    cat >> ~/.ipython/profile_default/ipython_config.py << EOF
 mkdir -p ~/.ipython/profile_default
 cat >> ~/.ipython/profile_default/ipython_config.py << EOF
 c.InteractiveShellApp.exec_lines = []
 c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
 c.InteractiveShellApp.exec_lines.append('%autoreload 2')
 EOF
+}
+ipython-autoreload
 ```
 </Admonition>
 

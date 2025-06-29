@@ -32,9 +32,12 @@ il nous faut a minima :
   * et de LaTeX pour les formules mathématiques
 * **Git** pour la gestion de versions
   * c'est un outil super-utile pour le développement, c'est indispensable que vous sachiez l'utiliser
-* enfin on configurera également un compte sur **github.com**
+* pour finir on configurera également un compte sur **github.com**
   * pour le stockage de vos travaux - typiquement les rendus
   * et le travail en groupe - typiquement les hackatons et projets
+* enfin et **en option**, on verra aussi comment installer et configurer `starship.rs`  
+  pour avoir un *prompt* qui indique plus clairement où on en est dans le terminal  
+  typiquement, dans quel dossier on se trouve, quelle version de Python on utilise, etc..
 
   <Admonition type="note" title="et pour le S2" collapsible>
 
@@ -1002,6 +1005,41 @@ et là vous pouvez ajouter votre clé publique SSH:
 </Admonition>
 
 <LabeledAnchor label="label-install-nodejs" />
+
+## 🔧 `starship.rs`
+
+<Admonition title="expérimental et pour Windows seulement" type="danger">
+
+cette partie repose sur un script écrit par nos soins;
+il est **expérimental** et n'est pour l'instant disponible **que pour Windows**
+
+</Admonition>
+
+**optionnel** - pour avoir un prompt moderne
+
+l'idée est d'avoir un prompt qui affiche en permanence, c'est-à-dire à chaque commande,
+des informations fiables sur le contexte dans lequel on se trouve, comme:
+
+- dans quel dossier on est
+- quel environnement virtuel Python est actif - et la version de Python
+- quelle branche git est active
+-  et si le dépôt a des changements non commités, etc.
+
+<Admonition title="installation de starship" collapsible>
+
+```bash
+curl https://ue12-p25.github.io/intro/code/setup-starship.sh | bash
+```
+<Admonition title="les détails sordides" collapsible type="tip">
+si vous êtes curieux vous pouvez jeter un œil au script qui est exécuté; il va faire ceci:
+
+- installer une fonte 'Hack Nerd' et configurer le terminal (mintty dans le cas de GitBash) pour l'utiliser
+- installer le programme starship via `conda`
+- configurer bash pour utiliser starship
+
+</Admonition>
+
+</Admonition>
 
 ## 🔧 Node.js (S2 uniquement)
 

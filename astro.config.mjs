@@ -11,8 +11,8 @@ import starlightThemeRapide from 'starlight-theme-rapide'
 
 // https://astro.build/config
 export default defineConfig({
-  base: 'intro',
-  site: "https://ue12-p25.github.io",
+  base: '',
+  site: "https://intro.info-mines.paris",
   // for mathjax
   markdown: {
     remarkPlugins: [remarkMath],

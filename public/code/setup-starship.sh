@@ -5,7 +5,7 @@
 # only for windows for now
 platform=
 
-function for-windows-only() {
+function compute-platform() {
     case "$(uname -s)" in
         Linux*)
             if grep -q Microsoft /proc/version 2>/dev/null; then
@@ -20,11 +20,11 @@ function for-windows-only() {
         MINGW*|MSYS*|CYGWIN*)
             platform="windows"
             ;;
+        *)
+            echo "Unsupported platform: $(uname -s)"
+            exit 1
+            ;;
     esac
-    [[ "$platform" == "windows" ]] || {
-        echo this script is for Windows only for now
-        exit 1
-    }
 }
 
 # this method does not work well, mintty uses some other font directory method...
@@ -59,20 +59,23 @@ function for-windows-only() {
 # }
 
 
-# so let's use Courier New instead, which has the Nerd Font glyphs
+# on Windows: let's use Courier New instead
+# which has the Nerd Font glyphs
 function adopt-font-in-mintty() {
+    if [[ "$platform" != "windows" ]]; then
+        return
+    fi
     echo "Adopting font in mintty..."
     local MINTTY_CONFIG="$HOME/.minttyrc"
     [[ -f "$MINTTY_CONFIG" ]] || touch "$MINTTY_CONFIG"
     echo "Font=Courier New" >> "$MINTTY_CONFIG"
     echo "FontHeight=16" >> "$MINTTY_CONFIG"
 
-    echo "Installed Nerd Fonts locally."
 }
 
 
 function install-starship() {
-    type starship >& /dev/null && { echo "Starship is already installed."; return; }
+    type starship >& /dev/null && { echo "starship is already installed."; return; }
     echo "Installing starship..."
     conda install -y conda-forge::starship
 }
@@ -120,7 +123,7 @@ EOF
 
 function configure-starship() {
     local config="$HOME/.config/starship.toml"
-    [[ -f $config ]] && { echo "Starship configuration exists at $config - keeping it"; return; }
+    [[ -f $config ]] && { echo "starship configuration exists at $config - keeping it"; return; }
     local configdir=$(dirname "$config")
     [[ -d $configdir ]] || mkdir -p "$configdir"
     cat-starship-config > "$config"
@@ -129,20 +132,20 @@ function configure-starship() {
 
 function enable-starship-in-bash() {
     local bashrc="$HOME/.bashrc"
-    if grep -q 'starship init bash' "$bashrc" 2> /dev/null; then
-        echo "Starship prompt already enabled in bash."
+    # idempotent
+    if grep -q 'begin by setup-starship' "$bashrc" 2> /dev/null; then
+        echo "starship prompt already enabled in $bashrc"
         return
     fi
-    [[ -f $bashrc ]] || touch "$bashrc"
-    echo "Enabling Starship prompt in .bashrc"
+    echo "Enabling starship prompt in $bashrc"
+    # somehow on windows starship gets installed in a location
+    # that is not in the PATH
     cat >> "$bashrc" << 'EOF'
 ##### begin by setup-starship.sh
-# just in case we'd start from an odd place
-cd
 # add conda/bin to PATH
-condabin="$(type -p conda 2>/dev/null | sed -e 's|scripts/conda|bin|i')"
-export PATH="$PATH:$condabin"
-# Enable Starship prompt
+conda_bin="$(type -p conda 2>/dev/null | sed -e 's|scripts/conda|bin|i')"
+export PATH="$PATH:$conda_bin"
+# Enable starship prompt
 eval "$(starship init bash)"
 ##### end by setup-starship.sh
 EOF
@@ -157,7 +160,7 @@ EOF
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 EOF
     }
-    echo "Starship prompt enabled in bash."
+    echo "starship prompt enabled in bash."
 }
 
 
@@ -167,7 +170,7 @@ function restart-terminal() {
 
 
 function main() {
-    for-windows-only
+    compute-platform
     # download-font
     # install-font
     adopt-font-in-mintty

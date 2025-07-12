@@ -179,19 +179,23 @@ pour installer `git`, utilisez ce lien: [Démarrage rapide de git](https://git-s
 <Tabs>
 <TabItem label="Windows" icon="seti:windows">
 Pour lancer un terminal `bash` sur Windows, vous cherchez *Git Bash* dans le menu Démarrer.
-  <Admonition title="Pin to Taskbar" collapsible type="tip">
 
-    n'hésitez pas à faire en sorte (*Pin to Taskbar*) que ce programme reste dans la barre des tâches
-    même lorsqu'il est inactif; ça vous facilitera la vie...
+N'hésitez pas à faire en sorte que ce programme **reste dans la barre des tâches
+même lorsqu'il est inactif**; ça vous facilitera la vie...
 
-    **mais** vérifiez bien toutefois que le terminal **démarre bien dans votre homedir**  
-    si vous tapez `pwd` dans un terminal qui vient de démarrer, vous devez voir  
-    `/c/Users/Votre Nom`  
-    <LabeledLink label="label-troubleshoot-terminal-starts-in-weird-folder" file="3-2-troubleshooting">
-    si ce n'est pas le cas voyez cette page pour arranger le problème
-    </LabeledLink>
+<Admonition title="Et voici comment faire (Pin to Taskbar)" collapsible type="tip">
 
-  </Admonition>
+  <video controls width="350" src="/media/gitbash-pin-taskbar.webm"/>
+
+</Admonition>
+
+vérifiez bien dans tous les cas que le terminal **démarre bien dans votre homedir**  
+si vous tapez `pwd` dans un terminal qui vient de démarrer, vous devez voir  
+`/c/Users/Votre Nom`  
+<LabeledLink label="label-troubleshoot-terminal-starts-in-weird-folder" file="3-2-troubleshooting">
+si ce n'est pas le cas voyez cette page pour arranger le problème
+</LabeledLink>
+
 
 </TabItem>
 <TabItem label="Mac" icon="apple">
@@ -974,7 +978,7 @@ et donc, ce qu'on va faire tout simplement, c'est:
 * générer une paire de clés
 * et déposer une copie de la clé publique sur github, en l'associant à votre compte github
 
-### 🔧 on y va
+### 🔧 associer la clé SSH dans github
 
 <Admonition title="création de la paire de clés" collapsible>
 
@@ -1032,16 +1036,38 @@ et là vous pouvez ajouter votre clé publique SSH:
 
 <LabeledAnchor label="label-install-nodejs" />
 
-## 🔧 `starship.rs`
+## optionnels
 
-<Admonition title="expérimental et pour Windows seulement" type="danger">
+### 🔧 Git Graph Extension
 
-cette partie repose sur un script écrit par nos soins;
-il est **expérimental** et n'est pour l'instant disponible **que pour Windows**
+Fortement recommandé:
+
+<Admonition title="Git Graph Extension" collapsible>
+
+<Steps>
+1. dans vs-code, allez dans le menu *Extensions* (icône en forme de blocs)
+2. cherchez l'extension *Git Graph* (icône en forme de graphe)
+3. installez-la
+</Steps>
+
+on verra comment s'en servir dans le cours sur git, mais en gros
+une fois installée, vous pouvez l'ouvrir en cliquant sur l'icône
+   *Git Graph* dans la barre latérale gauche de vs-code
+
+<ImageLoader filename="vscode-gitgraph.png" width="300px" />
 
 </Admonition>
 
-**optionnel** - pour avoir un prompt moderne
+### 🔧 starship prompt
+
+<Admonition title="expérimental" type="danger">
+
+cette partie repose sur un script écrit par nos soins;
+il est pour l'instant **expérimental**
+
+</Admonition>
+
+pour avoir un prompt moderne
 
 l'idée est d'avoir un prompt qui affiche en permanence, c'est-à-dire à chaque commande,
 des informations fiables sur le contexte dans lequel on se trouve, comme:
@@ -1051,15 +1077,15 @@ des informations fiables sur le contexte dans lequel on se trouve, comme:
 - quelle branche git est active
 -  et si le dépôt a des changements non commités, non poussés, etc.
 
-<Admonition title="installation de starship (windows only for now)" collapsible>
+<Admonition title="installation de starship" collapsible>
 
 ```bash
 curl https://intro.info-mines.paris/code/setup-starship.sh | bash
 ```
 <Admonition title="les détails sordides" collapsible type="tip">
-si vous êtes curieux vous pouvez jeter un œil au script qui est exécuté; il va faire ceci:
+si vous êtes curieux vous pouvez jeter un coup d'œil au script qui est exécuté; il va faire ceci:
 
-- installer une fonte 'Hack Nerd' et configurer le terminal (mintty dans le cas de GitBash) pour l'utiliser
+- sur windows, modifier la fonte du terminal GitBash
 - installer le programme starship via `conda`
 - configurer bash pour utiliser starship
 

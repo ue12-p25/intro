@@ -1,7 +1,8 @@
 ---
 // can't seem to find a way to reliably extract
 // that from Astro.site or similar
-const baseurl = 'intro'
+// const baseurl = '/intro/'
+const baseurl = '/'
 
 interface Props {
     label: string
@@ -10,8 +11,12 @@ interface Props {
 
 const { label, file } = Astro.props
 
+const has_file = file && (file.length > 0)
+
+const url = has_file ? `${baseurl}${file}#${label}` : `#${label}`
+
 ---
 
-<a href=`/${baseurl}/${file}#${label}` class="labeled link">
+<a href=`${url}` class="labeled link">
     <slot />
 </a>

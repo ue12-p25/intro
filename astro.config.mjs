@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight"
 // see https://github.com/withastro/starlight/issues/721
 import remarkMath from "remark-math"
 import rehypeMathjax from "rehype-mathjax"
+import remarkGfm from "remark-gfm"
 
 import starlightImageZoom from 'starlight-image-zoom'
 import starlightThemeRapide from 'starlight-theme-rapide'
@@ -15,7 +16,7 @@ export default defineConfig({
   site: "https://intro.info-mines.paris",
   // for mathjax
   markdown: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkGfm],
     rehypePlugins: [rehypeMathjax],
   },
   integrations: [

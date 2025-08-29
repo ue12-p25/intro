@@ -1,5 +1,5 @@
 ---
-title: UE12/UE22 - Introduction
+title: UE12/UE22
 description: on installe les ordis
 template: splash
 hero:
@@ -9,23 +9,39 @@ hero:
     dark: ../../media/logo-p25-dark.excalidraw.svg
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components'
+import { Card, CardGrid, Icon } from '@astrojs/starlight/components'
+import CourseLink from '@components/CourseLink.astro'
 
-{/* not sure how to use this
-import.meta.env.BASE_URL
-whose value should help us not hard-wire the /intro instances below
-*/}
-
-{/* ## Les supports de cours */}
 
 {/* | accueil | https://info-mines.paris | https://github.com/ue12-p25 | */}
-<Card title="les supports de cours" icon="open-book">
-| cours S1 | URL | GitHub |
-|---:|---:|:---|
-| intro | https://intro.info-mines.paris | https://github.com/ue12-p25/intro |
-| numérique | https://numerique.info-mines.paris | https://github.com/ue12-p25/numerique |
-| exos numérique | https://exos-numerique.info-mines.paris | https://github.com/flotpython/exos-ds |
-| git | https://git.info-mines.paris | https://github.com/ue12-p25/git |
+<Card title="les supports de cours du S1" icon="open-book">
+  [la liste des repos sur github](https://github.com/orgs/ue12-p25/repositories)
+<CardGrid>
+    <Card>
+		<CourseLink course="Introduction (ce cours)"
+			html="https://intro.info-mines.paris"
+			github="https://github.com/ue12-p25/intro"
+			icon="right-caret" />
+	</Card>
+    <Card>
+		<CourseLink course="Le cours sur git"
+			html="https://git.info-mines.paris"
+			github="https://github.com/ue12-p25/git"
+			icon="seti:git" />
+	</Card>
+    <Card>
+		<CourseLink course="Python numérique"
+			html="https://numerique.info-mines.paris"
+			github="https://github.com/ue12-p25/numerique"
+			icon="seti:python" />
+	</Card>
+    <Card>
+		<CourseLink course="Des exercices sur Python numérique"
+			html="https://exos-numerique.info-mines.paris"
+			github="https://github.com/flotpython/exos-ds"
+			icon="seti:python" />
+	</Card>
+</CardGrid>
 
 les cours suivants seront annoncés ici ultérieurement
 {/*
@@ -41,6 +57,12 @@ Voir aussi [le cours de Julia ici](https://drive.google.com/drive/folders/1qSmdW
 | backend | https://backend.info-mines.paris
  */}
 </Card>
+
+
+
+
+
+
 
 <Card title="et pour commencer...">
 

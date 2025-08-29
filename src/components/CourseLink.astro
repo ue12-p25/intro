@@ -1,0 +1,21 @@
+---
+import { Icon } from "@astrojs/starlight/components"
+
+interface Props {
+    course: string
+    html: string
+    github: string
+    icon: string
+}
+
+const { course, html, github, icon } = Astro.props
+---
+
+<span class="course-link"></span>
+<a href=`${html}`>
+  <Icon name=`${icon}` class="inline-icon" />
+  {course}
+</a>
+<a href=`${github}` target="_blank">
+  <Icon name="github" class="inline-icon" />
+</a>

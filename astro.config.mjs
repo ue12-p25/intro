@@ -21,7 +21,7 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      title: "UE12/UE22 - Introduction",
+      title: "UE12/UE22 - Accueil",
       favicon: "media/favicon-p25.svg",
        logo: {
         light: "/src/media/logo-p25-light.svg",

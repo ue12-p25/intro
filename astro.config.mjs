@@ -45,7 +45,6 @@ export default defineConfig({
           items: [
             { label: "<tl;dr>", slug: "0-1-presentation-ue12-ue22" },
             { label: "Version longue", slug: "0-2-presentation-longue" },
-            { label: "Les supports", slug: "0-3-supports" },
           ],
         },
         {

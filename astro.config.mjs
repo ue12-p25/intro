@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight"
 // see https://github.com/withastro/starlight/issues/721
 import remarkMath from "remark-math"
 import rehypeMathjax from "rehype-mathjax"
+import remarkGfm from "remark-gfm"
 
 import starlightImageZoom from 'starlight-image-zoom'
 import starlightThemeRapide from 'starlight-theme-rapide'
@@ -15,12 +16,12 @@ export default defineConfig({
   site: "https://intro.info-mines.paris",
   // for mathjax
   markdown: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkGfm],
     rehypePlugins: [rehypeMathjax],
   },
   integrations: [
     starlight({
-      title: "UE12/UE22 - Introduction",
+      title: "UE12/UE22 - Accueil",
       favicon: "media/favicon-p25.svg",
        logo: {
         light: "/src/media/logo-p25-light.svg",
@@ -44,7 +45,6 @@ export default defineConfig({
           items: [
             { label: "<tl;dr>", slug: "0-1-presentation-ue12-ue22" },
             { label: "Version longue", slug: "0-2-presentation-longue" },
-            { label: "Les supports", slug: "0-3-supports" },
           ],
         },
         {

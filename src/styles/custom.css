@@ -14,10 +14,8 @@ svg.inline-icon {
 }
 
 .course-link {
-    &:first-child {
-        margin-right: 1rem;
-    }
-    &:last-child {
-        margin-left: 1rem;
+    :last-child {
+        margin-left: 0.5em;
+        font-size: x-large;
     }
 }

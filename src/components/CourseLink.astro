@@ -11,10 +11,9 @@ interface Props {
 
 const { title, verbose, html, github, icon } = Astro.props
 ---
-<Card title={title}>
+<Card title={title} icon={icon}>
     <span class="course-link">
         <a href=`${html}` target="_blank">
-            <Icon name=`${icon}` class="inline-icon" />
             {verbose}
         </a>
         <a href=`${github}` target="_blank">

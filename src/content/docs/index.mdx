@@ -13,23 +13,28 @@ import { Card, CardGrid, Icon } from '@astrojs/starlight/components'
 import CourseLink from '@components/CourseLink.astro'
 
 
-<Card title="les supports de cours du S1" icon="open-book">
+<Card title="les supports de cours du S1" icon="open-book" class="outline-courses">
 <CardGrid>
-	<CourseLink title="Introduction"
+
+{/*
+	 <CourseLink title="Introduction"
 		verbose="pour les installations et le béaba (ce cours-ci)"
 		html="https://intro.info-mines.paris"
 		github="https://github.com/ue12-p25/intro"
-		icon="right-caret" />
-	<CourseLink title="Le cours sur git"
-		verbose="un outil totalement incontournable"
-		html="https://git.info-mines.paris"
-		github="https://github.com/ue12-p25/git"
-		icon="seti:git" />
+		icon="right-caret"
+		sametab={true} />
+*/}
+
 	<CourseLink title="Python numérique"
 		verbose="un cours sur le traitement de données avec Python"
 		html="https://numerique.info-mines.paris"
 		github="https://github.com/ue12-p25/numerique"
 		icon="seti:python" />
+	<CourseLink title="Le cours sur git"
+		verbose="un outil totalement incontournable"
+		html="https://git.info-mines.paris"
+		github="https://github.com/ue12-p25/git"
+		icon="seti:git" />
 {/*
 	<CourseLink title="Des exercices sur Python numérique"
 		verbose="des exercices pratiques sur Python numérique"
@@ -78,12 +83,12 @@ les cours suivants seront annoncés ici ultérieurement; voyez aussi
 		html="https://backend.info-mines.paris"
 		github="https://github.com/ue22-p25/backend"/>
 </CardGrid>
-</Card> 
+</Card>
 */}
 
 
 
-<Card title="et pour commencer...">
+<Card title="mais pour commencer: les installations, et le béaba...">
 
 <CardGrid stagger>
 	<Card title="introduction" icon="information">

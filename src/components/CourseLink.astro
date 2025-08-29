@@ -1,5 +1,6 @@
 ---
 import { Card, Icon } from "@astrojs/starlight/components"
+import type { boolean } from "astro:schema"
 
 interface Props {
     title: string
@@ -7,16 +8,21 @@ interface Props {
     html: string
     github: string
     icon: string
+    sametab: boolean
 }
 
-const { title, verbose, html, github, icon } = Astro.props
+const { title, verbose, html, github, icon, sametab } = Astro.props
+// default is to open in a new tab
+const target = ((sametab === undefined) || ! sametab ) ? 'target="_blank"' : ''
+
+console.log("CourseLink: ", { title, verbose, html, github, icon, sametab, target })
 ---
 <Card title={title} icon={icon}>
     <span class="course-link">
-        <a href=`${html}` target="_blank">
+        <a href=`${html}` target={target}>
             {verbose}
         </a>
-        <a href=`${github}` target="_blank">
+        <a href=`${github}` {target}>
             <Icon name="github" class="inline-icon" />
         </a>
     </span>

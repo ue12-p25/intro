@@ -15,35 +15,31 @@ import CourseLink from '@components/CourseLink.astro'
 
 {/* | accueil | https://info-mines.paris | https://github.com/ue12-p25 | */}
 <Card title="les supports de cours du S1" icon="open-book">
-  [la liste des repos sur github](https://github.com/orgs/ue12-p25/repositories)
 <CardGrid>
-    <Card>
-		<CourseLink course="Introduction (ce cours)"
-			html="https://intro.info-mines.paris"
-			github="https://github.com/ue12-p25/intro"
-			icon="right-caret" />
-	</Card>
-    <Card>
-		<CourseLink course="Le cours sur git"
-			html="https://git.info-mines.paris"
-			github="https://github.com/ue12-p25/git"
-			icon="seti:git" />
-	</Card>
-    <Card>
-		<CourseLink course="Python numérique"
-			html="https://numerique.info-mines.paris"
-			github="https://github.com/ue12-p25/numerique"
-			icon="seti:python" />
-	</Card>
-    <Card>
-		<CourseLink course="Des exercices sur Python numérique"
-			html="https://exos-numerique.info-mines.paris"
-			github="https://github.com/flotpython/exos-ds"
-			icon="seti:python" />
-	</Card>
+	<CourseLink title="Introduction"
+		verbose="pour les installations et le béaba (ce cours-ci)"
+		html="https://intro.info-mines.paris"
+		github="https://github.com/ue12-p25/intro"
+		icon="right-caret" />
+	<CourseLink title="Le cours sur git"
+		verbose="un outil totalement incontournable"
+		html="https://git.info-mines.paris"
+		github="https://github.com/ue12-p25/git"
+		icon="seti:git" />
+	<CourseLink title="Python numérique"
+		verbose="un cours sur le traitement de données avec Python"
+		html="https://numerique.info-mines.paris"
+		github="https://github.com/ue12-p25/numerique"
+		icon="seti:python" />
+	<CourseLink title="Des exercices sur Python numérique"
+		verbose="des exercices pratiques sur Python numérique"
+		html="https://exos-numerique.info-mines.paris"
+		github="https://github.com/flotpython/exos-ds"
+		icon="seti:python" />
 </CardGrid>
 
-les cours suivants seront annoncés ici ultérieurement
+les cours suivants seront annoncés ici ultérieurement; voyez aussi
+  <a href="https://github.com/orgs/ue12-p25/repositories" target="_">la liste des repos sur github</a>
 {/*
 | AP Python | https://flotpython.github.io/slides | https://github.com/ue12-p25/flotpython |
 | AP C++ | https://cpp.bmarchand.fr | https://github.com/ue12-p25/cpp |

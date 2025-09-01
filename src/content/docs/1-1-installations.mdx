@@ -495,6 +495,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
     <LabeledLink label="label-troubleshoot-python-command-not-found" file="3-2-troubleshooting">voyez cette page</LabeledLink>
     </Admonition>
   </Admonition>
+
 </TabItem>
 
 <TabItem label="MacOS" icon="apple">
@@ -565,6 +566,23 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 </Tabs>
 
 </Admonition>
+
+  <Admonition title="épilogue - pour être sûr" collapsible>
+  une fois l'installation terminée, et par sécurité, on va faire ceci:
+   <Steps>
+   1. on ouvre un nouveau terminal
+   1. dans lequel on tape
+      ```bash
+      conda init bash
+      ```
+   </Steps>
+
+   normalement c'est fait par le programme d'installation mais on voit
+  tant de configurations différentes, parfois il est nécessaire de le refaire,
+  et ça ne coûte rien...
+  </Admonition>
+
+
 
 <Admonition title="on vérifie conda et python" collapsible type="caution">
 et on fait quoi pour vérifier ? on crée un **nouveau terminal** !

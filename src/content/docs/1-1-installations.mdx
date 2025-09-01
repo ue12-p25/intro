@@ -56,6 +56,17 @@ Mais avant de commencer, voici quelques recommandations générales :
 Ceux qui zappent cette section ont 95% de chances de tomber dans le piège !
 </Admonition>
 
+### pas besoin de droits administrateur
+
+En général sur un ordi personnel, l'utilisateur principal a ce qu'on appelle des
+**droits administrateur**; cependant dans certains environnements - par exemple
+les machines de la DSI - vous pouvez ne pas avoir ces droits.
+
+C'est votre cas ? Pas de panique; sachez que toutes les installations que nous
+allons faire ont été choisies car elles peuvent se faire **sans droits
+administrateur** - même si parfois il faut alors se livrer à quelques
+contorsions.
+
 ### comment tester une installation
 
 après avoir installé, disons par exemple VS Code, on va vérifier que ça a bien marché.   
@@ -323,7 +334,9 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   <Admonition title="Windows: toutes les option par défaut" collapsible>
 
-  pour les Windows, à nouveau vous prenez **toutes les options par défaut** (enfin, il faut accepter la licence, évidemment)  
+  pour les Windows: choisissez la version "User Installer" - comme ça vous n'aurez pas besoin des droits administrateur
+  
+  à nouveau vous prenez **toutes les options par défaut** (enfin, il faut accepter la licence, évidemment)  
   ne vous laissez pas distraire par un message qui vous parlerait d'installer pour d'autres utilisateurs !
   par défaut on fait une installation pour l'utilisateur courant, et c'est suffisant pour nous,
   une installation pour tous les utilisateurs n'est pas nécessaire et n'apporte que des complications...
@@ -456,7 +469,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
 
   <Admonition title="les réponses aux questions" collapsible>
 
-  vous lancez le `.exe`  
+  la commande précédente va lancer le programme d'installation  
   et vous prenez les options par défaut lorsqu'on vous pose une question  
   **sauf pour les écrans qui suivent**:
 
@@ -747,8 +760,6 @@ function ipython-autoreload() {
     fi
     mkdir -p ~/.ipython/profile_default
     cat >> ~/.ipython/profile_default/ipython_config.py << EOF
-mkdir -p ~/.ipython/profile_default
-cat >> ~/.ipython/profile_default/ipython_config.py << EOF
 c.InteractiveShellApp.exec_lines = []
 c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
 c.InteractiveShellApp.exec_lines.append('%autoreload 2')

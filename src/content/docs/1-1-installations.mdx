@@ -458,7 +458,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
     Vous copiez les commandes suivantes dans un terminal bash
 
     ```bash
-    curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o miniconda-installer.exe
+    curl -k https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o miniconda-installer.exe
     ./miniconda-installer.exe
     ```
 
@@ -517,14 +517,14 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   <TabItem label="Intel" icon="apple">
 
   ```bash
-  curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg -o miniconda-installer-intel.pkg
+  curl -k https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg -o miniconda-installer-intel.pkg
   open miniconda-installer-intel.pkg
   ```
   </TabItem>
 
   <TabItem label="M1/M2" icon="apple">
   ```bash
-  curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.pkg -o miniconda-installer-arm.pkg
+  curl -k https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.pkg -o miniconda-installer-arm.pkg
   open miniconda-installer-arm.pkg
   ```
   </TabItem>
@@ -542,7 +542,7 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   <Admonition title="download" collapsible>
 
   ```bash
-  curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o miniconda-installer.sh
+  curl -k https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o miniconda-installer.sh
   bash miniconda-installer.sh
   ```
 
@@ -1115,7 +1115,7 @@ des informations fiables sur le contexte dans lequel on se trouve, comme:
 <Admonition title="installation de starship" collapsible>
 
 ```bash
-curl https://intro.info-mines.paris/code/setup-starship.sh | bash
+curl -k https://intro.info-mines.paris/code/setup-starship.sh | bash
 ```
 <Admonition title="les détails sordides" collapsible type="tip">
 si vous êtes curieux vous pouvez jeter un coup d'œil au script qui est exécuté; il va faire ceci:

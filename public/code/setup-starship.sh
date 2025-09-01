@@ -76,6 +76,10 @@ function adopt-font-in-mintty() {
 
 function install-starship() {
     type starship >& /dev/null && { echo "starship is already installed."; return; }
+    echo "Accepting conda TOS"
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/msys2
     echo "Installing starship..."
     conda install -y conda-forge::starship
 }

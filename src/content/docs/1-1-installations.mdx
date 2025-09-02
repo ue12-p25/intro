@@ -168,9 +168,9 @@ choisissez au moins l'option recommandée (#2) - on peut prendre l'option (#3) s
     ```
   </Admonition>
 </TabItem>
-<TabItem label="Mac & Linux" icon="apple">
+<TabItem label="Mac" icon="apple">
 
-sur ces deux OS, `bash` est **préinstallé**  
+sur MacOS, `bash` est **préinstallé**  
 pour installer `git`, utilisez ce lien: [Démarrage rapide de git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
 
 * rien de particulier à signaler sur linux, c'est sans doute déjà installé, et sinon c'est trivial
@@ -182,6 +182,15 @@ pour installer `git`, utilisez ce lien: [Démarrage rapide de git](https://git-s
   xcode-select --install
   ```
   </Admonition>
+</TabItem>
+<TabItem label="Linux" icon="linux">
+sur Linux il y a `bash` de base; `git` est souvent préinstallé aussi, mais pour être sûr:
+```bash
+sudo apt update
+sudo apt install git
+# on en aura besoin aussi un peu plus loin
+sudo apt install curl
+```
 </TabItem>
 </Tabs>
 </Admonition>
@@ -353,6 +362,18 @@ Vous voulez installer donc il va falloir que vous alliez dans une section *downl
   **il est impératif** de glisser-déplacer ce fichier dans le dossier `Applications`  
   si on ne le fait pas, ça semble fonctionner, mais on a des tas de problèmes assez retors par la suite
 
+  </Admonition>
+
+  <Admonition title="Linux" collapsible>
+
+    Pour info sur Linux, lorsque vous avez téléchargé un fichier `.deb`, vous pouvez l'installer avec la commande
+    suivante:
+
+    ```bash
+    # on se met dans le dossier où on a téléchargé le fichier, sans doute ici
+    cd ~/Downloads
+    sudo dpkg -i nom_du_fichier.deb
+    ```
   </Admonition>
 </Admonition>
 

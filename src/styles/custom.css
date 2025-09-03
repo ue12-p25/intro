@@ -23,3 +23,10 @@ svg.inline-icon {
 .sidebar-toggle {
     opacity: 50%;
 }
+
+/* thanks to
+   https://github.com/withastro/starlight/issues/721
+*/
+.MathJax svg {
+	display: inline !important;
+}

@@ -520,7 +520,7 @@ ainsi le rôle de l'OS c'est principalement de fournir de l'**isolation** entre 
 
 </Admonition>
 
-<Admonition title="notion de **process**">
+<Admonition title="notion de process">
 
 l'unité de base pour matérialiser cette isolation s'appelle un ***process***  
 chaque programme qui tourne constitue un ***process***, qui possède
@@ -531,7 +531,7 @@ chaque programme qui tourne constitue un ***process***, qui possède
   </Admonition>
 
 * son espace mémoire
-* un dossier courant (pour pouvoir utiliser des chemins d'accès *relatifs*, on va en reparler tout de suite)
+* un dossier courant (pour pouvoir utiliser des chemins d'accès *relatifs*, comme on a vu plus haut)
 * éventuellement une liste de processus fils
 * et tout un tas d'autres détails...
 </Admonition>
@@ -539,12 +539,14 @@ chaque programme qui tourne constitue un ***process***, qui possède
 <Admonition title="arborescence de processus">
 
 on ne peut créer un **process** .. que depuis un **process**  
-(comme on l'a vu plus haut par exemple, le terminal passe son temps à créer des *process*)
-et donc entre autres un *process* contient l'identité de son *process* parent - qu'on appelle le `ppid` pour *parent process id* (ce qui du coup, donne à l'ensemble des processus une structure d'arbre)
+(le terminal, par exemple, passe son temps à créer des *process*)  
+ce qui permet d'organiser les processus en une **arborescence** comme ceci:
+
+<ImageLoader filename="bash-process-tree.png" />
 
 pourquoi c'est important pour nous ?  
 parce que ça explique cette histoire scabreuse de la variable `PATH`  
-car en effet les variable d'environnement - comme `PATH` - sont **héritées du processus parent**  
+car en effet les variables d'environnement - comme `PATH` - sont **héritées du processus parent**  
 </Admonition>
 
 <Admonition title="soyons précis (pour les curieux)" type="tip">

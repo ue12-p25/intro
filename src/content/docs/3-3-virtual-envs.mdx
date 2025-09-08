@@ -5,6 +5,7 @@ description: comment gérer plusieurs environnements Python
 
 import Admonition from '@components/Admonition.astro'
 import SidebarToggle from '@components/SidebarToggle.astro'
+import LabeledLink from '@components/LabeledLink.astro'
 
 <SidebarToggle />
 
@@ -18,8 +19,8 @@ environnements Python différents; c'est utile notamment :
 
 * si vous travaillez sur plusieurs projets différents, qui ont chacun leur ensemble de
   dépendances, pas forcément compatibles entre elles;
-  par exemple, l'un utilise Django-5.x et l'autre Django-3.x
-  ou même, l'un utilise python-3.12 et l'autre python-3.11
+  par exemple, l'un utilise Django-4.x et l'autre Django-3.x
+  ou même, l'un utilise python-3.13 et l'autre python-3.12
 
 * ou encore, lors de la sortie d'une nouvelle release de Python, que vous voulez essayer sans tout casser
 
@@ -39,7 +40,7 @@ créer/activer/détruire des environnements multiples; on entend par environneme
 les commandes utiles sont
 
 * `conda env list`
-* `conda create -n mon_environnement python=3.12`
+* `conda create -n mon_environnement python=3.13`
 * `conda env remove -n mon_environnement`
 
 et pour gérer tout cela, on dispose de commandes pour changer d'environnement; le modèle
@@ -56,20 +57,24 @@ mental est simple :
 * pour en sortir, et revenir dans `base`, vous faites  
   `conda deactivate`
 
-## exemple de session
+## le prompt
 
-voici à titre indicatif une session sous MacOS pour illustrer tout ceci
-
-<Admonition title="le prompt" type="note">
-
-vous remarquerez comme le *prompt* bash reflète **l'environnement dans lequel on se
-trouve**  
+vous remarquerez, dans l'exemple qui suit, comme le *prompt* bash reflète
+**l'environnement dans lequel on se trouve**  
 ça semble **relativement impératif** si on ne veut pas s'emmêler les pinceaux  
 surtout n'utilisez pas cette technologie si votre prompt ne montre pas l'environnement
 courant,  
 c'est beaucoup trop facile de se tirer une balle dans le pied si on n'a pas cet
 aide-mémoire en permanence sous les yeux !
-</Admonition>
+
+n'hésitez pas à installer <LabeledLink label="-starship-prompt" file="1-1-installations">
+un prompt plus sophistiqué, comme starship,
+</LabeledLink> qui vous donnera plein d'infos sur votre environnement courant
+et vous évitera de vous prendre les pieds dans le tapis !
+
+## exemple de session
+
+voici à titre indicatif une session sous MacOS pour illustrer tout ceci
 
 ### la liste de mes environnements
 
@@ -81,10 +86,10 @@ base                  *  /Users/tparment/miniconda3
 <snip ...>
 ```
 
-### j'en crée un nouveau avec Python-3.12
+### j'en crée un nouveau avec Python-3.13
 
 ```bash
-[base] ~ $ conda create -n demo-py312 python=3.12
+[base] ~ $ conda create -n demo-py313 python=3.13
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
 <snip ...>
@@ -97,15 +102,15 @@ Solving environment: done
 conda environments:
 #
 base                  *  /Users/tparment/miniconda3
-demo-py312                /Users/tparment/miniconda3/envs/demo-py312
+demo-py313                /Users/tparment/miniconda3/envs/demo-py313
 <snip...>
 ```
 
 ### pour entrer dans le nouvel environnement
 
 ```bash
-[base] ~ $ conda activate demo-py312
-[demo-py312] ~ $
+[base] ~ $ conda activate demo-py313
+[demo-py313] ~ $
 ```
 
 ### les packages installés
@@ -113,7 +118,7 @@ demo-py312                /Users/tparment/miniconda3/envs/demo-py312
 très peu de choses
 
 ```bash
-[demo-py312] ~ $ pip list
+[demo-py313] ~ $ pip list
 Package    Version
 ---------- -------------------
 certifi    2020.4.5.1
@@ -125,20 +130,20 @@ wheel      0.34.2
 ### on y installe ce qu'on veut
 
 ```bash
-[demo-py312] ~ $ pip install numpy==1.15.3
+[demo-py313] ~ $ pip install numpy==1.15.3
 ```
 
 ### la version de python
 
 ```bash
-[demo-py312] ~ $ python --version
+[demo-py313] ~ $ python --version
 Python 3.8.2
 ```
 
-### sortir 
+### sortir
 
 ```bash
-[demo-py312] ~ $ conda deactivate
+[demo-py313] ~ $ conda deactivate
 [base] ~ $
 ```
 
@@ -160,14 +165,14 @@ Version: 1.18.1
 ### pour détruire l'environnement en question
 
 ```bash
-[base] ~ $ conda env remove -n demo-py312
+[base] ~ $ conda env remove -n demo-py313
 
-Remove all packages in environment /Users/tparment/miniconda3/envs/demo-py312:
+Remove all packages in environment /Users/tparment/miniconda3/envs/demo-py313:
 ```
 
 ## exercice: de retour dans vs-code
 
-* créez un nouvel environnement miniconda avec Python-3.12
+* créez un nouvel environnement miniconda avec Python-3.13
 * de retour dans vs-code, sélectionnez cet environnement
 
 notez que ce réglage est associé au *workspace* vs-code

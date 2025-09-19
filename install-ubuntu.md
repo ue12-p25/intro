@@ -10,8 +10,7 @@ Au démarrage
 - [ ] au bootloader: Try or Install Ubuntu
 - [ ] Language English 
 - [ ] Keyboard French
-- [ ] Connect to the internet → ITN (optionnel)
-  - [ ] `sum(n**3forninrange(10))`
+- [ ] Connect to the internet (optionnel)
 - [ ] Install Ubuntu
 - [ ] Interactive installation 
 - [ ] Extended Selection 

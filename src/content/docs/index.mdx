@@ -9,90 +9,53 @@ hero:
     dark: ../../media/logo-p25-dark.excalidraw.svg
 ---
 
-import { Card, CardGrid, Icon } from '@astrojs/starlight/components'
+import { Card, CardGrid, Icon, LinkCard } from '@astrojs/starlight/components'
+import { Tabs, TabItem } from '@astrojs/starlight/components'
+
 import CourseLink from '@components/CourseLink.astro'
 
 
-<Card title="les supports de cours du S1" icon="open-book" class="outline-courses">
-<CardGrid>
+
+<div class="outline-courses">
+<Card title="les supports de cours" icon="open-book" class="outline-courses">
+<Tabs>
+<TabItem label="Cours du S1" icon="open-book">
+
+	<CourseLink title="Python numérique (et données)" html="https://numerique.info-mines.paris" />
+	<CourseLink title="Une collection d'exercices autour de Python numérique" html="https://numerique-exos.info-mines.paris/" exo="true" />
+	<CourseLink title="Le cours sur git" html="https://git.info-mines.paris" />
+	<CourseLink title="Le cours sur Python avancé" html="https://python.info-mines.paris/" />
+
+    {/* <CourseLink title="Une collection d'exercices autour de Python" html="https://python-exos.info-mines.paris/" exo="true" /> */}
 
 {/*
-	 <CourseLink title="Introduction"
-		verbose="pour les installations et le béaba (ce cours-ci)"
-		html="https://intro.info-mines.paris"
-		github="https://github.com/ue12-p25/intro"
-		icon="right-caret"
-		sametab={true} />
-*/}
-
-	<CourseLink title="Python numérique"
-		verbose="un cours sur le traitement de données avec Python"
-		html="https://numerique.info-mines.paris"
-		github="https://github.com/ue12-p25/numerique"
-		icon="seti:python" />
-	<CourseLink title="Le cours sur git"
-		verbose="un outil totalement incontournable"
-		html="https://git.info-mines.paris"
-		github="https://github.com/ue12-p25/git"
-		icon="seti:git" />
-
-	{/*
-	   too tedious to create this redirection this year
-	   hopefully next year exos-ds be built with jb2 and under github pages
-	   so things will be easier and less confusing
-	   html="https://numerique-exos.info-mines.paris"
-	*/}
-	{/*
-	<CourseLink title="Une collection d'exercices sur Python numérique"
-		verbose="des exercices pratiques sur Python numérique"
-		html="https://flotpython-exos-ds.readthedocs.io/"
-		github="https://github.com/flotpython/exos-ds"
-		icon="seti:python" />
-	*/}
-
-{/*
-
-	<CourseLink title="Python avancé"
-		verbose="pour approfondir le langage Python"
-		html="https://flotpython.github.io/slides"
-		github="https://github.com/flotpython/slides"
-		icon="seti:python" />
-	<CourseLink title="C++"
-		verbose="un langage compilé et proche de la mémoire"
-		html="https://cpp.bmarchand.fr"
-		github="https://github.com/ue12-p25/cpp"
-		icon="seti:cpp" />
-
-	<CourseLink title="Julia"
-		verbose="pour découvrir un langage dynamique et polyvalent"
+	<CourseLink title="Le cours C++" html="https://cpp.bmarchand.fr" />
+	<CourseLink title="Le cours Julia"
 		html="https://drive.google.com/drive/folders/1qSmdWM2Ze34PsVjGvCzLY5-19RP3Z6AQ?usp=sharing"
-		github="???"
-		icon="seti:julia" />
-	Elixir?
+	/>
 */}
 
-</CardGrid>
 
 les cours suivants seront annoncés ici ultérieurement; voyez aussi
-  <a href="https://github.com/orgs/ue12-p25/repositories" target="_">la liste des repos sur github</a>
+  <a href="https://github.com/orgs/ue12-p25/repositories" target="_">la liste des repos du S1 sur github</a>
 
-</Card>
+</TabItem>
 
-
+<TabItem label="Cours du S2" icon="open-book">
+	<CourseLink title="Web Frontend" html="https://frontend.info-mines.paris" />
 {/*
-<Card title="les supports de cours du S2" icon="open-book">
-<CardGrid>
-	<CourseLink title="Web Frontend"
-		verbose="développement coté client: HTML CSS et JavaScript"
-		html="https://frontend.info-mines.paris"
-		github="https://github.com/ue22-p25/frontend"/>
-	<CourseLink title="Web Backend"
-		verbose="réseaux et serveurs Web - FastAPI"
-		html="https://backend.info-mines.paris"
-		github="https://github.com/ue22-p25/backend"/>
-</CardGrid>
-</Card>
+	<CourseLink title="Web Backend" html="https://backend.info-mines.paris" />
 */}
+
+les cours suivants seront annoncés ici ultérieurement; voyez aussi
+  <a href="https://github.com/orgs/ue22-p25/repositories" target="_">la liste des repos du S2 sur github</a>
+
+</TabItem>
+
+</Tabs>
+</Card>
+</div>
+
 
 
 

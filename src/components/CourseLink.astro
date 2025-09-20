@@ -1,29 +1,17 @@
 ---
-import { Card, Icon } from "@astrojs/starlight/components"
-import type { boolean } from "astro:schema"
+import { LinkCard } from "@astrojs/starlight/components"
 
 interface Props {
     title: string
-    verbose: string
     html: string
-    github: string
-    icon: string
-    sametab: boolean
+    exo: boolean
 }
 
-const { title, verbose, html, github, icon, sametab } = Astro.props
-// default is to open in a new tab
-const target = ((sametab === undefined) || ! sametab ) ? 'target="_blank"' : ''
+const { title, html, exo } = Astro.props
 
-console.log("CourseLink: ", { title, verbose, html, github, icon, sametab, target })
 ---
-<Card title={title} icon={icon}>
-    <span class="course-link">
-        <a href=`${html}` target={target}>
-            {verbose}
-        </a>
-        <a href=`${github}` {target}>
-            <Icon name="github" class="inline-icon" />
-        </a>
-    </span>
-</Card>
+{exo ? (
+    <div class="exo"><LinkCard title={title} href={html} target="_blank" /></div>
+) : (
+    <LinkCard title={title} href={html} target="_blank" />
+)}

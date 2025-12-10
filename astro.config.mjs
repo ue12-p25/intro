@@ -71,6 +71,7 @@ export default defineConfig({
             { label: "Checklist", slug: "3-1-checklist" },
             { label: "Troubleshooting", slug: "3-2-troubleshooting" },
             { label: "Environnements virtuels", slug: "3-3-virtual-envs" },
+            { label: "Setup avec mise et uv", slug: "3-4-mise-uv"},
           ],
         },
       ],

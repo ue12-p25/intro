@@ -87,9 +87,12 @@ function install-starship() {
 
 function cat-starship-config() {
     cat << 'EOF'
-format = """$directory\
+format = """$shlvl\
+$directory\
 $conda\
 $python\
+$pixi\
+$mise\
 $git_branch\
 $git_status\
 \n\
@@ -120,6 +123,16 @@ untracked = ''
 modified = "✎"
 deleted = "🗑️"
 staged = "+"
+
+[pixi]
+format='[$symbol$environment]($style) '
+
+[shlvl]
+format='[$symbol$shlvl]($style) '
+disabled = false
+
+[mise]
+disabled = false
 
 EOF
 }

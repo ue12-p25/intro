@@ -1,6 +1,6 @@
 ---
 title: (mise + uv) au lieu de (conda + pip)
-description: setup alternatif à conda
+description: setup alternatif à conda avec mise
 ---
 
 import { Image } from 'astro:assets'
@@ -52,12 +52,16 @@ les versions d'outils et de langages de programmation. Il remplace
 avantageusement `conda` pour installer différentes versions des langages de
 développement les plus répandus.
 
-la logique de mise consiste à pouvoir dire par exemple  
+la logique consiste à pouvoir dire par exemple  
 > dans le dossier `/un/dossier` (et ses descendants), si je tape `python` ça veut
 dire la version 3.14 et si je tape `node` ça veut dire la version 24
 
 et bien sûr on peut faire ça dans autant de dossiers qu'on veut  
 de cette façon, il suffit de changer de dossier pour changer de version !
+
+<Admonition title="pas tout à fait ça" type="caution" collapsible> en pratique
+on n'obtient ce comportement qu'après avoir aussi installé `direnv`; mais bon
+c'est l'idée générale tout de même </Admonition>
 
 ### et `uv` pour remplacer `pip` ?
 
@@ -67,7 +71,7 @@ plus efficace à `pip` tout en restant compatible avec l'écosystème Python
 existant
 
 essentiellement `uv` va créer un environnement virtuel qui est associé, lui
-aussi, au dossier courant (il faudra bien penser à l'activer malgré tout)
+aussi, au dossier courant
 
 ## pour les installer
 
@@ -364,5 +368,5 @@ dossiers séparés, et ne pas en inclure un sous un autre
 voyez aussi ces différents outils qui ont certains comportements avec ceux-ci
 
 - `npm` pour l'idée d'installer les dépendances tout en les mémorisant dans `package.json`
-- `venv` qui est utilisé en sous-main par `uv` pour les environnements virutels
+- `venv` qui est utilisé en sous-main par `uv` pour les environnements virtuels
   Python (et qui n'existait pas à l'époque de `conda`)

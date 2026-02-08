@@ -31,9 +31,9 @@ svg.inline-icon {
 	display: inline !important;
 }
 
-.outline-courses>article.card>div div[role="tabpanel"]      div.sl-link-card {
+article.card>div div[role="tabpanel"]      div.sl-link-card {
     background-color: rgba(223, 247, 214, 0.2);
 }
-.outline-courses>article.card>div div[role="tabpanel"] .exo div.sl-link-card {
+article.card>div div[role="tabpanel"] .exo div.sl-link-card {
     background-color: rgba(205, 220, 243, 0.2);
 }

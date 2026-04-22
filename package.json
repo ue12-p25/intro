@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.32.3",
-    "astro": "^5.15.9",
-    "astro-embed": "^0.9.0",
+    "@astrojs/starlight": "^0.38.3",
+    "astro": "^6.1.8",
+    "astro-embed": "^0.13.0",
     "prismjs": "^1.30.0",
     "rehype-mathjax": "^7.1.0",
     "remark-math": "^6.0.0",

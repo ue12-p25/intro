@@ -28,9 +28,9 @@ export default defineConfig({
         dark: "/src/media/logo-p25-dark.svg",
         alt: "MinesParis PSL P25",
       },
-      social: {
-        github: "https://github.com/ue12-p25/intro",
-      },
+      social: [
+        { icon: "github", label: "GitHub", href: "https://github.com/ue12-p25/intro" },
+      ],
       plugins: [
         starlightThemeRapide(),
         // for zoomable images

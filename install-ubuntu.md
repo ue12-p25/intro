@@ -1,22 +1,24 @@
-# Installe Ubuntu 
+# Ubuntu Install
 
-pour réinstaller les ordis de prêt aux étudiants
+to reinstall a computer that can be lended to students
 
-Au démarrage 
+in 2025: used a ubuntu-24-lts (.3) install on a samsung USB-C 256G key
 
-- [ ] enfoncer **Escape** 
-- [ ] puis choisir **Boot Menu (F9)**
-- [ ] puis dans la liste sélectionner **La clé USB (samsung)**
-- [ ] au bootloader: Try or Install Ubuntu
-- [ ] Language English 
+## checklist
+
+- [ ] press **Escape**
+- [ ] then choose **Boot Menu (F9)**
+- [ ] then in the list select **The USB Key (samsung)**
+- [ ] at the bootloader: Try or Install Ubuntu
+- [ ] Language English
 - [ ] Keyboard French
 - [ ] Connect to the internet (optionnel)
 - [ ] Install Ubuntu
-- [ ] Interactive installation 
-- [ ] Extended Selection 
+- [ ] Interactive installation
+- [ ] Extended Selection
 - [ ] Proprietary : none
 - [ ] Erase disk and installl
 - [ ] Jean Mineur / password=jeanmineur
 - [ ] Require my password to log in
 - [ ] Time zone Paris
-- [ ] Confirm install 
+- [ ] Confirm install
